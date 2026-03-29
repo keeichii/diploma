@@ -21,8 +21,21 @@ def car_sum(ar: Iterable[float] | pd.Series) -> float:
 
 def bhar_from_simple_returns(ri: pd.Series, rm: pd.Series) -> float:
     """
-    BHAR = Π(1+R_i) - Π(1+R_m) на выровненных по индексу рядах (один торговый период на шаг).
-    ri, rm — простые доходности (не лог).
+    Buy-and-Hold Abnormal Return (BHAR) in "excess wealth" units:
+
+        BHAR_i(T) = Π_{t=1..T}(1 + R_i,t) - Π_{t=1..T}(1 + R_m,t)
+
+    where:
+      - ri: simple stock returns (not log returns)
+      - rm: simple benchmark returns (not log returns)
+
+    Interpretation:
+      - value > 0: strategy "buy stock at t=1 and hold to T" created
+        more terminal wealth than benchmark buy-and-hold.
+      - value < 0: underperformance vs benchmark wealth path.
+
+    Note: this is NOT (Π(1+Ri)/Π(1+Rm) - 1). We intentionally use
+    the difference of terminal wealth multipliers across all modules.
     """
     df = pd.DataFrame({"ri": ri.astype(float), "rm": rm.astype(float)}).dropna()
     if df.empty:
@@ -65,26 +78,50 @@ def bhar_post_window(
     rm_col: str,
     horizon: int,
     min_fraction_valid: float = 0.8,
-    min_tail_beyond_horizon: int = 10,
+    min_tail_beyond_horizon: int = 0,
 ) -> tuple[float, str]:
     """
-    BHAR на t=1..T (торговые дни в колонке t).
-    Требуется max(t) >= T + min_tail_beyond_horizon и достаточная доля валидных наблюдений.
-    Возвращает (значение, причина пропуска: '' если ок).
+    BHAR on post-event window t in [1..T] with robust coverage checks.
+
+    The function is intentionally tolerant to small gaps in integer t:
+    it does NOT require exact contiguous sequence 1..T. Instead it:
+      1) keeps rows with 1 <= t <= T,
+      2) de-duplicates by t (last observation wins),
+      3) drops rows where either ri or rm is NaN,
+      4) computes BHAR on available aligned pairs if enough valid rows.
+
+    Returns:
+      (bhar_value, why)
+      - bhar_value is NaN on failure
+      - why is "" on success, otherwise an explicit failure reason:
+        "empty", "short_post_window", "missing_benchmark", "missing_stock_return",
+        "no_valid_pairs", "too_few_valid_returns"
     """
     if sub.empty or horizon < 1:
         return float("nan"), "empty"
     g = sub.sort_values("t")
-    if g["t"].max() < horizon + min_tail_beyond_horizon:
-        return float("nan"), "insufficient_bhar_data"
+    max_t = pd.to_numeric(g["t"], errors="coerce").max()
+    if pd.isna(max_t) or max_t < horizon + min_tail_beyond_horizon:
+        return float("nan"), "short_post_window"
+
     win = g.loc[g["t"].between(1, horizon)].drop_duplicates("t", keep="last").sort_values("t")
-    if len(win) != horizon or not win["t"].tolist() == list(range(1, horizon + 1)):
-        return float("nan"), "insufficient_bhar_data"
+    if win.empty:
+        return float("nan"), "short_post_window"
+
+    if rm_col not in win.columns or win[rm_col].notna().sum() == 0:
+        return float("nan"), "missing_benchmark"
+    if ri_col not in win.columns or win[ri_col].notna().sum() == 0:
+        return float("nan"), "missing_stock_return"
+
     ok_mask = win[ri_col].notna() & win[rm_col].notna()
-    if ok_mask.sum() < max(1, int(math.ceil(horizon * min_fraction_valid))):
-        return float("nan"), "insufficient_bhar_data"
-    ri = win[ri_col].astype(float)
-    rm = win[rm_col].astype(float)
-    if ri.isna().any() or rm.isna().any():
-        return float("nan"), "insufficient_bhar_data"
+    valid_n = int(ok_mask.sum())
+    if valid_n == 0:
+        return float("nan"), "no_valid_pairs"
+
+    min_obs = max(1, int(math.ceil(horizon * float(min_fraction_valid))))
+    if valid_n < min_obs:
+        return float("nan"), "too_few_valid_returns"
+
+    ri = win.loc[ok_mask, ri_col].astype(float)
+    rm = win.loc[ok_mask, rm_col].astype(float)
     return bhar_from_simple_returns(ri, rm), ""

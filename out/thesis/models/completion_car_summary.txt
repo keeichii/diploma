@@ -4,7 +4,7 @@ Dep. Variable:          CAR_CLOSE_1_1   R-squared:                       0.090
 Model:                            OLS   Adj. R-squared:                 -0.032
 Method:                 Least Squares   F-statistic:                     18.72
 Date:                Sun, 29 Mar 2026   Prob (F-statistic):           8.94e-11
-Time:                        18:09:46   Log-Likelihood:                 99.926
+Time:                        22:10:10   Log-Likelihood:                 99.926
 No. Observations:                  52   AIC:                            -185.9
 Df Residuals:                      45   BIC:                            -172.2
 Df Model:                           6                                         

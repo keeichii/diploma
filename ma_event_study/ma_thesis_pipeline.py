@@ -85,6 +85,10 @@ import pandas as pd
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
 from scipy import stats
+try:
+    from ma_event_study.event_study_formulas import bhar_post_window
+except ImportError:
+    from event_study_formulas import bhar_post_window
 
 try:
     from ma_event_study.event_study_config import get_estimation_window
@@ -538,15 +542,44 @@ def compounded_return(values: pd.Series) -> float:
     return float(np.prod(1.0 + values) - 1.0)
 
 
-def bhar_window(sub: pd.DataFrame, event_t: pd.Series, horizon: int, min_fraction: float = 0.8) -> float:
-    mask = event_t.between(1, horizon)
-    window = sub.loc[mask, ["security_return", "benchmark_return"]].dropna(how="any")
-    min_obs = max(5, int(math.ceil(horizon * min_fraction)))
-    if len(window) < min_obs:
-        return np.nan
-    stock = compounded_return(window["security_return"])
-    bench = compounded_return(window["benchmark_return"])
-    return stock - bench
+def bhar_window(
+    sub: pd.DataFrame,
+    event_t: pd.Series,
+    horizon: int,
+    min_fraction: float = 0.75,
+    min_tail_beyond_horizon: int = 0,
+    source_row_excel: Optional[int] = None,
+) -> float:
+    """
+    BHAR_i(T) in excess-wealth units:
+      Π(1+Ri) - Π(1+Rm), using simple returns on t in [1..T].
+
+    Uses the same robust validator/definition as event_study_formulas.bhar_post_window
+    so BHAR is mathematically consistent across modules.
+    """
+    frame = pd.DataFrame(
+        {
+            "t": pd.to_numeric(event_t, errors="coerce"),
+            "security_return": pd.to_numeric(sub["security_return"], errors="coerce"),
+            "benchmark_return": pd.to_numeric(sub["benchmark_return"], errors="coerce"),
+        }
+    )
+    val, why = bhar_post_window(
+        frame,
+        ri_col="security_return",
+        rm_col="benchmark_return",
+        horizon=horizon,
+        min_fraction_valid=min_fraction,
+        min_tail_beyond_horizon=min_tail_beyond_horizon,
+    )
+    if why and source_row_excel is not None:
+        log_warning(
+            category="insufficient_bhar_data",
+            message=f"T={horizon}: {why}",
+            table_role="daily_bhar",
+            source_row_excel=source_row_excel,
+        )
+    return val
 
 
 def extract_controls(sub: pd.DataFrame, event_t: pd.Series, prefix: str) -> Dict[str, float]:
@@ -604,9 +637,12 @@ def compute_anchored_daily_metrics(panel: pd.DataFrame, prefix: str) -> Tuple[pd
             f"CAR_{prefix}_3_3": sum_window(abnormal, event_t, -3, 3),
             f"CAR_{prefix}_5_5": sum_window(abnormal, event_t, -5, 5),
             f"CAR_{prefix}_10_10": sum_window(abnormal, event_t, -10, 10),
-            f"BHAR_{prefix}_60": bhar_window(sub, event_t, 60),
-            f"BHAR_{prefix}_120": bhar_window(sub, event_t, 120),
-            f"BHAR_{prefix}_250": bhar_window(sub, event_t, 250),
+            f"CAR_{prefix}_30_30": sum_window(abnormal, event_t, -30, 30),
+            f"CAR_{prefix}_50_50": sum_window(abnormal, event_t, -50, 50),
+            f"CAR_{prefix}_30_5": sum_window(abnormal, event_t, -30, -5),
+            f"BHAR_{prefix}_60": bhar_window(sub, event_t, 60, source_row_excel=int(source_row)),
+            f"BHAR_{prefix}_120": bhar_window(sub, event_t, 120, source_row_excel=int(source_row)),
+            f"BHAR_{prefix}_250": bhar_window(sub, event_t, 250, source_row_excel=int(source_row)),
             f"{prefix}_MODEL_TYPE": model_type,
             f"{prefix}_ESTIMATION_OBS": n_est,
         }
@@ -791,9 +827,9 @@ def compute_completion_metrics(base: pd.DataFrame, panels: Dict[str, pd.DataFram
                 "CAR_CLOSE_3_3": sum_window(abnormal, event_t, -3, 3),
                 "CAR_CLOSE_5_5": sum_window(abnormal, event_t, -5, 5),
                 "CAR_CLOSE_10_10": sum_window(abnormal, event_t, -10, 10),
-                "BHAR_CLOSE_60": bhar_window(pos, event_t, 60),
-                "BHAR_CLOSE_120": bhar_window(pos, event_t, 120),
-                "BHAR_CLOSE_250": bhar_window(pos, event_t, 250),
+                "BHAR_CLOSE_60": bhar_window(pos, event_t, 60, source_row_excel=int(deal.source_row_excel)),
+                "BHAR_CLOSE_120": bhar_window(pos, event_t, 120, source_row_excel=int(deal.source_row_excel)),
+                "BHAR_CLOSE_250": bhar_window(pos, event_t, 250, source_row_excel=int(deal.source_row_excel)),
                 "CLOSE_MODEL_TYPE": model_type,
                 "CLOSE_ESTIMATION_OBS": n_est,
                 "CLOSE_PANEL_ROLE": role,
@@ -883,6 +919,44 @@ def run_one_sample_tests(enriched: pd.DataFrame, metric_cols: List[str]) -> pd.D
                 "metric": col,
                 "n": int(series.shape[0]),
                 "mean": series.mean(),
+                "t_stat": t_stat,
+                "p_value": p_value,
+            }
+        )
+    return pd.DataFrame(rows)
+
+
+def build_metric_focus_table(
+    enriched: pd.DataFrame,
+    one_sample_tests: pd.DataFrame,
+    metrics: List[str],
+    *,
+    block_label: str = "",
+) -> pd.DataFrame:
+    """Small thesis-ready summary table for a selected metric block."""
+    if one_sample_tests.empty:
+        one_map = pd.DataFrame(columns=["metric", "t_stat", "p_value"]).set_index("metric")
+    else:
+        one_map = one_sample_tests.set_index("metric")
+
+    rows: List[Dict[str, object]] = []
+    for metric in metrics:
+        if metric not in enriched.columns:
+            continue
+        s = pd.to_numeric(enriched[metric], errors="coerce").dropna()
+        t_stat = np.nan
+        p_value = np.nan
+        if metric in one_map.index:
+            t_stat = one_map.loc[metric, "t_stat"]
+            p_value = one_map.loc[metric, "p_value"]
+        rows.append(
+            {
+                "block_label": block_label,
+                "metric_name": metric,
+                "n": int(s.shape[0]),
+                "mean": float(s.mean()) if not s.empty else np.nan,
+                "median": float(s.median()) if not s.empty else np.nan,
+                "std": float(s.std()) if not s.empty else np.nan,
                 "t_stat": t_stat,
                 "p_value": p_value,
             }
@@ -1036,12 +1110,49 @@ def run_regressions(enriched: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame,
 def plot_histogram(series: pd.Series, title: str, path: Path) -> None:
     series = series.dropna()
     if series.empty:
+        plt.figure(figsize=(8, 5))
+        plt.title(title)
+        plt.text(0.5, 0.5, "No non-NaN observations", ha="center", va="center")
+        plt.xlabel("Value")
+        plt.ylabel("Frequency")
+        plt.tight_layout()
+        plt.savefig(path, dpi=200)
+        plt.close()
         return
     plt.figure(figsize=(8, 5))
     plt.hist(series, bins=20, edgecolor="black")
     plt.title(title)
     plt.xlabel("Value")
     plt.ylabel("Frequency")
+    plt.tight_layout()
+    plt.savefig(path, dpi=200)
+    plt.close()
+
+
+def plot_scatter(
+    x: pd.Series,
+    y: pd.Series,
+    title: str,
+    xlabel: str,
+    ylabel: str,
+    path: Path,
+) -> None:
+    frame = pd.DataFrame({"x": x, "y": y}).dropna()
+    if frame.empty:
+        plt.figure(figsize=(7, 6))
+        plt.title(title)
+        plt.text(0.5, 0.5, "No paired non-NaN observations", ha="center", va="center")
+        plt.xlabel(xlabel)
+        plt.ylabel(ylabel)
+        plt.tight_layout()
+        plt.savefig(path, dpi=200)
+        plt.close()
+        return
+    plt.figure(figsize=(7, 6))
+    plt.scatter(frame["x"], frame["y"], alpha=0.7)
+    plt.title(title)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
     plt.tight_layout()
     plt.savefig(path, dpi=200)
     plt.close()
@@ -1140,6 +1251,19 @@ def main() -> None:
     )
     leakage_metrics = compute_leakage_metrics(base, ann_metrics, create_metrics)
     leakage_metrics = add_pre_announcement_runups(leakage_metrics, ann_panel_annotated)
+    ann_create_diff = (
+        ann_metrics[["source_row_excel", "CAR_ANN_1_1", "CAR_ANN_30_5"]]
+        .merge(
+            create_metrics[["source_row_excel", "CAR_CREATE_1_1", "CAR_CREATE_30_5"]],
+            on="source_row_excel",
+            how="outer",
+        )
+    )
+    ann_create_diff["DIFF_CAR_ANN_CREATE_1_1"] = ann_create_diff["CAR_ANN_1_1"] - ann_create_diff["CAR_CREATE_1_1"]
+    ann_create_diff["DIFF_CAR_ANN_CREATE_30_5"] = ann_create_diff["CAR_ANN_30_5"] - ann_create_diff["CAR_CREATE_30_5"]
+    ann_create_diff = ann_create_diff[
+        ["source_row_excel", "DIFF_CAR_ANN_CREATE_1_1", "DIFF_CAR_ANN_CREATE_30_5"]
+    ]
 
     print("Announcement intraday deals with metrics:", int(intraday_metrics["CAR_ANN_INTRADAY_15M"].notna().sum()))
     print("Announcement daily deals with CAR:", int(ann_metrics["CAR_ANN_1_1"].notna().sum()))
@@ -1152,6 +1276,7 @@ def main() -> None:
         .merge(ann_metrics, on="source_row_excel", how="left")
         .merge(completion_metrics, on="source_row_excel", how="left")
         .merge(leakage_metrics, on="source_row_excel", how="left")
+        .merge(ann_create_diff, on="source_row_excel", how="left")
         .merge(act_metrics, on="source_row_excel", how="left")
         .merge(create_metrics, on="source_row_excel", how="left")
     )
@@ -1189,6 +1314,9 @@ def main() -> None:
         "CAR_ANN_3_3",
         "CAR_ANN_5_5",
         "CAR_ANN_10_10",
+        "CAR_ANN_30_30",
+        "CAR_ANN_50_50",
+        "CAR_ANN_30_5",
         "BHAR_ANN_60",
         "BHAR_ANN_120",
         "BHAR_ANN_250",
@@ -1201,15 +1329,83 @@ def main() -> None:
         "BHAR_CLOSE_250",
         "RUNUP_PRE_30_5",
         "CAR_PRE_ANNOUNCEMENT",
+        "DIFF_CAR_ANN_MINUS_CREATE_1_1",
         "CAR_CREATE_1_1",
         "CAR_CREATE_3_3",
+        "CAR_CREATE_30_5",
+        "CAR_ACT_30_30",
+        "CAR_ACT_50_50",
+        "CAR_ACT_30_5",
+        "CAR_CREATE_30_30",
+        "CAR_CREATE_50_50",
         "CAR_ACT_1_1",
         "CAR_ACT_3_3",
+        "DIFF_CAR_ANN_CREATE_1_1",
+        "DIFF_CAR_ANN_CREATE_30_5",
     ]
 
     print_header("HYPOTHESIS TESTS AND REGRESSIONS")
     summary_stats = run_summary_stats(enriched, metric_cols)
     one_sample_tests = run_one_sample_tests(enriched, metric_cols)
+    fast_reaction_intraday_summary = build_metric_focus_table(
+        enriched,
+        one_sample_tests,
+        [
+            "CAR_ANN_INTRADAY_15M",
+            "CAR_ANN_INTRADAY_30M",
+            "CAR_ANN_INTRADAY_1H",
+            "CAR_INTRADAY_PRE_4_0",
+            "ratio_1h_vs_day",
+        ],
+        block_label="fast_reaction_intraday",
+    )
+    daily_leakage_summary = build_metric_focus_table(
+        enriched,
+        one_sample_tests,
+        [
+            "CAR_ANN_1_1",
+            "CAR_CREATE_1_1",
+            "RUNUP_PRE_30_5",
+            "CAR_PRE_ANNOUNCEMENT",
+            "DIFF_CAR_ANN_MINUS_CREATE_1_1",
+        ],
+        block_label="leakage_daily",
+    )
+    paired_rows: List[Dict[str, object]] = []
+    for label, ann_col, create_col in [
+        ("CAR_ANN_vs_CREATE_1_1", "CAR_ANN_1_1", "CAR_CREATE_1_1"),
+        ("CAR_ANN_vs_CREATE_30_5", "CAR_ANN_30_5", "CAR_CREATE_30_5"),
+    ]:
+        if ann_col not in enriched.columns or create_col not in enriched.columns:
+            continue
+        pair = enriched[[ann_col, create_col]].dropna()
+        if len(pair) < 3:
+            paired_rows.append(
+                {
+                    "test_label": label,
+                    "announcement_metric": ann_col,
+                    "create_metric": create_col,
+                    "n_pairs": int(len(pair)),
+                    "mean_diff_ann_minus_create": np.nan,
+                    "t_stat": np.nan,
+                    "p_value": np.nan,
+                }
+            )
+            continue
+        diff = pair[ann_col] - pair[create_col]
+        t_stat, p_value = stats.ttest_1samp(diff, popmean=0.0, nan_policy="omit")
+        paired_rows.append(
+            {
+                "test_label": label,
+                "announcement_metric": ann_col,
+                "create_metric": create_col,
+                "n_pairs": int(len(pair)),
+                "mean_diff_ann_minus_create": float(diff.mean()),
+                "t_stat": float(t_stat),
+                "p_value": float(p_value),
+            }
+        )
+    paired_tests = pd.DataFrame(paired_rows)
     group_tests = run_group_tests(enriched, ["CAR_ANN_1_1", "CAR_CLOSE_1_1", "RUNUP_PRE_30_5", "BHAR_ANN_120"])
     reg_coefs, reg_diag, reg_summaries = run_regressions(enriched)
 
@@ -1232,6 +1428,17 @@ def main() -> None:
     export_dataframe(mapping_audit, OUTPUT_DIRS["tables"] / "mapping_audit.csv")
     export_dataframe(summary_stats, OUTPUT_DIRS["tables"] / "summary_statistics.csv", OUTPUT_DIRS["tables"] / "summary_statistics.xlsx")
     export_dataframe(one_sample_tests, OUTPUT_DIRS["tables"] / "one_sample_tests.csv", OUTPUT_DIRS["tables"] / "one_sample_tests.xlsx")
+    export_dataframe(
+        fast_reaction_intraday_summary,
+        OUTPUT_DIRS["tables"] / "fast_reaction_intraday_summary.csv",
+        OUTPUT_DIRS["tables"] / "fast_reaction_intraday_summary.xlsx",
+    )
+    export_dataframe(
+        daily_leakage_summary,
+        OUTPUT_DIRS["tables"] / "daily_leakage_summary.csv",
+        OUTPUT_DIRS["tables"] / "daily_leakage_summary.xlsx",
+    )
+    export_dataframe(paired_tests, OUTPUT_DIRS["tables"] / "paired_tests.csv", OUTPUT_DIRS["tables"] / "paired_tests.xlsx")
     export_dataframe(group_tests, OUTPUT_DIRS["tables"] / "group_tests.csv", OUTPUT_DIRS["tables"] / "group_tests.xlsx")
     model_count_rows: List[Dict[str, object]] = []
     for label, mframe in [
@@ -1260,8 +1467,32 @@ def main() -> None:
         (OUTPUT_DIRS["models"] / f"{model_name}_summary.txt").write_text(summary_text, encoding="utf-8")
 
     plot_histogram(enriched["CAR_ANN_1_1"], "Distribution of CAR_ANN_1_1", OUTPUT_DIRS["charts"] / "car_ann_1_1_hist.png")
+    plot_histogram(
+        enriched["CAR_ANN_INTRADAY_15M"],
+        "Distribution of CAR_ANN_INTRADAY_15M (fast market reaction)",
+        OUTPUT_DIRS["charts"] / "car_ann_intraday_15m_hist.png",
+    )
+    plot_histogram(
+        enriched["RUNUP_PRE_30_5"],
+        "Distribution of pre-announcement run-up CAR [-30; -5]",
+        OUTPUT_DIRS["charts"] / "runup_pre_30_5_hist.png",
+    )
+    plot_histogram(
+        enriched["DIFF_CAR_ANN_MINUS_CREATE_1_1"],
+        "Distribution of CAR_ANN_1_1 - CAR_CREATE_1_1",
+        OUTPUT_DIRS["charts"] / "diff_car_ann_create_1_1_hist.png",
+    )
     plot_histogram(enriched["BHAR_ANN_120"], "Distribution of BHAR_ANN_120", OUTPUT_DIRS["charts"] / "bhar_ann_120_hist.png")
+    plot_histogram(enriched["BHAR_ANN_250"], "Distribution of BHAR_ANN_250", OUTPUT_DIRS["charts"] / "bhar_ann_250_hist.png")
     plot_histogram(enriched["CAR_CLOSE_1_1"], "Distribution of CAR_CLOSE_1_1", OUTPUT_DIRS["charts"] / "car_close_1_1_hist.png")
+    plot_scatter(
+        enriched["CAR_ANN_1_1"],
+        enriched["BHAR_ANN_120"],
+        "BHAR_ANN_120 vs CAR_ANN_1_1",
+        "CAR_ANN_1_1",
+        "BHAR_ANN_120",
+        OUTPUT_DIRS["charts"] / "bhar_ann_120_vs_car_ann_1_1_scatter.png",
+    )
     plot_event_profile(ann_panel_annotated, "ar_ann", "t", "Announcement Event Profile", OUTPUT_DIRS["charts"] / "announcement_event_profile.png")
     plot_event_profile(create_panel_annotated, "ar_create", "t", "Create-Date Event Profile", OUTPUT_DIRS["charts"] / "create_event_profile.png")
 

@@ -1,5 +1,5 @@
 """
-Итоговая карта гипотез H1–H22 для narrative / CSV.
+Итоговая карта гипотез H1–H23 для narrative / CSV.
 Читает one_sample_tests, group_tests, regression_coefficients, enriched (для корреляций).
 """
 from __future__ import annotations
@@ -37,10 +37,11 @@ HYPOTHESES: list[tuple[str, str, str, str]] = [
     ("H16", "ROA, P/B, P/E, активы", "M2 coefficients", "reg:M2_H14_H16_CAR_ANN:any"),
     ("H17", "Ликвидность (объём до события)", "coef log_Volume M4", "reg:M4_H17_CAR_ANN:log_Volume_pre20"),
     ("H18", "Связь CAR короткого окна и BHAR", "Spearman CAR×BHAR", "spearman"),
-    ("H19", "Пост-сделочный дрейф BHAR", "BHAR_ANN_120 share<0 + t-test", "bhar_h19"),
+    ("H19", "Долгосрочный BHAR (+1;+120) после объявления не положителен (отрицательный пост-сделочный дрейф)", "BHAR_ANN_120 share<0 + t-test", "bhar_h19"),
     ("H20", "Ecosystem vs non-ecosystem BHAR", "Mann-Whitney BHAR", "group:bhar_ecosystem"),
     ("H21", "Пост-сделочные финансы (ROE)", "требуются данные", "not_available"),
     ("H22", "Пост-сделочные финансы (прочее)", "требуются данные", "not_available"),
+    ("H23", "Долгосрочный BHAR (+1;+250) не положителен", "BHAR_ANN_250", "one_sample:BHAR_ANN_250"),
 ]
 
 

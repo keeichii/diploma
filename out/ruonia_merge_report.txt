@@ -24,6 +24,6 @@ Merge logic:
 - original rows preserved (no drops)
 - non-matched dates keep NaN in added RUONIA fields
 
-table_2_1_first_press_release.xlsx: rows=36673, RUONIA_fill=89.25%
-table_2_2_cbonds_actualization.xlsx: rows=36716, RUONIA_fill=89.56%
-table_2_3_cbonds_create.xlsx: rows=36361, RUONIA_fill=90.55%
+table_2_1_first_press_release.xlsx: rows=41613, RUONIA_fill=89.74%
+table_2_2_cbonds_actualization.xlsx: rows=41486, RUONIA_fill=90.04%
+table_2_3_cbonds_create.xlsx: rows=41121, RUONIA_fill=90.94%

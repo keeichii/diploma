@@ -1,10 +1,10 @@
 panel,model_type,n_deals
-announcement_daily,mean_adjusted,105
+announcement_daily,mean_adjusted,88
 announcement_daily,market_model,20
-announcement_daily,market_adjusted,3
-actualization_daily,mean_adjusted,101
+announcement_daily,market_adjusted,20
+actualization_daily,mean_adjusted,88
+actualization_daily,market_adjusted,21
 actualization_daily,market_model,20
-actualization_daily,market_adjusted,3
-create_daily,mean_adjusted,103
+create_daily,mean_adjusted,87
+create_daily,market_adjusted,21
 create_daily,market_model,18
-create_daily,market_adjusted,3

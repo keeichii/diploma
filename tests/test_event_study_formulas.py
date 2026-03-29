@@ -54,4 +54,4 @@ def test_bhar_post_window_short_panel():
     sub = pd.DataFrame([{"t": i, "ri": 0.01, "rm": 0.0} for i in range(0, 10)])
     val, why = bhar_post_window(sub, ri_col="ri", rm_col="rm", horizon=60, min_tail_beyond_horizon=10)
     assert np.isnan(val)
-    assert why == "insufficient_bhar_data"
+    assert why == "short_post_window"

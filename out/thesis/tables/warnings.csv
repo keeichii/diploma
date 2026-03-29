@@ -1,324 +1,1293 @@
 category,message,table_role,source_row_excel
 completion_intraday_unavailable,Completion intraday metrics left missing because no dedicated completion intraday panel was uploaded,intraday,2.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,2.0
+insufficient_bhar_data,T=120: short_post_window,daily_bhar,4.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,4.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,5.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,6.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,7.0
 model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,9.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,28.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,30.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,28.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,30.0
 model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,34.0
 model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,35.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,39.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,42.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,43.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,45.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,48.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,49.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,50.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,51.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,53.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,54.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,57.0
+insufficient_bhar_data,T=120: short_post_window,daily_bhar,36.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,36.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,39.0
+insufficient_bhar_data,T=60: too_few_valid_returns,daily_bhar,39.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,42.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,42.0
+insufficient_bhar_data,T=120: too_few_valid_returns,daily_bhar,42.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,42.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,43.0
+insufficient_bhar_data,T=60: too_few_valid_returns,daily_bhar,43.0
+insufficient_bhar_data,T=120: too_few_valid_returns,daily_bhar,43.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,45.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,45.0
+insufficient_bhar_data,T=120: too_few_valid_returns,daily_bhar,45.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,45.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,48.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,48.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,48.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,48.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,49.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,49.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,49.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,49.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,50.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,50.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,50.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,50.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,51.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,51.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,51.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,51.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,53.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,53.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,53.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,53.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,54.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,54.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,54.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,54.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,57.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,57.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,57.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,57.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,58.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,59.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,60.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,61.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,64.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,58.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,58.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,58.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,59.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,59.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,59.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,59.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,60.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,60.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,60.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,60.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,61.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,61.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,61.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,61.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,64.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,64.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,64.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,64.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,65.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,65.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,65.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,65.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,67.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,67.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,67.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,67.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,68.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,68.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,68.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,68.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,71.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,71.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,71.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,71.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,72.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,72.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,72.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,72.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,74.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,74.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,74.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,74.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,75.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,75.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,75.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,75.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,77.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,77.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,77.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,77.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,78.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,78.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,78.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,78.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,79.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,79.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,79.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,79.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,80.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,80.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,80.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,80.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,81.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,81.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,81.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,81.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,82.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,82.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,82.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,82.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,83.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,83.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,83.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,83.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,84.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,84.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,84.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,84.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,91.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,91.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,91.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,91.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,92.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,92.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,92.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,92.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,93.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,93.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,93.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,93.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,95.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,95.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,95.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,95.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,96.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,96.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,96.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,96.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,97.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,97.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,97.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,97.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,99.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,99.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,99.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,99.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,100.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,100.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,100.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,100.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,109.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,109.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,109.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,109.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,111.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,111.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,111.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,111.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,112.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,112.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,112.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,112.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,115.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,115.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,115.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,115.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,116.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,116.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,116.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,116.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,117.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,117.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,117.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,117.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,118.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,118.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,118.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,118.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,119.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,119.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,119.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,119.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,120.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,120.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,120.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,120.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,121.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,121.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,121.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,121.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,123.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,123.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,123.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,123.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,130.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,130.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,130.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,130.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,138.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,138.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,138.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,138.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,142.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,142.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,142.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,142.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,143.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,143.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,143.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,143.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,145.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,145.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,145.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,145.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,146.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,146.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,146.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,146.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,147.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,147.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,147.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,147.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,149.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,149.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,149.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,149.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,150.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,150.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,150.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,150.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,151.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,151.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,151.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,151.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,153.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,153.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,153.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,153.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,154.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,154.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,154.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,154.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,155.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,155.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,155.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,155.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,156.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,156.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,156.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,156.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,157.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,157.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,157.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,157.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,158.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,158.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,158.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,158.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,160.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,160.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,160.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,160.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,161.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,161.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,161.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,161.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,162.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,162.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,162.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,162.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,163.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,163.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,163.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,163.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,167.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,167.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,167.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,167.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,169.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,169.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,169.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,169.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,170.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,170.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,170.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,170.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,171.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,171.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,171.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,171.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,172.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,172.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,172.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,172.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,174.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,174.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,174.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,174.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,175.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,175.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,175.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,175.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,176.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,176.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,176.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,176.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,177.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,177.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,177.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,177.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,178.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,178.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,178.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,178.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,181.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,181.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,181.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,181.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,182.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,182.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,182.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,182.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,183.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,183.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,183.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,183.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,184.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,184.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,184.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,184.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,185.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,185.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,185.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,185.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,186.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,186.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,186.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,186.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,187.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,187.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,187.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,187.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,188.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,188.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,188.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,188.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,189.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,189.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,189.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,189.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,191.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,191.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,191.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,191.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,192.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,192.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,192.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,192.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,193.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,193.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,193.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,193.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,194.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,194.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,194.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,194.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,198.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,198.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,198.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,198.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,199.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,199.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,199.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,199.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,200.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,200.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,200.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,200.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,201.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,201.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,201.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,201.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,202.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,202.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,202.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,202.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,203.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,203.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,203.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,203.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,204.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,204.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,204.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,204.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,205.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,205.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,205.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,205.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,206.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,206.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,206.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,206.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,207.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,207.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,207.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,207.0
+insufficient_bhar_data,T=120: short_post_window,daily_bhar,2.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,2.0
+insufficient_bhar_data,T=120: short_post_window,daily_bhar,4.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,4.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,5.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,6.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,7.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,28.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,28.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,30.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,30.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,31.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,31.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,31.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,31.0
 model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,33.0
+insufficient_bhar_data,T=60: short_post_window,daily_bhar,34.0
+insufficient_bhar_data,T=120: short_post_window,daily_bhar,34.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,34.0
 model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,35.0
 model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,39.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,42.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,43.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,45.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,48.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,49.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,50.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,51.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,53.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,54.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,57.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,58.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,59.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,60.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,61.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,64.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,42.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,42.0
+insufficient_bhar_data,T=120: too_few_valid_returns,daily_bhar,42.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,42.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,43.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,43.0
+insufficient_bhar_data,T=120: too_few_valid_returns,daily_bhar,43.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,45.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,45.0
+insufficient_bhar_data,T=120: too_few_valid_returns,daily_bhar,45.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,45.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,48.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,48.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,48.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,48.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,49.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,49.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,49.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,49.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,50.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,50.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,50.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,50.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,51.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,51.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,51.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,51.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,53.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,53.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,53.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,53.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,54.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,54.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,54.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,54.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,57.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,57.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,57.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,57.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,58.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,58.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,58.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,58.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,59.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,59.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,59.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,59.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,60.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,60.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,60.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,60.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,61.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,61.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,61.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,61.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,64.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,64.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,64.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,64.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,65.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,65.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,65.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,65.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,67.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,67.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,67.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,67.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,68.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,71.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,68.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,68.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,68.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,71.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,71.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,71.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,71.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,72.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,72.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,72.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,72.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,74.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,74.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,74.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,74.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,75.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,75.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,75.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,75.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,77.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,77.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,77.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,77.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,78.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,78.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,78.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,78.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,79.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,79.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,79.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,79.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,80.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,80.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,80.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,80.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,81.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,81.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,81.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,81.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,82.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,82.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,82.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,82.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,83.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,83.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,83.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,83.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,84.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,84.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,84.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,84.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,90.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,90.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,90.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,90.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,91.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,91.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,91.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,91.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,92.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,92.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,92.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,92.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,93.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,93.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,93.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,93.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,95.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,95.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,95.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,95.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,96.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,96.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,96.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,96.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,97.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,97.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,97.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,97.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,99.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,99.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,99.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,99.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,100.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,100.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,100.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,100.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,109.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,109.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,109.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,109.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,111.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,111.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,111.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,111.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,112.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,112.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,112.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,112.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,115.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,115.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,115.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,115.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,116.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,116.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,116.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,116.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,117.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,117.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,117.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,117.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,118.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,118.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,118.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,118.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,119.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,119.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,119.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,119.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,120.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,120.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,120.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,120.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,121.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,121.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,121.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,121.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,123.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,123.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,123.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,123.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,130.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,130.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,130.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,130.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,138.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,138.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,138.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,138.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,142.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,142.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,142.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,142.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,143.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,143.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,143.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,143.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,145.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,145.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,145.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,145.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,146.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,146.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,146.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,146.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,147.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,147.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,147.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,147.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,149.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,149.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,149.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,149.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,150.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,150.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,150.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,150.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,151.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,151.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,151.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,151.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,153.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,153.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,153.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,153.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,154.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,154.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,154.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,154.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,155.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,155.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,155.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,155.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,156.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,156.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,156.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,156.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,157.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,157.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,157.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,157.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,158.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,158.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,158.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,158.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,160.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,160.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,160.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,160.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,161.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,161.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,161.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,161.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,162.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,162.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,162.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,162.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,163.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,163.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,163.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,163.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,167.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,167.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,167.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,167.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,169.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,169.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,169.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,169.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,170.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,170.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,170.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,170.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,171.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,171.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,171.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,171.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,172.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,172.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,172.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,172.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,174.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,174.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,174.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,174.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,175.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,175.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,175.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,175.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,176.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,176.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,176.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,176.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,177.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,177.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,177.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,177.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,178.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,178.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,178.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,178.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,181.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,181.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,181.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,181.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,182.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,182.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,182.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,182.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,183.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,183.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,183.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,183.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,184.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,184.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,184.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,184.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,185.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,185.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,185.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,185.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,186.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,186.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,186.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,186.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,187.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,187.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,187.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,187.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,188.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,188.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,188.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,188.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,189.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,189.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,189.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,189.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,191.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,191.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,191.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,191.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,192.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,192.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,192.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,192.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,193.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,193.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,193.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,193.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,194.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,194.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,194.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,194.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,198.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,198.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,198.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,198.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,199.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,199.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,199.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,199.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,200.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,200.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,200.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,200.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,201.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,201.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,201.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,201.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,202.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,202.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,202.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,202.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,203.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,203.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,203.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,203.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,204.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,204.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,204.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,204.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,205.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,205.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,205.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,205.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,206.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,206.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,206.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,206.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,207.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,207.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,207.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,207.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,2.0
+insufficient_bhar_data,T=120: short_post_window,daily_bhar,4.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,4.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,5.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,6.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,7.0
 model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,9.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,25.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,25.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,25.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,25.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,25.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,30.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,30.0
 model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,34.0
 model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,35.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,39.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,42.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,43.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,45.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,48.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,49.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,50.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,51.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,53.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,54.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,57.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,39.0
+insufficient_bhar_data,T=60: too_few_valid_returns,daily_bhar,39.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,42.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,42.0
+insufficient_bhar_data,T=120: too_few_valid_returns,daily_bhar,42.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,42.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,43.0
+insufficient_bhar_data,T=60: too_few_valid_returns,daily_bhar,43.0
+insufficient_bhar_data,T=120: too_few_valid_returns,daily_bhar,43.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,45.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,45.0
+insufficient_bhar_data,T=120: too_few_valid_returns,daily_bhar,45.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,45.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,48.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,48.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,48.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,48.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,49.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,49.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,49.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,49.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,50.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,50.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,50.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,50.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,51.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,51.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,51.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,51.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,53.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,53.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,53.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,53.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,54.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,54.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,54.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,54.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,57.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,57.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,57.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,57.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,58.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,59.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,60.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,61.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,64.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,65.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,58.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,58.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,58.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,59.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,59.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,59.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,59.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,60.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,60.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,60.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,60.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,61.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,61.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,61.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,61.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,64.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,64.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,64.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,64.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,65.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,65.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,65.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,65.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,67.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,67.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,67.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,67.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,68.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,68.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,68.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,68.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,71.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,71.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,71.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,71.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,72.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,72.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,72.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,72.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,74.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,74.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,74.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,74.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,75.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,75.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,75.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,75.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,77.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,77.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,77.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,77.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,78.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,78.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,78.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,78.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,79.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,79.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,79.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,79.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,80.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,80.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,80.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,80.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,81.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,81.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,81.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,81.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,82.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,82.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,82.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,82.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,83.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,83.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,83.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,83.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,84.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,84.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,84.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,84.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,91.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,91.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,91.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,91.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,92.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,92.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,92.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,92.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,93.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,93.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,93.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,93.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,95.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,95.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,95.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,95.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,96.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,96.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,96.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,96.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,97.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,97.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,97.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,97.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,99.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,99.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,99.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,99.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,100.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,100.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,100.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,100.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,109.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,109.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,109.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,109.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,111.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,111.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,111.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,111.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,112.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,112.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,112.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,112.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,115.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,115.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,115.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,115.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,116.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,116.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,116.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,116.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,117.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,117.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,117.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,117.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,118.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,118.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,118.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,118.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,119.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,119.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,119.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,119.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,120.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,120.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,120.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,120.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,121.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,121.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,121.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,121.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,123.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,123.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,123.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,123.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,130.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,130.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,130.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,130.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,138.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,138.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,138.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,138.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,142.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,142.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,142.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,142.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,143.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,143.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,143.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,143.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,145.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,145.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,145.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,145.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,146.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,146.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,146.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,146.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,147.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,147.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,147.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,147.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,149.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,149.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,149.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,149.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,150.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,150.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,150.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,150.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,151.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,151.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,151.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,151.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,153.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,153.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,153.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,153.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,154.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,154.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,154.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,154.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,155.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,155.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,155.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,155.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,156.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,156.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,156.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,156.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,157.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,157.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,157.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,157.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,158.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,158.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,158.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,158.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,160.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,160.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,160.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,160.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,161.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,161.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,161.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,161.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,162.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,162.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,162.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,162.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,163.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,163.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,163.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,163.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,167.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,167.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,167.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,167.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,169.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,169.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,169.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,169.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,170.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,170.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,170.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,170.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,171.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,171.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,171.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,171.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,172.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,172.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,172.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,172.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,174.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,174.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,174.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,174.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,175.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,175.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,175.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,175.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,176.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,176.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,176.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,176.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,177.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,177.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,177.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,177.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,178.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,178.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,178.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,178.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,181.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,181.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,181.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,181.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,182.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,182.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,182.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,182.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,183.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,183.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,183.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,183.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,184.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,184.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,184.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,184.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,185.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,185.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,185.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,185.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,186.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,186.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,186.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,186.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,187.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,187.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,187.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,187.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,188.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,188.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,188.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,188.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,189.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,189.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,189.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,189.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,191.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,191.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,191.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,191.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,192.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,192.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,192.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,192.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,193.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,193.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,193.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,193.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,194.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,194.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,194.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,194.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,198.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,198.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,198.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,198.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,199.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,199.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,199.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,199.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,200.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,200.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,200.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,200.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,201.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,201.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,201.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,201.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,202.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,202.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,202.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,202.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,203.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,203.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,203.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,203.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,204.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,204.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,204.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,204.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,205.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,205.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,205.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,205.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,206.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,206.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,206.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,206.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,207.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,207.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,207.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,207.0
+insufficient_bhar_data,T=120: short_post_window,daily_bhar,2.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,2.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,3.0
+insufficient_bhar_data,T=120: short_post_window,daily_bhar,4.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,4.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,5.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,7.0
+insufficient_bhar_data,T=120: short_post_window,daily_bhar,10.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,10.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,19.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,22.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,28.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,29.0
@@ -326,52 +1295,139 @@ missing_completion_coverage,No daily panel contains the completion date for re-a
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,31.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,32.0
 model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,33.0
+insufficient_bhar_data,T=60: short_post_window,daily_bhar,34.0
+insufficient_bhar_data,T=120: short_post_window,daily_bhar,34.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,34.0
 model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,35.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,36.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,37.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,38.0
 model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,39.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,39.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,40.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,42.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,43.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,42.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,42.0
+insufficient_bhar_data,T=120: too_few_valid_returns,daily_bhar,42.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,42.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,43.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,43.0
+insufficient_bhar_data,T=120: too_few_valid_returns,daily_bhar,43.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,44.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,45.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,45.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,45.0
+insufficient_bhar_data,T=120: too_few_valid_returns,daily_bhar,45.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,45.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,46.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,47.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,48.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,49.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,50.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,51.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,48.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,48.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,48.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,48.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,49.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,49.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,49.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,49.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,50.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,50.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,50.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,50.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,51.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,51.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,51.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,51.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,52.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,53.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,54.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,53.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,53.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,53.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,53.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,54.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,54.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,54.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,54.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,55.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,56.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,57.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,57.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,57.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,57.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,57.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,58.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,59.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,60.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,61.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,58.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,58.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,58.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,59.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,59.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,59.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,59.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,60.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,60.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,60.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,60.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,61.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,61.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,61.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,61.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,62.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,63.0
-model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,64.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,64.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,64.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,64.0
+insufficient_bhar_data,T=250: too_few_valid_returns,daily_bhar,64.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,65.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,65.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,65.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,65.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,66.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,67.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,67.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,67.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,67.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,68.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,68.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,68.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,68.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,69.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,70.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,71.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,71.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,71.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,71.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,72.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,72.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,72.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,72.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,73.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,74.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,74.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,74.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,74.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,75.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,75.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,75.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,75.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,77.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,77.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,77.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,77.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,78.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,78.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,78.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,78.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,79.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,79.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,79.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,79.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,80.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,80.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,80.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,80.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,81.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,81.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,81.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,81.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,82.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,82.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,82.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,82.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,85.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,86.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,87.0
@@ -379,14 +1435,35 @@ missing_completion_coverage,No daily panel contains the completion date for re-a
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,89.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,90.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,91.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,91.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,91.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,91.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,93.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,93.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,93.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,93.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,94.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,95.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,95.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,95.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,95.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,96.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,96.0
+insufficient_bhar_data,T=120: short_post_window,daily_bhar,96.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,96.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,97.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,97.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,97.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,97.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,98.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,99.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,99.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,99.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,99.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,100.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,100.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,100.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,100.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,101.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,103.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,104.0
@@ -395,17 +1472,41 @@ missing_completion_coverage,No daily panel contains the completion date for re-a
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,107.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,108.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,109.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,109.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,109.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,109.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,110.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,111.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,111.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,111.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,111.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,112.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,112.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,112.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,112.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,113.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,114.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,115.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,115.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,115.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,115.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,116.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,116.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,116.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,116.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,117.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,117.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,117.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,117.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,121.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,121.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,121.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,121.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,122.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,123.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,123.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,123.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,123.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,124.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,125.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,126.0
@@ -416,55 +1517,556 @@ missing_completion_coverage,No daily panel contains the completion date for re-a
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,137.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,141.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,142.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,142.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,142.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,142.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,143.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,143.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,143.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,143.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,145.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,145.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,145.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,145.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,146.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,146.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,146.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,146.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,147.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,147.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,147.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,147.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,149.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,149.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,149.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,149.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,151.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,151.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,151.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,151.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,154.0
+insufficient_bhar_data,T=60: short_post_window,daily_bhar,154.0
+insufficient_bhar_data,T=120: short_post_window,daily_bhar,154.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,154.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,155.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,155.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,155.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,155.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,156.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,156.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,156.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,156.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,157.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,157.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,157.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,157.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,158.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,158.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,158.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,158.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,159.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,160.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,161.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,161.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,161.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,161.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,162.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,162.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,162.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,162.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,163.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,163.0
+insufficient_bhar_data,T=120: short_post_window,daily_bhar,163.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,163.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,165.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,166.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,168.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,169.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,169.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,169.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,169.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,170.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,170.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,170.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,170.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,171.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,171.0
+insufficient_bhar_data,T=120: short_post_window,daily_bhar,171.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,171.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,172.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,172.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,172.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,172.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,173.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,176.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,176.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,176.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,176.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,177.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,177.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,177.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,177.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,178.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,178.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,178.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,178.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,179.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,180.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,181.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,181.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,181.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,181.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,182.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,182.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,182.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,182.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,185.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,185.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,185.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,185.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,186.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,186.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,186.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,186.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,187.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,187.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,187.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,187.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,189.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,189.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,189.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,189.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,190.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,191.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,191.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,191.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,191.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,192.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,192.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,192.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,192.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,194.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,194.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,194.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,194.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,195.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,196.0
 missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,197.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,198.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,198.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,198.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,198.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,200.0
+insufficient_bhar_data,T=60: short_post_window,daily_bhar,200.0
+insufficient_bhar_data,T=120: short_post_window,daily_bhar,200.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,200.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,202.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,202.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,202.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,202.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,203.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,203.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,203.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,203.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,204.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,204.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,204.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,204.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,205.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,205.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,205.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,205.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,206.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,206.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,206.0
+insufficient_bhar_data,T=250: missing_benchmark,daily_bhar,206.0
 model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,207.0
+insufficient_bhar_data,T=60: missing_benchmark,daily_bhar,207.0
+insufficient_bhar_data,T=120: missing_benchmark,daily_bhar,207.0
+insufficient_bhar_data,T=250: short_post_window,daily_bhar,207.0
 regression_skipped,announcement_bhar: no usable predictors,,
 regression_skipped,completion_bhar: no usable predictors,,
+insufficient_bhar_data,source_row=2 T=60: missing_stock_return; valid_pairs=0; max_t=167; min_fraction=0.75; min_tail=0,announcement_daily,2.0
+insufficient_bhar_data,source_row=2 T=120: missing_stock_return; valid_pairs=0; max_t=167; min_fraction=0.75; min_tail=0,announcement_daily,2.0
+insufficient_bhar_data,source_row=2 T=250: short_post_window; valid_pairs=0; max_t=167; min_fraction=0.75; min_tail=0,announcement_daily,2.0
+insufficient_bhar_data,source_row=4 T=60: missing_stock_return; valid_pairs=0; max_t=113; min_fraction=0.75; min_tail=0,announcement_daily,4.0
+insufficient_bhar_data,source_row=4 T=120: short_post_window; valid_pairs=0; max_t=113; min_fraction=0.75; min_tail=0,announcement_daily,4.0
+insufficient_bhar_data,source_row=4 T=250: short_post_window; valid_pairs=0; max_t=113; min_fraction=0.75; min_tail=0,announcement_daily,4.0
+insufficient_bhar_data,source_row=5 T=60: missing_stock_return; valid_pairs=0; max_t=201; min_fraction=0.75; min_tail=0,announcement_daily,5.0
+insufficient_bhar_data,source_row=5 T=120: missing_stock_return; valid_pairs=0; max_t=201; min_fraction=0.75; min_tail=0,announcement_daily,5.0
+insufficient_bhar_data,source_row=5 T=250: short_post_window; valid_pairs=0; max_t=201; min_fraction=0.75; min_tail=0,announcement_daily,5.0
+insufficient_bhar_data,source_row=6 T=60: missing_stock_return; valid_pairs=0; max_t=227; min_fraction=0.75; min_tail=0,announcement_daily,6.0
+insufficient_bhar_data,source_row=6 T=120: missing_stock_return; valid_pairs=0; max_t=227; min_fraction=0.75; min_tail=0,announcement_daily,6.0
+insufficient_bhar_data,source_row=6 T=250: short_post_window; valid_pairs=0; max_t=227; min_fraction=0.75; min_tail=0,announcement_daily,6.0
+insufficient_bhar_data,source_row=7 T=60: missing_stock_return; valid_pairs=0; max_t=181; min_fraction=0.75; min_tail=0,announcement_daily,7.0
+insufficient_bhar_data,source_row=7 T=120: missing_stock_return; valid_pairs=0; max_t=181; min_fraction=0.75; min_tail=0,announcement_daily,7.0
+insufficient_bhar_data,source_row=7 T=250: short_post_window; valid_pairs=0; max_t=181; min_fraction=0.75; min_tail=0,announcement_daily,7.0
+insufficient_bhar_data,source_row=8 T=60: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,8.0
+insufficient_bhar_data,source_row=8 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,8.0
+insufficient_bhar_data,source_row=8 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,8.0
+insufficient_bhar_data,source_row=9 T=60: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,9.0
+insufficient_bhar_data,source_row=9 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,9.0
+insufficient_bhar_data,source_row=9 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,9.0
+insufficient_bhar_data,source_row=10 T=60: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,10.0
+insufficient_bhar_data,source_row=10 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,10.0
+insufficient_bhar_data,source_row=10 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,10.0
+insufficient_bhar_data,source_row=15 T=60: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,15.0
+insufficient_bhar_data,source_row=15 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,15.0
+insufficient_bhar_data,source_row=15 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,15.0
+insufficient_bhar_data,source_row=16 T=60: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,16.0
+insufficient_bhar_data,source_row=16 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,16.0
+insufficient_bhar_data,source_row=16 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,16.0
+insufficient_bhar_data,source_row=17 T=60: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,17.0
+insufficient_bhar_data,source_row=17 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,17.0
+insufficient_bhar_data,source_row=17 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,17.0
+insufficient_bhar_data,source_row=18 T=60: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,18.0
+insufficient_bhar_data,source_row=18 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,18.0
+insufficient_bhar_data,source_row=18 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,18.0
+insufficient_bhar_data,source_row=19 T=60: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,19.0
+insufficient_bhar_data,source_row=19 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,19.0
+insufficient_bhar_data,source_row=19 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,19.0
+insufficient_bhar_data,source_row=20 T=60: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,20.0
+insufficient_bhar_data,source_row=20 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,20.0
+insufficient_bhar_data,source_row=20 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,20.0
+insufficient_bhar_data,source_row=23 T=60: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,23.0
+insufficient_bhar_data,source_row=23 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,23.0
+insufficient_bhar_data,source_row=23 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,23.0
+insufficient_bhar_data,source_row=24 T=60: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,24.0
+insufficient_bhar_data,source_row=24 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,24.0
+insufficient_bhar_data,source_row=24 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,24.0
+insufficient_bhar_data,source_row=25 T=60: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,25.0
+insufficient_bhar_data,source_row=25 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,25.0
+insufficient_bhar_data,source_row=25 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,25.0
+insufficient_bhar_data,source_row=26 T=60: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,26.0
+insufficient_bhar_data,source_row=26 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,26.0
+insufficient_bhar_data,source_row=26 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,26.0
+insufficient_bhar_data,source_row=27 T=60: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,27.0
+insufficient_bhar_data,source_row=27 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,27.0
+insufficient_bhar_data,source_row=27 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,27.0
+insufficient_bhar_data,source_row=28 T=60: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,28.0
+insufficient_bhar_data,source_row=28 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,28.0
+insufficient_bhar_data,source_row=28 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,28.0
+insufficient_bhar_data,source_row=30 T=60: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,30.0
+insufficient_bhar_data,source_row=30 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,30.0
+insufficient_bhar_data,source_row=30 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,30.0
+insufficient_bhar_data,source_row=33 T=60: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,33.0
+insufficient_bhar_data,source_row=33 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,33.0
+insufficient_bhar_data,source_row=33 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,33.0
+insufficient_bhar_data,source_row=34 T=60: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,34.0
+insufficient_bhar_data,source_row=34 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,34.0
+insufficient_bhar_data,source_row=34 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,34.0
+insufficient_bhar_data,source_row=35 T=60: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,35.0
+insufficient_bhar_data,source_row=35 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,35.0
+insufficient_bhar_data,source_row=35 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,35.0
+insufficient_bhar_data,source_row=36 T=60: missing_stock_return; valid_pairs=0; max_t=69; min_fraction=0.75; min_tail=0,announcement_daily,36.0
+insufficient_bhar_data,source_row=36 T=120: short_post_window; valid_pairs=0; max_t=69; min_fraction=0.75; min_tail=0,announcement_daily,36.0
+insufficient_bhar_data,source_row=36 T=250: short_post_window; valid_pairs=0; max_t=69; min_fraction=0.75; min_tail=0,announcement_daily,36.0
+insufficient_bhar_data,source_row=39 T=60: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,39.0
+insufficient_bhar_data,source_row=39 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,39.0
+insufficient_bhar_data,source_row=39 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,39.0
+insufficient_bhar_data,source_row=42 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,42.0
+insufficient_bhar_data,source_row=42 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,42.0
+insufficient_bhar_data,source_row=42 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,42.0
+insufficient_bhar_data,source_row=43 T=60: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,43.0
+insufficient_bhar_data,source_row=43 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,43.0
+insufficient_bhar_data,source_row=43 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,43.0
+insufficient_bhar_data,source_row=45 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,45.0
+insufficient_bhar_data,source_row=45 T=120: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,45.0
+insufficient_bhar_data,source_row=45 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,45.0
+insufficient_bhar_data,source_row=48 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,48.0
+insufficient_bhar_data,source_row=48 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,48.0
+insufficient_bhar_data,source_row=48 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,48.0
+insufficient_bhar_data,source_row=49 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,49.0
+insufficient_bhar_data,source_row=49 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,49.0
+insufficient_bhar_data,source_row=49 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,49.0
+insufficient_bhar_data,source_row=50 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,50.0
+insufficient_bhar_data,source_row=50 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,50.0
+insufficient_bhar_data,source_row=50 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,50.0
+insufficient_bhar_data,source_row=51 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,51.0
+insufficient_bhar_data,source_row=51 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,51.0
+insufficient_bhar_data,source_row=51 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,51.0
+insufficient_bhar_data,source_row=53 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,53.0
+insufficient_bhar_data,source_row=53 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,53.0
+insufficient_bhar_data,source_row=53 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,53.0
+insufficient_bhar_data,source_row=54 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,54.0
+insufficient_bhar_data,source_row=54 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,54.0
+insufficient_bhar_data,source_row=54 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,54.0
+insufficient_bhar_data,source_row=57 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,57.0
+insufficient_bhar_data,source_row=57 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,57.0
+insufficient_bhar_data,source_row=57 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,57.0
+insufficient_bhar_data,source_row=58 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,58.0
+insufficient_bhar_data,source_row=58 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,58.0
+insufficient_bhar_data,source_row=58 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,58.0
+insufficient_bhar_data,source_row=59 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,59.0
+insufficient_bhar_data,source_row=59 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,59.0
+insufficient_bhar_data,source_row=59 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,59.0
+insufficient_bhar_data,source_row=60 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,60.0
+insufficient_bhar_data,source_row=60 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,60.0
+insufficient_bhar_data,source_row=60 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,60.0
+insufficient_bhar_data,source_row=61 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,61.0
+insufficient_bhar_data,source_row=61 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,61.0
+insufficient_bhar_data,source_row=61 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,61.0
+insufficient_bhar_data,source_row=64 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,64.0
+insufficient_bhar_data,source_row=64 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,64.0
+insufficient_bhar_data,source_row=64 T=250: missing_stock_return; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,64.0
+insufficient_bhar_data,source_row=65 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,65.0
+insufficient_bhar_data,source_row=65 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,65.0
+insufficient_bhar_data,source_row=65 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,65.0
+insufficient_bhar_data,source_row=67 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,67.0
+insufficient_bhar_data,source_row=67 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,67.0
+insufficient_bhar_data,source_row=67 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,67.0
+insufficient_bhar_data,source_row=68 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,68.0
+insufficient_bhar_data,source_row=68 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,68.0
+insufficient_bhar_data,source_row=68 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,68.0
+insufficient_bhar_data,source_row=71 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,71.0
+insufficient_bhar_data,source_row=71 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,71.0
+insufficient_bhar_data,source_row=71 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,71.0
+insufficient_bhar_data,source_row=72 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,72.0
+insufficient_bhar_data,source_row=72 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,72.0
+insufficient_bhar_data,source_row=72 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,72.0
+insufficient_bhar_data,source_row=74 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,74.0
+insufficient_bhar_data,source_row=74 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,74.0
+insufficient_bhar_data,source_row=74 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,74.0
+insufficient_bhar_data,source_row=75 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,75.0
+insufficient_bhar_data,source_row=75 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,75.0
+insufficient_bhar_data,source_row=75 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,75.0
+insufficient_bhar_data,source_row=77 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,77.0
+insufficient_bhar_data,source_row=77 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,77.0
+insufficient_bhar_data,source_row=77 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,77.0
+insufficient_bhar_data,source_row=78 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,78.0
+insufficient_bhar_data,source_row=78 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,78.0
+insufficient_bhar_data,source_row=78 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,78.0
+insufficient_bhar_data,source_row=79 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,79.0
+insufficient_bhar_data,source_row=79 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,79.0
+insufficient_bhar_data,source_row=79 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,79.0
+insufficient_bhar_data,source_row=80 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,80.0
+insufficient_bhar_data,source_row=80 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,80.0
+insufficient_bhar_data,source_row=80 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,80.0
+insufficient_bhar_data,source_row=81 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,81.0
+insufficient_bhar_data,source_row=81 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,81.0
+insufficient_bhar_data,source_row=81 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,81.0
+insufficient_bhar_data,source_row=82 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,82.0
+insufficient_bhar_data,source_row=82 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,82.0
+insufficient_bhar_data,source_row=82 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,82.0
+insufficient_bhar_data,source_row=83 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,83.0
+insufficient_bhar_data,source_row=83 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,83.0
+insufficient_bhar_data,source_row=83 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,83.0
+insufficient_bhar_data,source_row=84 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,84.0
+insufficient_bhar_data,source_row=84 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,84.0
+insufficient_bhar_data,source_row=84 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,84.0
+insufficient_bhar_data,source_row=91 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,91.0
+insufficient_bhar_data,source_row=91 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,91.0
+insufficient_bhar_data,source_row=91 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,91.0
+insufficient_bhar_data,source_row=92 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,92.0
+insufficient_bhar_data,source_row=92 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,92.0
+insufficient_bhar_data,source_row=92 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,92.0
+insufficient_bhar_data,source_row=93 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,93.0
+insufficient_bhar_data,source_row=93 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,93.0
+insufficient_bhar_data,source_row=93 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,93.0
+insufficient_bhar_data,source_row=95 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,95.0
+insufficient_bhar_data,source_row=95 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,95.0
+insufficient_bhar_data,source_row=95 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,95.0
+insufficient_bhar_data,source_row=96 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,96.0
+insufficient_bhar_data,source_row=96 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,96.0
+insufficient_bhar_data,source_row=96 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,96.0
+insufficient_bhar_data,source_row=97 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,97.0
+insufficient_bhar_data,source_row=97 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,97.0
+insufficient_bhar_data,source_row=97 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,97.0
+insufficient_bhar_data,source_row=99 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,99.0
+insufficient_bhar_data,source_row=99 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,99.0
+insufficient_bhar_data,source_row=99 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,99.0
+insufficient_bhar_data,source_row=100 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,100.0
+insufficient_bhar_data,source_row=100 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,100.0
+insufficient_bhar_data,source_row=100 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,100.0
+insufficient_bhar_data,source_row=109 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,109.0
+insufficient_bhar_data,source_row=109 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,109.0
+insufficient_bhar_data,source_row=109 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,109.0
+insufficient_bhar_data,source_row=111 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,111.0
+insufficient_bhar_data,source_row=111 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,111.0
+insufficient_bhar_data,source_row=111 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,111.0
+insufficient_bhar_data,source_row=112 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,112.0
+insufficient_bhar_data,source_row=112 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,112.0
+insufficient_bhar_data,source_row=112 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,112.0
+insufficient_bhar_data,source_row=115 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,115.0
+insufficient_bhar_data,source_row=115 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,115.0
+insufficient_bhar_data,source_row=115 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,115.0
+insufficient_bhar_data,source_row=116 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,116.0
+insufficient_bhar_data,source_row=116 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,116.0
+insufficient_bhar_data,source_row=116 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,116.0
+insufficient_bhar_data,source_row=117 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,117.0
+insufficient_bhar_data,source_row=117 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,117.0
+insufficient_bhar_data,source_row=117 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,117.0
+insufficient_bhar_data,source_row=118 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,118.0
+insufficient_bhar_data,source_row=118 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,118.0
+insufficient_bhar_data,source_row=118 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,118.0
+insufficient_bhar_data,source_row=119 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,119.0
+insufficient_bhar_data,source_row=119 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,119.0
+insufficient_bhar_data,source_row=119 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,119.0
+insufficient_bhar_data,source_row=120 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,120.0
+insufficient_bhar_data,source_row=120 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,120.0
+insufficient_bhar_data,source_row=120 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,120.0
+insufficient_bhar_data,source_row=121 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,121.0
+insufficient_bhar_data,source_row=121 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,121.0
+insufficient_bhar_data,source_row=121 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,121.0
+insufficient_bhar_data,source_row=123 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,123.0
+insufficient_bhar_data,source_row=123 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,123.0
+insufficient_bhar_data,source_row=123 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,123.0
+insufficient_bhar_data,source_row=130 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,130.0
+insufficient_bhar_data,source_row=130 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,130.0
+insufficient_bhar_data,source_row=130 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,130.0
+insufficient_bhar_data,source_row=138 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,138.0
+insufficient_bhar_data,source_row=138 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,138.0
+insufficient_bhar_data,source_row=138 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,138.0
+insufficient_bhar_data,source_row=142 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,142.0
+insufficient_bhar_data,source_row=142 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,142.0
+insufficient_bhar_data,source_row=142 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,142.0
+insufficient_bhar_data,source_row=143 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,143.0
+insufficient_bhar_data,source_row=143 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,143.0
+insufficient_bhar_data,source_row=143 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,143.0
+insufficient_bhar_data,source_row=145 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,145.0
+insufficient_bhar_data,source_row=145 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,145.0
+insufficient_bhar_data,source_row=145 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,145.0
+insufficient_bhar_data,source_row=146 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,146.0
+insufficient_bhar_data,source_row=146 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,146.0
+insufficient_bhar_data,source_row=146 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,146.0
+insufficient_bhar_data,source_row=147 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,147.0
+insufficient_bhar_data,source_row=147 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,147.0
+insufficient_bhar_data,source_row=147 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,147.0
+insufficient_bhar_data,source_row=149 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,149.0
+insufficient_bhar_data,source_row=149 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,149.0
+insufficient_bhar_data,source_row=149 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,149.0
+insufficient_bhar_data,source_row=150 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,150.0
+insufficient_bhar_data,source_row=150 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,150.0
+insufficient_bhar_data,source_row=150 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,150.0
+insufficient_bhar_data,source_row=151 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,151.0
+insufficient_bhar_data,source_row=151 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,151.0
+insufficient_bhar_data,source_row=151 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,151.0
+insufficient_bhar_data,source_row=153 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,153.0
+insufficient_bhar_data,source_row=153 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,153.0
+insufficient_bhar_data,source_row=153 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,153.0
+insufficient_bhar_data,source_row=154 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,154.0
+insufficient_bhar_data,source_row=154 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,154.0
+insufficient_bhar_data,source_row=154 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,154.0
+insufficient_bhar_data,source_row=155 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,155.0
+insufficient_bhar_data,source_row=155 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,155.0
+insufficient_bhar_data,source_row=155 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,155.0
+insufficient_bhar_data,source_row=156 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,156.0
+insufficient_bhar_data,source_row=156 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,156.0
+insufficient_bhar_data,source_row=156 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,156.0
+insufficient_bhar_data,source_row=157 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,157.0
+insufficient_bhar_data,source_row=157 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,157.0
+insufficient_bhar_data,source_row=157 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,157.0
+insufficient_bhar_data,source_row=158 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,158.0
+insufficient_bhar_data,source_row=158 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,158.0
+insufficient_bhar_data,source_row=158 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,158.0
+insufficient_bhar_data,source_row=160 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,160.0
+insufficient_bhar_data,source_row=160 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,160.0
+insufficient_bhar_data,source_row=160 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,160.0
+insufficient_bhar_data,source_row=161 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,161.0
+insufficient_bhar_data,source_row=161 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,161.0
+insufficient_bhar_data,source_row=161 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,161.0
+insufficient_bhar_data,source_row=162 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,162.0
+insufficient_bhar_data,source_row=162 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,162.0
+insufficient_bhar_data,source_row=162 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,162.0
+insufficient_bhar_data,source_row=163 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,163.0
+insufficient_bhar_data,source_row=163 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,163.0
+insufficient_bhar_data,source_row=163 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,163.0
+insufficient_bhar_data,source_row=167 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,167.0
+insufficient_bhar_data,source_row=167 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,167.0
+insufficient_bhar_data,source_row=167 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,167.0
+insufficient_bhar_data,source_row=169 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,169.0
+insufficient_bhar_data,source_row=169 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,169.0
+insufficient_bhar_data,source_row=169 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,169.0
+insufficient_bhar_data,source_row=170 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,170.0
+insufficient_bhar_data,source_row=170 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,170.0
+insufficient_bhar_data,source_row=170 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,170.0
+insufficient_bhar_data,source_row=171 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,171.0
+insufficient_bhar_data,source_row=171 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,171.0
+insufficient_bhar_data,source_row=171 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,171.0
+insufficient_bhar_data,source_row=172 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,172.0
+insufficient_bhar_data,source_row=172 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,172.0
+insufficient_bhar_data,source_row=172 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,172.0
+insufficient_bhar_data,source_row=174 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,174.0
+insufficient_bhar_data,source_row=174 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,174.0
+insufficient_bhar_data,source_row=174 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,174.0
+insufficient_bhar_data,source_row=175 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,175.0
+insufficient_bhar_data,source_row=175 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,175.0
+insufficient_bhar_data,source_row=175 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,175.0
+insufficient_bhar_data,source_row=176 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,176.0
+insufficient_bhar_data,source_row=176 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,176.0
+insufficient_bhar_data,source_row=176 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,176.0
+insufficient_bhar_data,source_row=177 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,177.0
+insufficient_bhar_data,source_row=177 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,177.0
+insufficient_bhar_data,source_row=177 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,177.0
+insufficient_bhar_data,source_row=178 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,178.0
+insufficient_bhar_data,source_row=178 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,178.0
+insufficient_bhar_data,source_row=178 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,178.0
+insufficient_bhar_data,source_row=181 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,181.0
+insufficient_bhar_data,source_row=181 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,181.0
+insufficient_bhar_data,source_row=181 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,181.0
+insufficient_bhar_data,source_row=182 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,182.0
+insufficient_bhar_data,source_row=182 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,182.0
+insufficient_bhar_data,source_row=182 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,182.0
+insufficient_bhar_data,source_row=183 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,183.0
+insufficient_bhar_data,source_row=183 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,183.0
+insufficient_bhar_data,source_row=183 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,183.0
+insufficient_bhar_data,source_row=184 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,184.0
+insufficient_bhar_data,source_row=184 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,184.0
+insufficient_bhar_data,source_row=184 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,184.0
+insufficient_bhar_data,source_row=185 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,185.0
+insufficient_bhar_data,source_row=185 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,185.0
+insufficient_bhar_data,source_row=185 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,185.0
+insufficient_bhar_data,source_row=186 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,186.0
+insufficient_bhar_data,source_row=186 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,186.0
+insufficient_bhar_data,source_row=186 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,186.0
+insufficient_bhar_data,source_row=187 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,187.0
+insufficient_bhar_data,source_row=187 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,187.0
+insufficient_bhar_data,source_row=187 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,187.0
+insufficient_bhar_data,source_row=188 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,188.0
+insufficient_bhar_data,source_row=188 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,188.0
+insufficient_bhar_data,source_row=188 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,188.0
+insufficient_bhar_data,source_row=189 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,189.0
+insufficient_bhar_data,source_row=189 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,189.0
+insufficient_bhar_data,source_row=189 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,189.0
+insufficient_bhar_data,source_row=191 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,191.0
+insufficient_bhar_data,source_row=191 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,191.0
+insufficient_bhar_data,source_row=191 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,191.0
+insufficient_bhar_data,source_row=192 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,192.0
+insufficient_bhar_data,source_row=192 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,192.0
+insufficient_bhar_data,source_row=192 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,192.0
+insufficient_bhar_data,source_row=193 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,193.0
+insufficient_bhar_data,source_row=193 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,193.0
+insufficient_bhar_data,source_row=193 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,193.0
+insufficient_bhar_data,source_row=194 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,194.0
+insufficient_bhar_data,source_row=194 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,194.0
+insufficient_bhar_data,source_row=194 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,194.0
+insufficient_bhar_data,source_row=198 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,198.0
+insufficient_bhar_data,source_row=198 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,198.0
+insufficient_bhar_data,source_row=198 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,198.0
+insufficient_bhar_data,source_row=199 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,199.0
+insufficient_bhar_data,source_row=199 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,199.0
+insufficient_bhar_data,source_row=199 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,199.0
+insufficient_bhar_data,source_row=200 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,200.0
+insufficient_bhar_data,source_row=200 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,200.0
+insufficient_bhar_data,source_row=200 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,200.0
+insufficient_bhar_data,source_row=201 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,201.0
+insufficient_bhar_data,source_row=201 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,201.0
+insufficient_bhar_data,source_row=201 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,201.0
+insufficient_bhar_data,source_row=202 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,202.0
+insufficient_bhar_data,source_row=202 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,202.0
+insufficient_bhar_data,source_row=202 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,202.0
+insufficient_bhar_data,source_row=203 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,203.0
+insufficient_bhar_data,source_row=203 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,203.0
+insufficient_bhar_data,source_row=203 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,203.0
+insufficient_bhar_data,source_row=204 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,204.0
+insufficient_bhar_data,source_row=204 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,204.0
+insufficient_bhar_data,source_row=204 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,204.0
+insufficient_bhar_data,source_row=205 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,205.0
+insufficient_bhar_data,source_row=205 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,205.0
+insufficient_bhar_data,source_row=205 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,205.0
+insufficient_bhar_data,source_row=206 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,206.0
+insufficient_bhar_data,source_row=206 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,206.0
+insufficient_bhar_data,source_row=206 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,206.0
+insufficient_bhar_data,source_row=207 T=60: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,207.0
+insufficient_bhar_data,source_row=207 T=120: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,207.0
+insufficient_bhar_data,source_row=207 T=250: missing_benchmark; valid_pairs=0; max_t=250; min_fraction=0.75; min_tail=0,announcement_daily,207.0

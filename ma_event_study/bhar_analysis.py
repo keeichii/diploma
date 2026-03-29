@@ -1,6 +1,11 @@
 """
 BHAR на горизонтах 60/120/250 торговых дней после T=0 (без look-ahead).
 Записывает предупреждения insufficient_bhar_data и доп. колонки для enrich.
+
+NOTE:
+`ma_thesis_pipeline` is the canonical BHAR engine used in enriched outputs.
+This module is kept as an auxiliary/diagnostic exporter (`out/bhar_by_deal_ann.csv`)
+to audit announcement-only BHAR coverage and failure reasons.
 """
 from __future__ import annotations
 
@@ -16,7 +21,9 @@ from .paths import OUT_DIR, THESIS_TABLES_DIR, ensure_clean_dirs
 logger = logging.getLogger("ma_event_study")
 
 BHAR_HORIZONS = (60, 120, 250)
-MIN_TAIL = 10
+# Smaller tail requirement improves realistic coverage while avoiding look-ahead.
+MIN_TAIL = 0
+MIN_FRACTION_VALID = 0.75
 
 
 def _norm_stub(df: pd.DataFrame) -> pd.DataFrame:
@@ -32,19 +39,32 @@ def _norm_stub(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def _benchmark_col(df: pd.DataFrame) -> str | None:
-    for c in df.columns:
-        cl = str(c).lower()
+    cols = [str(c) for c in df.columns]
+    # 1) strict IMOEX match
+    for c in cols:
+        cl = c.lower()
         if "imoex" in cl and "off_market" not in cl:
             return c
+    # 2) fallback: index/benchmark-like continuous price
+    for c in cols:
+        cl = c.lower()
+        if any(k in cl for k in ["benchmark", "index", "индекс"]) and "off_market" not in cl:
+            s = pd.to_numeric(df[c], errors="coerce")
+            if s.notna().sum() > 50 and s.dropna().nunique() > 20:
+                return c
     return None
 
 
 def _pick_px(df: pd.DataFrame) -> str:
-    for c in df.columns:
-        if "Adjusted Close" in str(c):
+    cols = [str(c) for c in df.columns]
+    for c in cols:
+        if "adjusted close" in c.lower():
             return c
-    for c in df.columns:
-        if str(c).startswith("Close"):
+    for c in cols:
+        if c.lower().startswith("close"):
+            return c
+    for c in cols:
+        if "close" in c.lower():
             return c
     raise ValueError("No price col")
 
@@ -67,8 +87,8 @@ def compute_bhars_from_daily_table(announce_path: Path) -> tuple[pd.DataFrame, l
     raw["t"] = pd.to_numeric(raw.get("t"), errors="coerce")
     raw["px"] = pd.to_numeric(raw[px], errors="coerce")
     raw["bm"] = pd.to_numeric(raw[bx], errors="coerce")
-    raw["Ri"] = raw.groupby("source_row_excel", sort=False)["px"].pct_change()
-    raw["Rm"] = raw.groupby("source_row_excel", sort=False)["bm"].pct_change()
+    raw["Ri"] = raw.groupby("source_row_excel", sort=False)["px"].pct_change(fill_method=None)
+    raw["Rm"] = raw.groupby("source_row_excel", sort=False)["bm"].pct_change(fill_method=None)
 
     rows = []
     for sid, g in raw.groupby("source_row_excel", sort=True):
@@ -82,11 +102,16 @@ def compute_bhars_from_daily_table(announce_path: Path) -> tuple[pd.DataFrame, l
             sub = g2[["t", "Ri", "Rm"]].rename(
                 columns={"Ri": "stock_return_simple", "Rm": "benchmark_return_simple"}
             )
+            # diagnostics for explicit warnings
+            win = sub.loc[sub["t"].between(1, T)].drop_duplicates("t", keep="last")
+            valid_pairs = int((win["stock_return_simple"].notna() & win["benchmark_return_simple"].notna()).sum())
+            max_t = pd.to_numeric(sub["t"], errors="coerce").max()
             val, why = bhar_post_window(
                 sub,
                 ri_col="stock_return_simple",
                 rm_col="benchmark_return_simple",
                 horizon=T,
+                min_fraction_valid=MIN_FRACTION_VALID,
                 min_tail_beyond_horizon=MIN_TAIL,
             )
             rec[f"BHAR_ANN_{T}"] = val
@@ -94,10 +119,22 @@ def compute_bhars_from_daily_table(announce_path: Path) -> tuple[pd.DataFrame, l
                 warnings.append(
                     {
                         "category": "insufficient_bhar_data",
-                        "message": f"source_row={sid} T={T}: {why}",
+                        "message": (
+                            f"source_row={sid} T={T}: {why}; "
+                            f"valid_pairs={valid_pairs}; max_t={max_t}; "
+                            f"min_fraction={MIN_FRACTION_VALID}; min_tail={MIN_TAIL}"
+                        ),
                         "table_role": "announcement_daily",
                         "source_row_excel": sid,
                     }
+                )
+                logger.info(
+                    "BHAR_SKIP | source_row=%s | T=%s | why=%s | valid_pairs=%s | max_t=%s",
+                    sid,
+                    T,
+                    why,
+                    valid_pairs,
+                    max_t,
                 )
         rows.append(rec)
     return pd.DataFrame(rows), warnings

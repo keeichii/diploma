@@ -209,6 +209,9 @@ source_row_excel,table_role,mapping_status,panel_key_count
 25,actualization_daily,certain,1
 26,actualization_daily,certain,1
 27,actualization_daily,certain,1
+28,actualization_daily,certain,1
+30,actualization_daily,certain,1
+31,actualization_daily,certain,1
 33,actualization_daily,certain,1
 34,actualization_daily,certain,1
 35,actualization_daily,certain,1
@@ -243,6 +246,7 @@ source_row_excel,table_role,mapping_status,panel_key_count
 82,actualization_daily,certain,1
 83,actualization_daily,certain,1
 84,actualization_daily,certain,1
+90,actualization_daily,certain,1
 91,actualization_daily,certain,1
 92,actualization_daily,certain,1
 93,actualization_daily,certain,1
@@ -278,6 +282,7 @@ source_row_excel,table_role,mapping_status,panel_key_count
 156,actualization_daily,certain,1
 157,actualization_daily,certain,1
 158,actualization_daily,certain,1
+160,actualization_daily,certain,1
 161,actualization_daily,certain,1
 162,actualization_daily,certain,1
 163,actualization_daily,certain,1
@@ -333,6 +338,7 @@ source_row_excel,table_role,mapping_status,panel_key_count
 25,create_daily,certain,1
 26,create_daily,certain,1
 27,create_daily,certain,1
+30,create_daily,certain,1
 33,create_daily,certain,1
 34,create_daily,certain,1
 35,create_daily,certain,1
@@ -402,6 +408,7 @@ source_row_excel,table_role,mapping_status,panel_key_count
 156,create_daily,certain,1
 157,create_daily,certain,1
 158,create_daily,certain,1
+160,create_daily,certain,1
 161,create_daily,certain,1
 162,create_daily,certain,1
 163,create_daily,certain,1

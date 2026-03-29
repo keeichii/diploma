@@ -1525,9 +1525,11 @@ def build_table_2_generic(
         # Для daily-окон estimation (-daily_window_pre..+daily_window_post) нужен глубокий pre-history.
         # Берем запас по календарю как ~1.5 * требуемого числа торговых дней + небольшой буфер DAILY_FETCH_CALENDAR_PADDING.
         required_pre_trade_days = int(cfg.daily_window_pre)
+        required_post_trade_days = int(cfg.daily_window_post)
         required_pre_calendar_days = int(math.ceil(required_pre_trade_days * 1.5))
+        required_post_calendar_days = int(math.ceil(required_post_trade_days * 1.5))
         fetch_start = anchor_date - timedelta(days=required_pre_calendar_days + DAILY_FETCH_CALENDAR_PADDING)
-        fetch_end = anchor_date + timedelta(days=DAILY_FETCH_CALENDAR_PADDING)
+        fetch_end = anchor_date + timedelta(days=required_post_calendar_days + DAILY_FETCH_CALENDAR_PADDING)
 
         daily = _get_daily_window(
             client,
@@ -1672,9 +1674,11 @@ def run_build(cfg: Config) -> None:
 
     # Окно бенчмарков: покрываем estimation window и добавляем небольшой календарный буфер.
     required_pre_trade_days = int(cfg.daily_window_pre)
+    required_post_trade_days = int(cfg.daily_window_post)
     required_pre_calendar_days = int(math.ceil(required_pre_trade_days * 1.5))
+    required_post_calendar_days = int(math.ceil(required_post_trade_days * 1.5))
     bench_from = min_anchor - timedelta(days=required_pre_calendar_days + DAILY_FETCH_CALENDAR_PADDING)
-    bench_to = max_anchor + timedelta(days=DAILY_FETCH_CALENDAR_PADDING)
+    bench_to = max_anchor + timedelta(days=required_post_calendar_days + DAILY_FETCH_CALENDAR_PADDING)
 
     try:
         with Client(cfg.token) as client:
