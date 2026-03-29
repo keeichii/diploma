@@ -1,0 +1,52 @@
+[run]
+# Можно указать имя переменной окружения с токеном (по умолчанию INVEST_TOKEN)
+token_env = "INVEST_TOKEN"
+
+# Автосохранение чекпоинтов по исходным строкам (audit)
+autosave_every = 25
+
+# Окно для таблиц 2.x: -daily_window..+daily_window торговых дней (250 => 501 строка)
+daily_window = 250
+
+# Если true — строки с неразрешённым тикером не обрабатываются дальше (только audit). Если false — все строки
+# попадают в table_1 / table_2 с пометкой в pipeline_row_note, расчёты потом отфильтруют сами.
+ignore_unresolved_rows = false
+
+[cache]
+# Каталог для файлового кеша свечей (чтобы не дергать API повторно между запусками)
+dir = "../data/cache"
+
+# Разрешить fallback Adjusted Close = Close
+# По ТЗ разрешено ТОЛЬКО при явном флаге.
+adjusted_close_allow_close_fallback = false
+
+# Как выбирать shares outstanding для пересчёта Market Cap из Close*shares,
+# когда готового ряда капитализации в financials нет.
+# Допустимые: "auto", "ao", "ap".
+market_cap_shares_variant = "auto"
+
+[input]
+# Excel со сделками M&A (ma_deals.xlsx по ТЗ)
+# В вашей структуре проекта файл лежит так:
+xlsx = "../data/input/ma_deals.xlsx"
+
+# Если вместо базового входа вы хотите использовать файл,
+# где уже добавлены рассчитанные цены вокруг событий (опционально):
+# xlsx = "../data/input/ma_deals_FINAL_PRICES.xlsx"
+
+# Если нужно принудительно выбрать лист (иначе скрипт сам подберёт или возьмёт первый)
+# sheet_name = "Deals_sorted"
+
+[output]
+dir = "../out"
+
+[financials]
+# Папка с файлами финансовых метрик (csv/xlsx). Не обязательна.
+# В эту же папку можно положить RUONIA/IMOEX, если не задаёте [benchmarks].
+# dir = "../data/financials"
+
+[benchmarks]
+# Файлы с временными рядами (csv/xlsx), если хотите задать явно.
+# imoex = "../benchmarks/imoex.csv"
+# ruonia = "../benchmarks/ruonia.csv"
+

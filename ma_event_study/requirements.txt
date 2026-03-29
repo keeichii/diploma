@@ -1,0 +1,11 @@
+t-tech-investments==0.3.4
+pandas>=2.2
+scipy>=1.11
+openpyxl>=3.1
+tomli>=2.0; python_version < "3.11"
+statsmodels>=0.14
+matplotlib>=3.8
+xlsxwriter>=3.1
+python-docx>=1.1
+reportlab>=4.0
+

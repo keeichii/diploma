@@ -1,0 +1,63 @@
+CAR DATA QUALITY AUDIT
+================================================================================
+
+Event ID columns (final):
+buyer_ticker + deal_object + event_name + anchor_date + anchor_trade_date + source_row_excel
+
+File: table_2_1_first_press_release-3.xlsx
+Source: /home/keeichi/Work/diplom/out/table_2_1_first_press_release.xlsx
+Rows: 63221, Unique events: 141
+Excluded pipeline stub rows (pipeline_row_note): 66
+Price field: Close, RUB (Adjusted Close fully empty; using Close.)
+RUONIA note: RUONIA-adjusted close unavailable: ruonia_index is fully empty after merge/ffill.
+Benchmark column: IMOEX daily close, non-null share=20.04%
+Duplicate event keys: 0
+Duplicate (event_id,t) rows: 0
+Missing t rows: 0, Missing price rows: 0
+Non-sequential t events: 0
+Events with missing t=0 row: 0
+Events with t=0 Date != anchor_date: 21
+Weekend rows: 993 (1.57%)
+Likely calendar-day series (median date diff=1 for majority events): True
+Anomalous |return| > 50% rows: 1
+Events with max(t)<=0 (no post-event tail): 2
+Max available t in file: 250
+--------------------------------------------------------------------------------
+File: table_2_2_cbonds_actualization.xlsx
+Source: /home/keeichi/Work/diplom/out/table_2_2_cbonds_actualization.xlsx
+Rows: 63869, Unique events: 140
+Excluded pipeline stub rows (pipeline_row_note): 67
+Price field: Close, RUB (Adjusted Close fully empty; using Close.)
+RUONIA note: RUONIA-adjusted close unavailable: ruonia_index is fully empty after merge/ffill.
+Benchmark column: IMOEX daily close, non-null share=20.75%
+Duplicate event keys: 0
+Duplicate (event_id,t) rows: 0
+Missing t rows: 0, Missing price rows: 0
+Non-sequential t events: 0
+Events with missing t=0 row: 0
+Events with t=0 Date != anchor_date: 20
+Weekend rows: 1130 (1.77%)
+Likely calendar-day series (median date diff=1 for majority events): True
+Anomalous |return| > 50% rows: 0
+Events with max(t)<=0 (no post-event tail): 0
+Max available t in file: 250
+--------------------------------------------------------------------------------
+File: table_2_3_cbonds_create.xlsx
+Source: /home/keeichi/Work/diplom/out/table_2_3_cbonds_create.xlsx
+Rows: 62853, Unique events: 140
+Excluded pipeline stub rows (pipeline_row_note): 67
+Price field: Close, RUB (Adjusted Close fully empty; using Close.)
+RUONIA note: RUONIA-adjusted close unavailable: ruonia_index is fully empty after merge/ffill.
+Benchmark column: IMOEX daily close, non-null share=19.07%
+Duplicate event keys: 0
+Duplicate (event_id,t) rows: 0
+Missing t rows: 0, Missing price rows: 0
+Non-sequential t events: 0
+Events with missing t=0 row: 0
+Events with t=0 Date != anchor_date: 22
+Weekend rows: 1010 (1.61%)
+Likely calendar-day series (median date diff=1 for majority events): True
+Anomalous |return| > 50% rows: 0
+Events with max(t)<=0 (no post-event tail): 2
+Max available t in file: 250
+--------------------------------------------------------------------------------

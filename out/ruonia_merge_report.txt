@@ -1,0 +1,29 @@
+RUONIA MERGE REPORT
+================================================================================
+RUONIA source: /home/keeichi/Work/diplom/data/input/ruonia and else.xlsx
+Source rows: 3984; unique DT: 3984
+RUONIA non-null share: 100.00%
+
+Added columns:
+- DT
+- RUONIA
+- vol
+- StatusXML
+- DateUpdate
+
+Rejected columns:
+- T: not needed for core model/qa under current fill/utility
+- C: not needed for core model/qa under current fill/utility
+- MinRate: not needed for core model/qa under current fill/utility
+- Percentile25: not needed for core model/qa under current fill/utility
+- Percentile75: not needed for core model/qa under current fill/utility
+- MaxRate: not needed for core model/qa under current fill/utility
+
+Merge logic:
+- left join on table Date (converted to date) == RUONIA DT
+- original rows preserved (no drops)
+- non-matched dates keep NaN in added RUONIA fields
+
+table_2_1_first_press_release.xlsx: rows=63287, RUONIA_fill=91.68%
+table_2_2_cbonds_actualization.xlsx: rows=63936, RUONIA_fill=92.17%
+table_2_3_cbonds_create.xlsx: rows=62920, RUONIA_fill=92.29%

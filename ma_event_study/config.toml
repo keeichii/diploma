@@ -1,0 +1,34 @@
+[run]
+# Можно указать имя переменной окружения с токеном (по умолчанию INVEST_TOKEN)
+token_env = "INVEST_TOKEN"
+
+# Автосохранение чекпоинтов по исходным строкам (audit)
+autosave_every = 25
+
+# Окно для таблиц 2.x: -daily_window..+daily_window торговых дней (250 => 501 строка)
+daily_window = 250
+
+# Если true — строки с неразрешённым тикером не обрабатываются дальше (только audit). Если false — все строки
+# попадают в table_1 / table_2 с пометкой в pipeline_row_note, расчёты потом отфильтруют сами.
+ignore_unresolved_rows = false
+
+[input]
+# Excel со сделками M&A (ma_deals.xlsx по ТЗ)
+xlsx = "../data/input/ma_deals.xlsx"
+
+# Если нужно принудительно выбрать лист (иначе скрипт сам подберёт или возьмёт первый)
+# sheet_name = "Deals_sorted"
+
+[output]
+dir = "../out"
+
+[financials]
+# Папка с файлами финансовых метрик (csv/xlsx). Не обязательна.
+# В эту же папку можно положить RUONIA/IMOEX, если не задаёте [benchmarks].
+dir = "../data/financials"
+
+[benchmarks]
+# Файлы с временными рядами (csv/xlsx), если хотите задать явно.
+# imoex = "../benchmarks/imoex.csv"
+# ruonia = "../benchmarks/ruonia.csv"
+

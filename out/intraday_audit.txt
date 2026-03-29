@@ -1,0 +1,21 @@
+INTRADAY AUDIT
+================================================================================
+Source: /home/keeichi/Work/diplom/out/table_1_intraday.xlsx
+Rows: 10076
+Unique events: 61
+Main sample events: 22
+Supplementary sample events: 39
+Empty releasetime event share: 63.93%
+Duplicate (event_id,timestampmsk): 0
+Missing price rows: 0
+Missing anchor timestamp rows: 0
+Missing tradedayoffset rows: 0
+Events missing tradedayoffset=-1: 0
+Events missing tradedayoffset=0: 0
+Events missing tradedayoffset=+1: 0
+Events where anchor timestamp absent in series: 0
+Events with missing k=0: 0
+Rows with non-15m step: 124
+Rows with |intraday return| > 10%: 0
+Off-market events: 4
+Excluded pipeline stub rows (pipeline_row_note): 146

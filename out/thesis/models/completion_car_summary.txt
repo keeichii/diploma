@@ -1,0 +1,37 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          CAR_CLOSE_1_1   R-squared:                       0.369
+Model:                            OLS   Adj. R-squared:                  0.200
+Method:                 Least Squares   F-statistic:                     47.08
+Date:                Sun, 29 Mar 2026   Prob (F-statistic):           1.07e-19
+Time:                        15:58:27   Log-Likelihood:                 127.93
+No. Observations:                  53   AIC:                            -231.9
+Df Residuals:                      41   BIC:                            -208.2
+Df Model:                          11                                         
+Covariance Type:                  HC1                                         
+======================================================================================================
+                                         coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------------------------
+Intercept                             -0.0164      0.018     -0.887      0.375      -0.053       0.020
+C(deal_status_clean)[T.Отменена]      -0.0232      0.031     -0.754      0.451      -0.083       0.037
+C(deal_status_clean)[T.Оформление]     0.0097      0.018      0.549      0.583      -0.025       0.044
+C(deal_status_clean)[T.Переговоры]     0.0436      0.006      7.272      0.000       0.032       0.055
+CLOSE_LIQUIDITY_60D                   -0.0009      0.001     -1.218      0.223      -0.002       0.001
+CLOSE_VOLATILITY_60D                  -0.0007      0.024     -0.028      0.978      -0.047       0.046
+stake_pct_std                       5.851e-05      0.000      0.525      0.600      -0.000       0.000
+CLOSE_ROE                              0.0008      0.000      1.667      0.095      -0.000       0.002
+CLOSE_P_B                             -0.0055      0.003     -2.144      0.032      -0.010      -0.000
+CLOSE_P_E                              0.0007      0.000      2.480      0.013       0.000       0.001
+CLOSE_TOTAL_ASSETS                 -8.581e-07   4.38e-07     -1.958      0.050   -1.72e-06    1.03e-09
+CLOSE_MARKET_CAP                    7.859e-06   3.63e-06      2.163      0.031    7.37e-07     1.5e-05
+==============================================================================
+Omnibus:                        0.127   Durbin-Watson:                   2.160
+Prob(Omnibus):                  0.939   Jarque-Bera (JB):                0.333
+Skew:                           0.001   Prob(JB):                        0.847
+Kurtosis:                       2.612   Cond. No.                     2.93e+05
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)
+[2] The condition number is large, 2.93e+05. This might indicate that there are
+strong multicollinearity or other numerical problems.
