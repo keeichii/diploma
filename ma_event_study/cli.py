@@ -117,6 +117,19 @@ def main(argv: list[str]) -> int:
         car_event_study_analysis.run()
         intraday_event_study_analysis.run()
         enrich_deals.run()
+        # Доп. артефакты из Codex2 (документация полей + сравнение create vs announcement)
+        try:
+            from . import refresh_intraday_extension_docs
+
+            refresh_intraday_extension_docs.run()
+        except Exception as e:
+            print(f"WARNING: refresh_intraday_extension_docs failed: {type(e).__name__}: {e}")
+        try:
+            from . import build_create_vs_announcement_analysis
+
+            build_create_vs_announcement_analysis.main()
+        except Exception as e:
+            print(f"WARNING: build_create_vs_announcement_analysis failed: {type(e).__name__}: {e}")
         if not args.no_report:
             from . import build_research_story_report
 

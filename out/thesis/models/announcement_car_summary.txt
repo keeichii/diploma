@@ -4,7 +4,7 @@ Dep. Variable:            CAR_ANN_1_1   R-squared:                       0.108
 Model:                            OLS   Adj. R-squared:                  0.001
 Method:                 Least Squares   F-statistic:                     12.38
 Date:                Sun, 29 Mar 2026   Prob (F-statistic):           1.42e-09
-Time:                        17:21:12   Log-Likelihood:                 122.72
+Time:                        18:09:46   Log-Likelihood:                 122.72
 No. Observations:                  66   AIC:                            -229.4
 Df Residuals:                      58   BIC:                            -211.9
 Df Model:                           7                                         

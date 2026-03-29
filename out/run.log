@@ -1,509 +1,547 @@
-2026-03-29 17:15:49,322 | INFO | AVAILABLE_SHEETS | ['Deals_sorted']
-2026-03-29 17:15:49,385 | INFO | DETECTED_COLUMNS | ['Покупатель', 'Тикер покупателя', 'Объект сделки', 'Дата объявления сделки', 'Время объявления сделки', 'Дата закрытия сделки', 'Время закрытия сделки', 'Статус сделки', 'Цена сделки, млн USD', 'Доля участия, %', 'Вид сделки', 'Тип сделки', 'Направление интеграции', 'Тип национальности', 'Дата завершения', 'Дата переговоров', 'Дата оформления', 'Дата актуализации', 'Дата создания', 'Отрасль объекта', 'Регион объекта', 'Отрасль покупателя', 'Регион покупателя', 'Капитализация покупателя на момент сделки', 'Опыт покупателя в M&A', 'Диверсификация выручки', 'Развитие основного бизнеса', 'Снижение себестоимости основного бизнеса', 'Покупка клиентской базы', 'Источник информации']
-2026-03-29 17:15:49,385 | INFO | COLUMN_RESOLVED | buyer_company -> 'Покупатель'
-2026-03-29 17:15:49,385 | INFO | COLUMN_RESOLVED | buyer_ticker -> 'Тикер покупателя'
-2026-03-29 17:15:49,385 | INFO | COLUMN_RESOLVED | deal_object -> 'Объект сделки'
-2026-03-29 17:15:49,385 | INFO | COLUMN_RESOLVED | first_press_release_date -> 'Дата объявления сделки'
-2026-03-29 17:15:49,386 | INFO | COLUMN_RESOLVED | first_press_release_time -> 'Время объявления сделки'
-2026-03-29 17:15:49,386 | INFO | COLUMN_RESOLVED | cbonds_actualization_date -> 'Дата актуализации'
-2026-03-29 17:15:49,386 | INFO | COLUMN_RESOLVED | cbonds_create_date -> 'Дата создания'
-2026-03-29 17:15:53,135 | INFO | ROW_START | row_excel=2/208
-2026-03-29 17:15:53,139 | INFO | ROW_DONE | row_excel=2/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,139 | INFO | ROW_START | row_excel=3/208
-2026-03-29 17:15:53,142 | INFO | ROW_DONE | row_excel=3/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,143 | INFO | ROW_START | row_excel=4/208
-2026-03-29 17:15:53,148 | INFO | ROW_DONE | row_excel=4/208 | status=ready | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,149 | INFO | ROW_START | row_excel=5/208
-2026-03-29 17:15:53,153 | INFO | ROW_DONE | row_excel=5/208 | status=ready | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,154 | INFO | ROW_START | row_excel=6/208
-2026-03-29 17:15:53,157 | INFO | ROW_DONE | row_excel=6/208 | status=ready | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,157 | INFO | ROW_START | row_excel=7/208
-2026-03-29 17:15:53,159 | INFO | ROW_DONE | row_excel=7/208 | status=ready | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,159 | INFO | ROW_START | row_excel=8/208
-2026-03-29 17:15:53,161 | INFO | ROW_DONE | row_excel=8/208 | status=ready | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,162 | INFO | ROW_START | row_excel=9/208
-2026-03-29 17:15:53,222 | INFO | ROW_DONE | row_excel=9/208 | status=ready | resolved_ticker=SVCB | elapsed_s=0.06 | rate_limit_delta=0
-2026-03-29 17:15:53,223 | INFO | ROW_START | row_excel=10/208
-2026-03-29 17:15:53,224 | INFO | ROW_DONE | row_excel=10/208 | status=ready | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,225 | INFO | ROW_START | row_excel=11/208
-2026-03-29 17:15:53,226 | INFO | ROW_DONE | row_excel=11/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,226 | INFO | ROW_START | row_excel=12/208
-2026-03-29 17:15:53,228 | INFO | ROW_DONE | row_excel=12/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,228 | INFO | ROW_START | row_excel=13/208
-2026-03-29 17:15:53,230 | INFO | ROW_DONE | row_excel=13/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,231 | INFO | ROW_START | row_excel=14/208
-2026-03-29 17:15:53,232 | INFO | ROW_DONE | row_excel=14/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,232 | INFO | ROW_START | row_excel=15/208
-2026-03-29 17:15:53,235 | INFO | ROW_DONE | row_excel=15/208 | status=ready | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,236 | INFO | ROW_START | row_excel=16/208
-2026-03-29 17:15:53,238 | INFO | ROW_DONE | row_excel=16/208 | status=ready | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,239 | INFO | ROW_START | row_excel=17/208
-2026-03-29 17:15:53,241 | INFO | ROW_DONE | row_excel=17/208 | status=ready | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,242 | INFO | ROW_START | row_excel=18/208
-2026-03-29 17:15:53,244 | INFO | ROW_DONE | row_excel=18/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,244 | INFO | ROW_START | row_excel=19/208
-2026-03-29 17:15:53,245 | INFO | ROW_DONE | row_excel=19/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,245 | INFO | ROW_START | row_excel=20/208
-2026-03-29 17:15:53,246 | INFO | ROW_DONE | row_excel=20/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,246 | INFO | ROW_START | row_excel=21/208
-2026-03-29 17:15:53,247 | INFO | ROW_DONE | row_excel=21/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,247 | INFO | ROW_START | row_excel=22/208
-2026-03-29 17:15:53,248 | INFO | ROW_DONE | row_excel=22/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,248 | INFO | ROW_START | row_excel=23/208
-2026-03-29 17:15:53,249 | INFO | ROW_DONE | row_excel=23/208 | status=ready | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,249 | INFO | ROW_START | row_excel=24/208
-2026-03-29 17:15:53,250 | INFO | ROW_DONE | row_excel=24/208 | status=ready | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,251 | INFO | ROW_START | row_excel=25/208
-2026-03-29 17:15:53,252 | INFO | ROW_DONE | row_excel=25/208 | status=ready | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,253 | INFO | ROW_START | row_excel=26/208
-2026-03-29 17:15:53,256 | INFO | ROW_DONE | row_excel=26/208 | status=ready | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,256 | INFO | SOURCE_CHECKPOINT | rows_done=25
-2026-03-29 17:15:53,256 | INFO | ROW_START | row_excel=27/208
-2026-03-29 17:15:53,259 | INFO | ROW_DONE | row_excel=27/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,259 | INFO | ROW_START | row_excel=28/208
-2026-03-29 17:15:53,260 | INFO | ROW_DONE | row_excel=28/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,260 | INFO | ROW_START | row_excel=29/208
-2026-03-29 17:15:53,261 | INFO | ROW_DONE | row_excel=29/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,261 | INFO | ROW_START | row_excel=30/208
-2026-03-29 17:15:53,261 | INFO | ROW_DONE | row_excel=30/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,261 | INFO | ROW_START | row_excel=31/208
-2026-03-29 17:15:53,262 | INFO | ROW_DONE | row_excel=31/208 | status=ready_without_release_anchor | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,262 | INFO | ROW_START | row_excel=32/208
-2026-03-29 17:15:53,263 | INFO | ROW_DONE | row_excel=32/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,263 | INFO | ROW_START | row_excel=33/208
-2026-03-29 17:15:53,264 | INFO | ROW_DONE | row_excel=33/208 | status=ready | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,264 | INFO | ROW_START | row_excel=34/208
-2026-03-29 17:15:53,265 | INFO | ROW_DONE | row_excel=34/208 | status=ready | resolved_ticker=RENI | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,265 | INFO | ROW_START | row_excel=35/208
-2026-03-29 17:15:53,266 | INFO | ROW_DONE | row_excel=35/208 | status=ready | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,266 | INFO | ROW_START | row_excel=36/208
-2026-03-29 17:15:53,267 | INFO | ROW_DONE | row_excel=36/208 | status=ready | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,268 | INFO | ROW_START | row_excel=37/208
-2026-03-29 17:15:53,269 | INFO | ROW_DONE | row_excel=37/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,269 | INFO | ROW_START | row_excel=38/208
-2026-03-29 17:15:53,270 | INFO | ROW_DONE | row_excel=38/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,271 | INFO | ROW_START | row_excel=39/208
-2026-03-29 17:15:53,273 | INFO | ROW_DONE | row_excel=39/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,273 | INFO | ROW_START | row_excel=40/208
-2026-03-29 17:15:53,274 | INFO | ROW_DONE | row_excel=40/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,274 | INFO | ROW_START | row_excel=41/208
-2026-03-29 17:15:53,275 | INFO | ROW_DONE | row_excel=41/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,275 | INFO | ROW_START | row_excel=42/208
-2026-03-29 17:15:53,277 | INFO | ROW_DONE | row_excel=42/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,277 | INFO | ROW_START | row_excel=43/208
-2026-03-29 17:15:53,279 | INFO | ROW_DONE | row_excel=43/208 | status=ready | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,279 | INFO | ROW_START | row_excel=44/208
-2026-03-29 17:15:53,279 | INFO | ROW_DONE | row_excel=44/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,279 | INFO | ROW_START | row_excel=45/208
-2026-03-29 17:15:53,280 | INFO | ROW_DONE | row_excel=45/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,280 | INFO | ROW_START | row_excel=46/208
-2026-03-29 17:15:53,281 | INFO | ROW_DONE | row_excel=46/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,281 | INFO | ROW_START | row_excel=47/208
-2026-03-29 17:15:53,282 | INFO | ROW_DONE | row_excel=47/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,282 | INFO | ROW_START | row_excel=48/208
-2026-03-29 17:15:53,283 | INFO | ROW_DONE | row_excel=48/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,283 | INFO | ROW_START | row_excel=49/208
-2026-03-29 17:15:53,285 | INFO | ROW_DONE | row_excel=49/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,286 | INFO | ROW_START | row_excel=50/208
-2026-03-29 17:15:53,289 | INFO | ROW_DONE | row_excel=50/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,289 | INFO | ROW_START | row_excel=51/208
-2026-03-29 17:15:53,293 | INFO | ROW_DONE | row_excel=51/208 | status=ready | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,293 | INFO | SOURCE_CHECKPOINT | rows_done=50
-2026-03-29 17:15:53,293 | INFO | ROW_START | row_excel=52/208
-2026-03-29 17:15:53,294 | INFO | ROW_DONE | row_excel=52/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,294 | INFO | ROW_START | row_excel=53/208
-2026-03-29 17:15:53,295 | INFO | ROW_DONE | row_excel=53/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,295 | INFO | ROW_START | row_excel=54/208
-2026-03-29 17:15:53,296 | INFO | ROW_DONE | row_excel=54/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,296 | INFO | ROW_START | row_excel=55/208
-2026-03-29 17:15:53,297 | INFO | ROW_DONE | row_excel=55/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,297 | INFO | ROW_START | row_excel=56/208
-2026-03-29 17:15:53,298 | INFO | ROW_DONE | row_excel=56/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,298 | INFO | ROW_START | row_excel=57/208
-2026-03-29 17:15:53,299 | INFO | ROW_DONE | row_excel=57/208 | status=ready | resolved_ticker=OZON | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,300 | INFO | ROW_START | row_excel=58/208
-2026-03-29 17:15:53,303 | INFO | ROW_DONE | row_excel=58/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,303 | INFO | ROW_START | row_excel=59/208
-2026-03-29 17:15:53,306 | INFO | ROW_DONE | row_excel=59/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,306 | INFO | ROW_START | row_excel=60/208
-2026-03-29 17:15:53,308 | INFO | ROW_DONE | row_excel=60/208 | status=ready | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,309 | INFO | ROW_START | row_excel=61/208
-2026-03-29 17:15:53,311 | INFO | ROW_DONE | row_excel=61/208 | status=ready | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,311 | INFO | ROW_START | row_excel=62/208
-2026-03-29 17:15:53,312 | INFO | ROW_DONE | row_excel=62/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,312 | INFO | ROW_START | row_excel=63/208
-2026-03-29 17:15:53,312 | INFO | ROW_DONE | row_excel=63/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,312 | INFO | ROW_START | row_excel=64/208
-2026-03-29 17:15:53,314 | INFO | ROW_DONE | row_excel=64/208 | status=ready | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,314 | INFO | ROW_START | row_excel=65/208
-2026-03-29 17:15:53,315 | INFO | ROW_DONE | row_excel=65/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,315 | INFO | ROW_START | row_excel=66/208
-2026-03-29 17:15:53,316 | INFO | ROW_DONE | row_excel=66/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,316 | INFO | ROW_START | row_excel=67/208
-2026-03-29 17:15:53,317 | INFO | ROW_DONE | row_excel=67/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,318 | INFO | ROW_START | row_excel=68/208
-2026-03-29 17:15:53,320 | INFO | ROW_DONE | row_excel=68/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,320 | INFO | ROW_START | row_excel=69/208
-2026-03-29 17:15:53,322 | INFO | ROW_DONE | row_excel=69/208 | status=unresolved | resolved_ticker=None | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,322 | INFO | ROW_START | row_excel=70/208
-2026-03-29 17:15:53,323 | INFO | ROW_DONE | row_excel=70/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,323 | INFO | ROW_START | row_excel=71/208
-2026-03-29 17:15:53,326 | INFO | ROW_DONE | row_excel=71/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,326 | INFO | ROW_START | row_excel=72/208
-2026-03-29 17:15:53,327 | INFO | ROW_DONE | row_excel=72/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,327 | INFO | ROW_START | row_excel=73/208
-2026-03-29 17:15:53,328 | INFO | ROW_DONE | row_excel=73/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,328 | INFO | ROW_START | row_excel=74/208
-2026-03-29 17:15:53,329 | INFO | ROW_DONE | row_excel=74/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,329 | INFO | ROW_START | row_excel=75/208
-2026-03-29 17:15:53,330 | INFO | ROW_DONE | row_excel=75/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,330 | INFO | ROW_START | row_excel=76/208
-2026-03-29 17:15:53,331 | INFO | ROW_DONE | row_excel=76/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,331 | INFO | SOURCE_CHECKPOINT | rows_done=75
-2026-03-29 17:15:53,331 | INFO | ROW_START | row_excel=77/208
-2026-03-29 17:15:53,332 | INFO | ROW_DONE | row_excel=77/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,332 | INFO | ROW_START | row_excel=78/208
-2026-03-29 17:15:53,333 | INFO | ROW_DONE | row_excel=78/208 | status=ready | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,334 | INFO | ROW_START | row_excel=79/208
-2026-03-29 17:15:53,337 | INFO | ROW_DONE | row_excel=79/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,337 | INFO | ROW_START | row_excel=80/208
-2026-03-29 17:15:53,340 | INFO | ROW_DONE | row_excel=80/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,340 | INFO | ROW_START | row_excel=81/208
-2026-03-29 17:15:53,342 | INFO | ROW_DONE | row_excel=81/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,342 | INFO | ROW_START | row_excel=82/208
-2026-03-29 17:15:53,343 | INFO | ROW_DONE | row_excel=82/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,343 | INFO | ROW_START | row_excel=83/208
-2026-03-29 17:15:53,344 | INFO | ROW_DONE | row_excel=83/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,344 | INFO | ROW_START | row_excel=84/208
-2026-03-29 17:15:53,345 | INFO | ROW_DONE | row_excel=84/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,345 | INFO | ROW_START | row_excel=85/208
-2026-03-29 17:15:53,346 | INFO | ROW_DONE | row_excel=85/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,346 | INFO | ROW_START | row_excel=86/208
-2026-03-29 17:15:53,347 | INFO | ROW_DONE | row_excel=86/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,347 | INFO | ROW_START | row_excel=87/208
-2026-03-29 17:15:53,347 | INFO | ROW_DONE | row_excel=87/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,347 | INFO | ROW_START | row_excel=88/208
-2026-03-29 17:15:53,348 | INFO | ROW_DONE | row_excel=88/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,348 | INFO | ROW_START | row_excel=89/208
-2026-03-29 17:15:53,348 | INFO | ROW_DONE | row_excel=89/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,348 | INFO | ROW_START | row_excel=90/208
-2026-03-29 17:15:53,349 | INFO | ROW_DONE | row_excel=90/208 | status=ready_without_release_anchor | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,349 | INFO | ROW_START | row_excel=91/208
-2026-03-29 17:15:53,351 | INFO | ROW_DONE | row_excel=91/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,351 | INFO | ROW_START | row_excel=92/208
-2026-03-29 17:15:53,354 | INFO | ROW_DONE | row_excel=92/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,355 | INFO | ROW_START | row_excel=93/208
-2026-03-29 17:15:53,357 | INFO | ROW_DONE | row_excel=93/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,358 | INFO | ROW_START | row_excel=94/208
-2026-03-29 17:15:53,358 | INFO | ROW_DONE | row_excel=94/208 | status=ready_without_release_anchor | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,359 | INFO | ROW_START | row_excel=95/208
-2026-03-29 17:15:53,360 | INFO | ROW_DONE | row_excel=95/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,360 | INFO | ROW_START | row_excel=96/208
-2026-03-29 17:15:53,361 | INFO | ROW_DONE | row_excel=96/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,361 | INFO | ROW_START | row_excel=97/208
-2026-03-29 17:15:53,362 | INFO | ROW_DONE | row_excel=97/208 | status=ready | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,362 | INFO | ROW_START | row_excel=98/208
-2026-03-29 17:15:53,363 | INFO | ROW_DONE | row_excel=98/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,363 | INFO | ROW_START | row_excel=99/208
-2026-03-29 17:15:53,364 | INFO | ROW_DONE | row_excel=99/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,364 | INFO | ROW_START | row_excel=100/208
-2026-03-29 17:15:53,365 | INFO | ROW_DONE | row_excel=100/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,365 | INFO | ROW_START | row_excel=101/208
-2026-03-29 17:15:53,365 | INFO | ROW_DONE | row_excel=101/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,365 | INFO | SOURCE_CHECKPOINT | rows_done=100
-2026-03-29 17:15:53,365 | INFO | ROW_START | row_excel=102/208
-2026-03-29 17:15:53,366 | INFO | ROW_DONE | row_excel=102/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,366 | INFO | ROW_START | row_excel=103/208
-2026-03-29 17:15:53,367 | INFO | ROW_DONE | row_excel=103/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,367 | INFO | ROW_START | row_excel=104/208
-2026-03-29 17:15:53,369 | INFO | ROW_DONE | row_excel=104/208 | status=ready_without_release_anchor | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,369 | INFO | ROW_START | row_excel=105/208
-2026-03-29 17:15:53,372 | INFO | ROW_DONE | row_excel=105/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,372 | INFO | ROW_START | row_excel=106/208
-2026-03-29 17:15:53,373 | INFO | ROW_DONE | row_excel=106/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,373 | INFO | ROW_START | row_excel=107/208
-2026-03-29 17:15:53,375 | INFO | ROW_DONE | row_excel=107/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,375 | INFO | ROW_START | row_excel=108/208
-2026-03-29 17:15:53,376 | INFO | ROW_DONE | row_excel=108/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,376 | INFO | ROW_START | row_excel=109/208
-2026-03-29 17:15:53,377 | INFO | ROW_DONE | row_excel=109/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,377 | INFO | ROW_START | row_excel=110/208
-2026-03-29 17:15:53,378 | INFO | ROW_DONE | row_excel=110/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,378 | INFO | ROW_START | row_excel=111/208
-2026-03-29 17:15:53,379 | INFO | ROW_DONE | row_excel=111/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,379 | INFO | ROW_START | row_excel=112/208
-2026-03-29 17:15:53,380 | INFO | ROW_DONE | row_excel=112/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,380 | INFO | ROW_START | row_excel=113/208
-2026-03-29 17:15:53,380 | INFO | ROW_DONE | row_excel=113/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,381 | INFO | ROW_START | row_excel=114/208
-2026-03-29 17:15:53,381 | INFO | ROW_DONE | row_excel=114/208 | status=ready_without_release_anchor | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,381 | INFO | ROW_START | row_excel=115/208
-2026-03-29 17:15:53,382 | INFO | ROW_DONE | row_excel=115/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,382 | INFO | ROW_START | row_excel=116/208
-2026-03-29 17:15:53,383 | INFO | ROW_DONE | row_excel=116/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,383 | INFO | ROW_START | row_excel=117/208
-2026-03-29 17:15:53,385 | INFO | ROW_DONE | row_excel=117/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,386 | INFO | ROW_START | row_excel=118/208
-2026-03-29 17:15:53,388 | INFO | ROW_DONE | row_excel=118/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,388 | INFO | ROW_START | row_excel=119/208
-2026-03-29 17:15:53,391 | INFO | ROW_DONE | row_excel=119/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,391 | INFO | ROW_START | row_excel=120/208
-2026-03-29 17:15:53,392 | INFO | ROW_DONE | row_excel=120/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,392 | INFO | ROW_START | row_excel=121/208
-2026-03-29 17:15:53,393 | INFO | ROW_DONE | row_excel=121/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,393 | INFO | ROW_START | row_excel=122/208
-2026-03-29 17:15:53,394 | INFO | ROW_DONE | row_excel=122/208 | status=ready_without_release_anchor | resolved_ticker=MBNK | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,394 | INFO | ROW_START | row_excel=123/208
-2026-03-29 17:15:53,395 | INFO | ROW_DONE | row_excel=123/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,395 | INFO | ROW_START | row_excel=124/208
-2026-03-29 17:15:53,395 | INFO | ROW_DONE | row_excel=124/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,395 | INFO | ROW_START | row_excel=125/208
-2026-03-29 17:15:53,396 | INFO | ROW_DONE | row_excel=125/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,396 | INFO | ROW_START | row_excel=126/208
-2026-03-29 17:15:53,397 | INFO | ROW_DONE | row_excel=126/208 | status=ready_without_release_anchor | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,397 | INFO | SOURCE_CHECKPOINT | rows_done=125
-2026-03-29 17:15:53,397 | INFO | ROW_START | row_excel=127/208
-2026-03-29 17:15:53,397 | INFO | ROW_DONE | row_excel=127/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,397 | INFO | ROW_START | row_excel=128/208
-2026-03-29 17:15:53,398 | INFO | ROW_DONE | row_excel=128/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,398 | INFO | ROW_START | row_excel=129/208
-2026-03-29 17:15:53,398 | INFO | ROW_DONE | row_excel=129/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,399 | INFO | ROW_START | row_excel=130/208
-2026-03-29 17:15:53,399 | INFO | ROW_DONE | row_excel=130/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,399 | INFO | ROW_START | row_excel=131/208
-2026-03-29 17:15:53,401 | INFO | ROW_DONE | row_excel=131/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,401 | INFO | ROW_START | row_excel=132/208
-2026-03-29 17:15:53,403 | INFO | ROW_DONE | row_excel=132/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,404 | INFO | ROW_START | row_excel=133/208
-2026-03-29 17:15:53,406 | INFO | ROW_DONE | row_excel=133/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,406 | INFO | ROW_START | row_excel=134/208
-2026-03-29 17:15:53,408 | INFO | ROW_DONE | row_excel=134/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,408 | INFO | ROW_START | row_excel=135/208
-2026-03-29 17:15:53,409 | INFO | ROW_DONE | row_excel=135/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,409 | INFO | ROW_START | row_excel=136/208
-2026-03-29 17:15:53,410 | INFO | ROW_DONE | row_excel=136/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,410 | INFO | ROW_START | row_excel=137/208
-2026-03-29 17:15:53,411 | INFO | ROW_DONE | row_excel=137/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,411 | INFO | ROW_START | row_excel=138/208
-2026-03-29 17:15:53,412 | INFO | ROW_DONE | row_excel=138/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,412 | INFO | ROW_START | row_excel=139/208
-2026-03-29 17:15:53,413 | INFO | ROW_DONE | row_excel=139/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,413 | INFO | ROW_START | row_excel=140/208
-2026-03-29 17:15:53,414 | INFO | ROW_DONE | row_excel=140/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,414 | INFO | ROW_START | row_excel=141/208
-2026-03-29 17:15:53,415 | INFO | ROW_DONE | row_excel=141/208 | status=ready_without_release_anchor | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,415 | INFO | ROW_START | row_excel=142/208
-2026-03-29 17:15:53,415 | INFO | ROW_DONE | row_excel=142/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,416 | INFO | ROW_START | row_excel=143/208
-2026-03-29 17:15:53,416 | INFO | ROW_DONE | row_excel=143/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,416 | INFO | ROW_START | row_excel=144/208
-2026-03-29 17:15:53,418 | INFO | ROW_DONE | row_excel=144/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,418 | INFO | ROW_START | row_excel=145/208
-2026-03-29 17:15:53,419 | INFO | ROW_DONE | row_excel=145/208 | status=ready | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,420 | INFO | ROW_START | row_excel=146/208
-2026-03-29 17:15:53,422 | INFO | ROW_DONE | row_excel=146/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,422 | INFO | ROW_START | row_excel=147/208
-2026-03-29 17:15:53,423 | INFO | ROW_DONE | row_excel=147/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,424 | INFO | ROW_START | row_excel=148/208
-2026-03-29 17:15:53,426 | INFO | ROW_DONE | row_excel=148/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,426 | INFO | ROW_START | row_excel=149/208
-2026-03-29 17:15:53,427 | INFO | ROW_DONE | row_excel=149/208 | status=ready | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,427 | INFO | ROW_START | row_excel=150/208
-2026-03-29 17:15:53,427 | INFO | ROW_DONE | row_excel=150/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,428 | INFO | ROW_START | row_excel=151/208
-2026-03-29 17:15:53,428 | INFO | ROW_DONE | row_excel=151/208 | status=ready_without_release_anchor | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,428 | INFO | SOURCE_CHECKPOINT | rows_done=150
-2026-03-29 17:15:53,428 | INFO | ROW_START | row_excel=152/208
-2026-03-29 17:15:53,429 | INFO | ROW_DONE | row_excel=152/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,429 | INFO | ROW_START | row_excel=153/208
-2026-03-29 17:15:53,430 | INFO | ROW_DONE | row_excel=153/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,430 | INFO | ROW_START | row_excel=154/208
-2026-03-29 17:15:53,431 | INFO | ROW_DONE | row_excel=154/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,431 | INFO | ROW_START | row_excel=155/208
-2026-03-29 17:15:53,432 | INFO | ROW_DONE | row_excel=155/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,432 | INFO | ROW_START | row_excel=156/208
-2026-03-29 17:15:53,432 | INFO | ROW_DONE | row_excel=156/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,432 | INFO | ROW_START | row_excel=157/208
-2026-03-29 17:15:53,434 | INFO | ROW_DONE | row_excel=157/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,435 | INFO | ROW_START | row_excel=158/208
-2026-03-29 17:15:53,437 | INFO | ROW_DONE | row_excel=158/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,438 | INFO | ROW_START | row_excel=159/208
-2026-03-29 17:15:53,439 | INFO | ROW_DONE | row_excel=159/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,440 | INFO | ROW_START | row_excel=160/208
-2026-03-29 17:15:53,441 | INFO | ROW_DONE | row_excel=160/208 | status=ready_without_release_anchor | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,441 | INFO | ROW_START | row_excel=161/208
-2026-03-29 17:15:53,442 | INFO | ROW_DONE | row_excel=161/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,443 | INFO | ROW_START | row_excel=162/208
-2026-03-29 17:15:53,443 | INFO | ROW_DONE | row_excel=162/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,443 | INFO | ROW_START | row_excel=163/208
-2026-03-29 17:15:53,444 | INFO | ROW_DONE | row_excel=163/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,444 | INFO | ROW_START | row_excel=164/208
-2026-03-29 17:15:53,445 | INFO | ROW_DONE | row_excel=164/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,445 | INFO | ROW_START | row_excel=165/208
-2026-03-29 17:15:53,446 | INFO | ROW_DONE | row_excel=165/208 | status=ready_without_release_anchor | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,446 | INFO | ROW_START | row_excel=166/208
-2026-03-29 17:15:53,447 | INFO | ROW_DONE | row_excel=166/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,447 | INFO | ROW_START | row_excel=167/208
-2026-03-29 17:15:53,447 | INFO | ROW_DONE | row_excel=167/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,448 | INFO | ROW_START | row_excel=168/208
-2026-03-29 17:15:53,448 | INFO | ROW_DONE | row_excel=168/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,448 | INFO | ROW_START | row_excel=169/208
-2026-03-29 17:15:53,450 | INFO | ROW_DONE | row_excel=169/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,451 | INFO | ROW_START | row_excel=170/208
-2026-03-29 17:15:53,453 | INFO | ROW_DONE | row_excel=170/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,453 | INFO | ROW_START | row_excel=171/208
-2026-03-29 17:15:53,455 | INFO | ROW_DONE | row_excel=171/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,455 | INFO | ROW_START | row_excel=172/208
-2026-03-29 17:15:53,457 | INFO | ROW_DONE | row_excel=172/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,457 | INFO | ROW_START | row_excel=173/208
-2026-03-29 17:15:53,457 | INFO | ROW_DONE | row_excel=173/208 | status=ready_without_release_anchor | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,458 | INFO | ROW_START | row_excel=174/208
-2026-03-29 17:15:53,460 | INFO | ROW_DONE | row_excel=174/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,460 | INFO | ROW_START | row_excel=175/208
-2026-03-29 17:15:53,461 | INFO | ROW_DONE | row_excel=175/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,461 | INFO | ROW_START | row_excel=176/208
-2026-03-29 17:15:53,462 | INFO | ROW_DONE | row_excel=176/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,462 | INFO | SOURCE_CHECKPOINT | rows_done=175
-2026-03-29 17:15:53,462 | INFO | ROW_START | row_excel=177/208
-2026-03-29 17:15:53,463 | INFO | ROW_DONE | row_excel=177/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,463 | INFO | ROW_START | row_excel=178/208
-2026-03-29 17:15:53,464 | INFO | ROW_DONE | row_excel=178/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,464 | INFO | ROW_START | row_excel=179/208
-2026-03-29 17:15:53,465 | INFO | ROW_DONE | row_excel=179/208 | status=ready_without_release_anchor | resolved_ticker=ROSB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,465 | INFO | ROW_START | row_excel=180/208
-2026-03-29 17:15:53,465 | INFO | ROW_DONE | row_excel=180/208 | status=ready_without_release_anchor | resolved_ticker=ROSB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,465 | INFO | ROW_START | row_excel=181/208
-2026-03-29 17:15:53,466 | INFO | ROW_DONE | row_excel=181/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,466 | INFO | ROW_START | row_excel=182/208
-2026-03-29 17:15:53,469 | INFO | ROW_DONE | row_excel=182/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,469 | INFO | ROW_START | row_excel=183/208
-2026-03-29 17:15:53,472 | INFO | ROW_DONE | row_excel=183/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,472 | INFO | ROW_START | row_excel=184/208
-2026-03-29 17:15:53,475 | INFO | ROW_DONE | row_excel=184/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,475 | INFO | ROW_START | row_excel=185/208
-2026-03-29 17:15:53,476 | INFO | ROW_DONE | row_excel=185/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,476 | INFO | ROW_START | row_excel=186/208
-2026-03-29 17:15:53,477 | INFO | ROW_DONE | row_excel=186/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,477 | INFO | ROW_START | row_excel=187/208
-2026-03-29 17:15:53,478 | INFO | ROW_DONE | row_excel=187/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,478 | INFO | ROW_START | row_excel=188/208
-2026-03-29 17:15:53,479 | INFO | ROW_DONE | row_excel=188/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,479 | INFO | ROW_START | row_excel=189/208
-2026-03-29 17:15:53,480 | INFO | ROW_DONE | row_excel=189/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,480 | INFO | ROW_START | row_excel=190/208
-2026-03-29 17:15:53,481 | INFO | ROW_DONE | row_excel=190/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,481 | INFO | ROW_START | row_excel=191/208
-2026-03-29 17:15:53,481 | INFO | ROW_DONE | row_excel=191/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,482 | INFO | ROW_START | row_excel=192/208
-2026-03-29 17:15:53,482 | INFO | ROW_DONE | row_excel=192/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,482 | INFO | ROW_START | row_excel=193/208
-2026-03-29 17:15:53,483 | INFO | ROW_DONE | row_excel=193/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,484 | INFO | ROW_START | row_excel=194/208
-2026-03-29 17:15:53,486 | INFO | ROW_DONE | row_excel=194/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,487 | INFO | ROW_START | row_excel=195/208
-2026-03-29 17:15:53,489 | INFO | ROW_DONE | row_excel=195/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,489 | INFO | ROW_START | row_excel=196/208
-2026-03-29 17:15:53,490 | INFO | ROW_DONE | row_excel=196/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,490 | INFO | ROW_START | row_excel=197/208
-2026-03-29 17:15:53,491 | INFO | ROW_DONE | row_excel=197/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,492 | INFO | ROW_START | row_excel=198/208
-2026-03-29 17:15:53,494 | INFO | ROW_DONE | row_excel=198/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,494 | INFO | ROW_START | row_excel=199/208
-2026-03-29 17:15:53,495 | INFO | ROW_DONE | row_excel=199/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,495 | INFO | ROW_START | row_excel=200/208
-2026-03-29 17:15:53,496 | INFO | ROW_DONE | row_excel=200/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,496 | INFO | ROW_START | row_excel=201/208
-2026-03-29 17:15:53,497 | INFO | ROW_DONE | row_excel=201/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,497 | INFO | SOURCE_CHECKPOINT | rows_done=200
-2026-03-29 17:15:53,497 | INFO | ROW_START | row_excel=202/208
-2026-03-29 17:15:53,498 | INFO | ROW_DONE | row_excel=202/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,498 | INFO | ROW_START | row_excel=203/208
-2026-03-29 17:15:53,499 | INFO | ROW_DONE | row_excel=203/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,499 | INFO | ROW_START | row_excel=204/208
-2026-03-29 17:15:53,499 | INFO | ROW_DONE | row_excel=204/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,499 | INFO | ROW_START | row_excel=205/208
-2026-03-29 17:15:53,500 | INFO | ROW_DONE | row_excel=205/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,501 | INFO | ROW_START | row_excel=206/208
-2026-03-29 17:15:53,502 | INFO | ROW_DONE | row_excel=206/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,503 | INFO | ROW_START | row_excel=207/208
-2026-03-29 17:15:53,505 | INFO | ROW_DONE | row_excel=207/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:53,505 | INFO | ROW_START | row_excel=208/208
-2026-03-29 17:15:53,506 | INFO | ROW_DONE | row_excel=208/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
-2026-03-29 17:15:55,476 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2024-02-19 | anchor_trade_idx=44 | trade_days_in_fetch=653 | required_pre=280
-2026-03-29 17:15:55,653 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2024-09-24 | anchor_trade_idx=196 | trade_days_in_fetch=652 | required_pre=280
-2026-03-29 17:15:55,778 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2023-09-07 | anchor_trade_idx=0 | trade_days_in_fetch=630 | required_pre=280
-2026-03-29 17:15:55,790 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2023-06-14 | anchor_trade_idx=0 | trade_days_in_fetch=557 | required_pre=280
-2026-03-29 17:15:55,798 | WARNING | INSUFFICIENT_HISTORY | ticker=T | anchor=2017-10-12 | anchor_trade_idx=0 | trade_days_in_fetch=104 | required_pre=280
-2026-03-29 17:15:55,831 | WARNING | INSUFFICIENT_HISTORY | ticker=RENI | anchor=2022-06-14 | anchor_trade_idx=139 | trade_days_in_fetch=770 | required_pre=280
-2026-03-29 17:15:55,891 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2022-02-23 | anchor_trade_idx=0 | trade_days_in_fetch=165 | required_pre=280
-2026-03-29 17:15:55,927 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2022-01-16 | anchor_trade_idx=0 | trade_days_in_fetch=139 | required_pre=280
-2026-03-29 17:15:55,995 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2022-01-10 | anchor_trade_idx=0 | trade_days_in_fetch=135 | required_pre=280
-2026-03-29 17:15:56,027 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2022-01-24 | anchor_trade_idx=0 | trade_days_in_fetch=145 | required_pre=280
-2026-03-29 17:15:56,031 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2022-01-24 | anchor_trade_idx=0 | trade_days_in_fetch=145 | required_pre=280
-2026-03-29 17:15:56,197 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2021-06-29 | anchor_trade_idx=0 | trade_days_in_fetch=1 | required_pre=280
-2026-03-29 17:15:56,198 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2021-06-29 | anchor_trade_idx=0 | trade_days_in_fetch=1 | required_pre=280
-2026-03-29 17:15:56,202 | WARNING | INSUFFICIENT_HISTORY | ticker=OZON | anchor=2021-04-13 | anchor_trade_idx=96 | trade_days_in_fetch=702 | required_pre=280
-2026-03-29 17:15:56,734 | WARNING | INSUFFICIENT_HISTORY | ticker=T | anchor=2017-10-13 | anchor_trade_idx=0 | trade_days_in_fetch=105 | required_pre=280
-2026-03-29 17:15:56,815 | WARNING | INSUFFICIENT_HISTORY | ticker=T | anchor=2017-10-13 | anchor_trade_idx=0 | trade_days_in_fetch=105 | required_pre=280
-2026-03-29 17:15:56,960 | WARNING | INSUFFICIENT_HISTORY | ticker=T | anchor=2018-07-13 | anchor_trade_idx=0 | trade_days_in_fetch=294 | required_pre=280
-2026-03-29 17:15:57,047 | WARNING | INSUFFICIENT_HISTORY | ticker=T | anchor=2017-10-13 | anchor_trade_idx=0 | trade_days_in_fetch=105 | required_pre=280
-2026-03-29 17:15:57,382 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2014-12-09 | anchor_trade_idx=134 | trade_days_in_fetch=778 | required_pre=280
-2026-03-29 17:15:57,451 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2014-09-11 | anchor_trade_idx=71 | trade_days_in_fetch=714 | required_pre=280
-2026-03-29 17:15:57,491 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2014-06-16 | anchor_trade_idx=8 | trade_days_in_fetch=653 | required_pre=280
-2026-03-29 17:15:57,657 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2013-10-15 | anchor_trade_idx=0 | trade_days_in_fetch=478 | required_pre=280
-2026-03-29 17:15:57,887 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2012-04-27 | anchor_trade_idx=0 | trade_days_in_fetch=95 | required_pre=280
-2026-03-29 17:16:07,449 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2024-11-15 | anchor_trade_idx=234 | trade_days_in_fetch=652 | required_pre=280
-2026-03-29 17:16:07,538 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2024-09-25 | anchor_trade_idx=197 | trade_days_in_fetch=652 | required_pre=280
-2026-03-29 17:16:07,656 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2024-01-11 | anchor_trade_idx=17 | trade_days_in_fetch=652 | required_pre=280
-2026-03-29 17:16:07,666 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2023-05-16 | anchor_trade_idx=0 | trade_days_in_fetch=532 | required_pre=280
-2026-03-29 17:16:07,766 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2022-02-22 | anchor_trade_idx=0 | trade_days_in_fetch=165 | required_pre=280
-2026-03-29 17:16:07,771 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2022-06-27 | anchor_trade_idx=0 | trade_days_in_fetch=255 | required_pre=280
-2026-03-29 17:16:07,814 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2021-12-23 | anchor_trade_idx=0 | trade_days_in_fetch=122 | required_pre=280
-2026-03-29 17:16:07,873 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2021-10-30 | anchor_trade_idx=0 | trade_days_in_fetch=85 | required_pre=280
-2026-03-29 17:16:07,905 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2021-09-30 | anchor_trade_idx=0 | trade_days_in_fetch=63 | required_pre=280
-2026-03-29 17:16:07,909 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2021-09-30 | anchor_trade_idx=0 | trade_days_in_fetch=63 | required_pre=280
-2026-03-29 17:16:08,018 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2021-07-20 | anchor_trade_idx=0 | trade_days_in_fetch=14 | required_pre=280
-2026-03-29 17:16:08,078 | WARNING | INSUFFICIENT_HISTORY | ticker=OZON | anchor=2021-05-27 | anchor_trade_idx=127 | trade_days_in_fetch=733 | required_pre=280
-2026-03-29 17:16:08,562 | WARNING | INSUFFICIENT_HISTORY | ticker=T | anchor=2019-08-29 | anchor_trade_idx=0 | trade_days_in_fetch=580 | required_pre=280
-2026-03-29 17:16:08,635 | WARNING | INSUFFICIENT_HISTORY | ticker=T | anchor=2019-08-01 | anchor_trade_idx=0 | trade_days_in_fetch=560 | required_pre=280
-2026-03-29 17:16:08,752 | WARNING | INSUFFICIENT_HISTORY | ticker=T | anchor=2018-07-24 | anchor_trade_idx=0 | trade_days_in_fetch=299 | required_pre=280
-2026-03-29 17:16:08,837 | WARNING | INSUFFICIENT_HISTORY | ticker=T | anchor=2017-10-11 | anchor_trade_idx=0 | trade_days_in_fetch=103 | required_pre=280
-2026-03-29 17:16:09,510 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2014-12-09 | anchor_trade_idx=134 | trade_days_in_fetch=778 | required_pre=280
-2026-03-29 17:16:09,579 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2014-09-11 | anchor_trade_idx=71 | trade_days_in_fetch=714 | required_pre=280
-2026-03-29 17:16:09,618 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2014-10-15 | anchor_trade_idx=95 | trade_days_in_fetch=738 | required_pre=280
-2026-03-29 17:16:09,765 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2013-10-15 | anchor_trade_idx=0 | trade_days_in_fetch=478 | required_pre=280
-2026-03-29 17:16:10,082 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2012-04-28 | anchor_trade_idx=0 | trade_days_in_fetch=96 | required_pre=280
-2026-03-29 17:16:19,381 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2024-02-19 | anchor_trade_idx=44 | trade_days_in_fetch=653 | required_pre=280
-2026-03-29 17:16:19,538 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2024-10-30 | anchor_trade_idx=222 | trade_days_in_fetch=653 | required_pre=280
-2026-03-29 17:16:19,641 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2023-06-14 | anchor_trade_idx=0 | trade_days_in_fetch=557 | required_pre=280
-2026-03-29 17:16:19,646 | WARNING | INSUFFICIENT_HISTORY | ticker=T | anchor=2017-10-13 | anchor_trade_idx=0 | trade_days_in_fetch=105 | required_pre=280
-2026-03-29 17:16:19,676 | WARNING | INSUFFICIENT_HISTORY | ticker=RENI | anchor=2022-06-14 | anchor_trade_idx=139 | trade_days_in_fetch=770 | required_pre=280
-2026-03-29 17:16:19,710 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2022-05-18 | anchor_trade_idx=0 | trade_days_in_fetch=226 | required_pre=280
-2026-03-29 17:16:19,718 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2021-11-29 | anchor_trade_idx=0 | trade_days_in_fetch=106 | required_pre=280
-2026-03-29 17:16:19,750 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2022-01-16 | anchor_trade_idx=0 | trade_days_in_fetch=139 | required_pre=280
-2026-03-29 17:16:19,795 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2022-01-10 | anchor_trade_idx=0 | trade_days_in_fetch=135 | required_pre=280
-2026-03-29 17:16:19,822 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2022-01-24 | anchor_trade_idx=0 | trade_days_in_fetch=145 | required_pre=280
-2026-03-29 17:16:19,826 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2022-01-24 | anchor_trade_idx=0 | trade_days_in_fetch=145 | required_pre=280
-2026-03-29 17:16:20,018 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2021-06-29 | anchor_trade_idx=0 | trade_days_in_fetch=1 | required_pre=280
-2026-03-29 17:16:20,019 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2021-06-29 | anchor_trade_idx=0 | trade_days_in_fetch=1 | required_pre=280
-2026-03-29 17:16:20,020 | WARNING | INSUFFICIENT_HISTORY | ticker=OZON | anchor=2021-04-13 | anchor_trade_idx=96 | trade_days_in_fetch=702 | required_pre=280
-2026-03-29 17:16:20,476 | WARNING | INSUFFICIENT_HISTORY | ticker=T | anchor=2017-10-13 | anchor_trade_idx=0 | trade_days_in_fetch=105 | required_pre=280
-2026-03-29 17:16:20,541 | WARNING | INSUFFICIENT_HISTORY | ticker=T | anchor=2017-10-13 | anchor_trade_idx=0 | trade_days_in_fetch=105 | required_pre=280
-2026-03-29 17:16:20,650 | WARNING | INSUFFICIENT_HISTORY | ticker=T | anchor=2018-07-13 | anchor_trade_idx=0 | trade_days_in_fetch=294 | required_pre=280
-2026-03-29 17:16:20,728 | WARNING | INSUFFICIENT_HISTORY | ticker=T | anchor=2017-10-13 | anchor_trade_idx=0 | trade_days_in_fetch=105 | required_pre=280
-2026-03-29 17:16:20,997 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2014-12-09 | anchor_trade_idx=134 | trade_days_in_fetch=778 | required_pre=280
-2026-03-29 17:16:21,072 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2014-09-11 | anchor_trade_idx=71 | trade_days_in_fetch=714 | required_pre=280
-2026-03-29 17:16:21,104 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2014-06-16 | anchor_trade_idx=8 | trade_days_in_fetch=653 | required_pre=280
-2026-03-29 17:16:21,238 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2013-10-15 | anchor_trade_idx=0 | trade_days_in_fetch=478 | required_pre=280
-2026-03-29 17:16:21,421 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2012-04-27 | anchor_trade_idx=0 | trade_days_in_fetch=95 | required_pre=280
-2026-03-29 17:16:30,199 | INFO | FIELD_MISSING_SUMMARY (daily tables)
-2026-03-29 17:16:30,199 | INFO | Adjusted Close | missing=126786 | top_reasons={'adjusted_close_unavailable': 126786} | top_sources={'unavailable': 126786}
-2026-03-29 17:16:30,199 | INFO | RUONIA daily | missing=126786 | top_reasons={'benchmark_series_missing': 126786} | top_sources={'unavailable': 126786}
-2026-03-29 17:16:30,199 | INFO | ROA | missing=71490 | top_reasons={'financials_no_asof_value': 64659, 'financials_missing_metric': 6831} | top_sources={'unavailable': 71490}
-2026-03-29 17:16:30,199 | INFO | ROE | missing=67249 | top_reasons={'financials_no_asof_value': 66508, 'financials_missing_metric': 741} | top_sources={'unavailable': 67249}
-2026-03-29 17:16:30,199 | INFO | IMOEX daily close | missing=105063 | top_reasons={'benchmark_no_asof_value': 105063} | top_sources={'unavailable': 105063}
-2026-03-29 17:16:30,199 | INFO | Market Capitalization | missing=65400 | top_reasons={'financials_no_asof_value': 64659, 'financials_missing_metric': 741} | top_sources={'unavailable': 65400}
-2026-03-29 17:16:30,199 | INFO | P/B | missing=65400 | top_reasons={'financials_no_asof_value': 64659, 'financials_missing_metric': 741} | top_sources={'unavailable': 65400}
-2026-03-29 17:16:30,199 | INFO | P/E | missing=65400 | top_reasons={'financials_no_asof_value': 64659, 'financials_missing_metric': 741} | top_sources={'unavailable': 65400}
-2026-03-29 17:16:30,199 | INFO | Total Assets | missing=65400 | top_reasons={'financials_no_asof_value': 64659, 'financials_missing_metric': 741} | top_sources={'unavailable': 65400}
-2026-03-29 17:18:32,924 | INFO | BHAR: сохранено 141 строк в /home/keeichi/Work/diplom/out/bhar_by_deal_ann.csv
+2026-03-29 18:04:38,973 | INFO | AVAILABLE_SHEETS | ['Deals_sorted']
+2026-03-29 18:04:39,038 | INFO | DETECTED_COLUMNS | ['Покупатель', 'Тикер покупателя', 'Объект сделки', 'Дата объявления сделки', 'Время объявления сделки', 'Дата закрытия сделки', 'Время закрытия сделки', 'Статус сделки', 'Цена сделки, млн USD', 'Доля участия, %', 'Вид сделки', 'Тип сделки', 'Направление интеграции', 'Тип национальности', 'Дата завершения', 'Дата переговоров', 'Дата оформления', 'Дата актуализации', 'Дата создания', 'Отрасль объекта', 'Регион объекта', 'Отрасль покупателя', 'Регион покупателя', 'Капитализация покупателя на момент сделки', 'Опыт покупателя в M&A', 'Диверсификация выручки', 'Развитие основного бизнеса', 'Снижение себестоимости основного бизнеса', 'Покупка клиентской базы', 'Источник информации']
+2026-03-29 18:04:39,039 | INFO | COLUMN_RESOLVED | buyer_company -> 'Покупатель'
+2026-03-29 18:04:39,039 | INFO | COLUMN_RESOLVED | buyer_ticker -> 'Тикер покупателя'
+2026-03-29 18:04:39,039 | INFO | COLUMN_RESOLVED | deal_object -> 'Объект сделки'
+2026-03-29 18:04:39,040 | INFO | COLUMN_RESOLVED | first_press_release_date -> 'Дата объявления сделки'
+2026-03-29 18:04:39,040 | INFO | COLUMN_RESOLVED | first_press_release_time -> 'Время объявления сделки'
+2026-03-29 18:04:39,040 | INFO | COLUMN_RESOLVED | deal_close_date -> 'Дата закрытия сделки'
+2026-03-29 18:04:39,040 | INFO | COLUMN_RESOLVED | cbonds_actualization_date -> 'Дата актуализации'
+2026-03-29 18:04:39,041 | INFO | COLUMN_RESOLVED | cbonds_create_date -> 'Дата создания'
+2026-03-29 18:04:42,878 | INFO | ROW_START | row_excel=2/208
+2026-03-29 18:04:42,881 | INFO | ROW_DONE | row_excel=2/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,881 | INFO | ROW_START | row_excel=3/208
+2026-03-29 18:04:42,882 | INFO | ROW_DONE | row_excel=3/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,882 | INFO | ROW_START | row_excel=4/208
+2026-03-29 18:04:42,883 | INFO | ROW_DONE | row_excel=4/208 | status=ready | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,884 | INFO | ROW_START | row_excel=5/208
+2026-03-29 18:04:42,888 | INFO | ROW_DONE | row_excel=5/208 | status=ready | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,889 | INFO | ROW_START | row_excel=6/208
+2026-03-29 18:04:42,928 | INFO | ROW_DONE | row_excel=6/208 | status=ready | resolved_ticker=SVCB | elapsed_s=0.04 | rate_limit_delta=0
+2026-03-29 18:04:42,928 | INFO | ROW_START | row_excel=7/208
+2026-03-29 18:04:42,931 | INFO | ROW_DONE | row_excel=7/208 | status=ready | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,931 | INFO | ROW_START | row_excel=8/208
+2026-03-29 18:04:42,935 | INFO | ROW_DONE | row_excel=8/208 | status=ready | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,936 | INFO | ROW_START | row_excel=9/208
+2026-03-29 18:04:42,938 | INFO | ROW_DONE | row_excel=9/208 | status=ready | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,938 | INFO | ROW_START | row_excel=10/208
+2026-03-29 18:04:42,940 | INFO | ROW_DONE | row_excel=10/208 | status=ready | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,941 | INFO | ROW_START | row_excel=11/208
+2026-03-29 18:04:42,941 | INFO | ROW_DONE | row_excel=11/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,942 | INFO | ROW_START | row_excel=12/208
+2026-03-29 18:04:42,942 | INFO | ROW_DONE | row_excel=12/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,942 | INFO | ROW_START | row_excel=13/208
+2026-03-29 18:04:42,943 | INFO | ROW_DONE | row_excel=13/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,943 | INFO | ROW_START | row_excel=14/208
+2026-03-29 18:04:42,945 | INFO | ROW_DONE | row_excel=14/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,945 | INFO | ROW_START | row_excel=15/208
+2026-03-29 18:04:42,949 | INFO | ROW_DONE | row_excel=15/208 | status=ready | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,950 | INFO | ROW_START | row_excel=16/208
+2026-03-29 18:04:42,955 | INFO | ROW_DONE | row_excel=16/208 | status=ready | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,955 | INFO | ROW_START | row_excel=17/208
+2026-03-29 18:04:42,958 | INFO | ROW_DONE | row_excel=17/208 | status=ready | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,958 | INFO | ROW_START | row_excel=18/208
+2026-03-29 18:04:42,961 | INFO | ROW_DONE | row_excel=18/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,962 | INFO | ROW_START | row_excel=19/208
+2026-03-29 18:04:42,966 | INFO | ROW_DONE | row_excel=19/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,966 | INFO | ROW_START | row_excel=20/208
+2026-03-29 18:04:42,970 | INFO | ROW_DONE | row_excel=20/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,970 | INFO | ROW_START | row_excel=21/208
+2026-03-29 18:04:42,971 | INFO | ROW_DONE | row_excel=21/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,971 | INFO | ROW_START | row_excel=22/208
+2026-03-29 18:04:42,972 | INFO | ROW_DONE | row_excel=22/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,972 | INFO | ROW_START | row_excel=23/208
+2026-03-29 18:04:42,975 | INFO | ROW_DONE | row_excel=23/208 | status=ready | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,975 | INFO | ROW_START | row_excel=24/208
+2026-03-29 18:04:42,978 | INFO | ROW_DONE | row_excel=24/208 | status=ready | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,979 | INFO | ROW_START | row_excel=25/208
+2026-03-29 18:04:42,986 | INFO | ROW_DONE | row_excel=25/208 | status=ready | resolved_ticker=YDEX | elapsed_s=0.01 | rate_limit_delta=0
+2026-03-29 18:04:42,986 | INFO | ROW_START | row_excel=26/208
+2026-03-29 18:04:42,988 | INFO | ROW_DONE | row_excel=26/208 | status=ready | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,988 | INFO | SOURCE_CHECKPOINT | rows_done=25
+2026-03-29 18:04:42,989 | INFO | ROW_START | row_excel=27/208
+2026-03-29 18:04:42,991 | INFO | ROW_DONE | row_excel=27/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,991 | INFO | ROW_START | row_excel=28/208
+2026-03-29 18:04:42,992 | WARNING | ANCHOR_DATE_MISMATCH | row=28 | release_date=2023-09-07 | anchor_trade_date=2023-12-15 | delta_days=99
+2026-03-29 18:04:42,993 | INFO | ROW_DONE | row_excel=28/208 | status=ready | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,993 | INFO | ROW_START | row_excel=29/208
+2026-03-29 18:04:42,995 | INFO | ROW_DONE | row_excel=29/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,995 | INFO | ROW_START | row_excel=30/208
+2026-03-29 18:04:42,999 | WARNING | ANCHOR_DATE_MISMATCH | row=30 | release_date=2023-06-14 | anchor_trade_date=2023-12-15 | delta_days=184
+2026-03-29 18:04:42,999 | INFO | ROW_DONE | row_excel=30/208 | status=ready | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:42,999 | INFO | ROW_START | row_excel=31/208
+2026-03-29 18:04:43,002 | INFO | ROW_DONE | row_excel=31/208 | status=ready_without_release_anchor | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,002 | INFO | ROW_START | row_excel=32/208
+2026-03-29 18:04:43,003 | INFO | ROW_DONE | row_excel=32/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,003 | INFO | ROW_START | row_excel=33/208
+2026-03-29 18:04:43,004 | INFO | ROW_DONE | row_excel=33/208 | status=ready | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,004 | INFO | ROW_START | row_excel=34/208
+2026-03-29 18:04:43,006 | INFO | ROW_DONE | row_excel=34/208 | status=ready | resolved_ticker=RENI | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,006 | INFO | ROW_START | row_excel=35/208
+2026-03-29 18:04:43,008 | INFO | ROW_DONE | row_excel=35/208 | status=ready | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,008 | INFO | ROW_START | row_excel=36/208
+2026-03-29 18:04:43,009 | INFO | ROW_DONE | row_excel=36/208 | status=ready | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,009 | INFO | ROW_START | row_excel=37/208
+2026-03-29 18:04:43,011 | INFO | ROW_DONE | row_excel=37/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,011 | INFO | ROW_START | row_excel=38/208
+2026-03-29 18:04:43,014 | INFO | ROW_DONE | row_excel=38/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,014 | INFO | ROW_START | row_excel=39/208
+2026-03-29 18:04:43,018 | INFO | ROW_DONE | row_excel=39/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,019 | INFO | ROW_START | row_excel=40/208
+2026-03-29 18:04:43,020 | INFO | ROW_DONE | row_excel=40/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,021 | INFO | ROW_START | row_excel=41/208
+2026-03-29 18:04:43,021 | INFO | ROW_DONE | row_excel=41/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,021 | INFO | ROW_START | row_excel=42/208
+2026-03-29 18:04:43,024 | INFO | ROW_DONE | row_excel=42/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,024 | INFO | ROW_START | row_excel=43/208
+2026-03-29 18:04:43,026 | INFO | ROW_DONE | row_excel=43/208 | status=ready | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,026 | INFO | ROW_START | row_excel=44/208
+2026-03-29 18:04:43,028 | INFO | ROW_DONE | row_excel=44/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,029 | INFO | ROW_START | row_excel=45/208
+2026-03-29 18:04:43,034 | INFO | ROW_DONE | row_excel=45/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.01 | rate_limit_delta=0
+2026-03-29 18:04:43,035 | INFO | ROW_START | row_excel=46/208
+2026-03-29 18:04:43,035 | INFO | ROW_DONE | row_excel=46/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,036 | INFO | ROW_START | row_excel=47/208
+2026-03-29 18:04:43,036 | INFO | ROW_DONE | row_excel=47/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,036 | INFO | ROW_START | row_excel=48/208
+2026-03-29 18:04:43,038 | INFO | ROW_DONE | row_excel=48/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,038 | INFO | ROW_START | row_excel=49/208
+2026-03-29 18:04:43,040 | INFO | ROW_DONE | row_excel=49/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,040 | INFO | ROW_START | row_excel=50/208
+2026-03-29 18:04:43,042 | INFO | ROW_DONE | row_excel=50/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,042 | INFO | ROW_START | row_excel=51/208
+2026-03-29 18:04:43,046 | INFO | ROW_DONE | row_excel=51/208 | status=ready | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,046 | INFO | SOURCE_CHECKPOINT | rows_done=50
+2026-03-29 18:04:43,047 | INFO | ROW_START | row_excel=52/208
+2026-03-29 18:04:43,049 | INFO | ROW_DONE | row_excel=52/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,049 | INFO | ROW_START | row_excel=53/208
+2026-03-29 18:04:43,053 | INFO | ROW_DONE | row_excel=53/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,053 | INFO | ROW_START | row_excel=54/208
+2026-03-29 18:04:43,054 | INFO | ROW_DONE | row_excel=54/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,054 | INFO | ROW_START | row_excel=55/208
+2026-03-29 18:04:43,055 | INFO | ROW_DONE | row_excel=55/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,055 | INFO | ROW_START | row_excel=56/208
+2026-03-29 18:04:43,055 | INFO | ROW_DONE | row_excel=56/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,055 | INFO | ROW_START | row_excel=57/208
+2026-03-29 18:04:43,057 | INFO | ROW_DONE | row_excel=57/208 | status=ready | resolved_ticker=OZON | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,057 | INFO | ROW_START | row_excel=58/208
+2026-03-29 18:04:43,066 | INFO | ROW_DONE | row_excel=58/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.01 | rate_limit_delta=0
+2026-03-29 18:04:43,066 | INFO | ROW_START | row_excel=59/208
+2026-03-29 18:04:43,071 | INFO | ROW_DONE | row_excel=59/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,071 | INFO | ROW_START | row_excel=60/208
+2026-03-29 18:04:43,073 | INFO | ROW_DONE | row_excel=60/208 | status=ready | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,073 | INFO | ROW_START | row_excel=61/208
+2026-03-29 18:04:43,075 | INFO | ROW_DONE | row_excel=61/208 | status=ready | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,075 | INFO | ROW_START | row_excel=62/208
+2026-03-29 18:04:43,076 | INFO | ROW_DONE | row_excel=62/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,076 | INFO | ROW_START | row_excel=63/208
+2026-03-29 18:04:43,077 | INFO | ROW_DONE | row_excel=63/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,077 | INFO | ROW_START | row_excel=64/208
+2026-03-29 18:04:43,082 | INFO | ROW_DONE | row_excel=64/208 | status=ready | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,083 | INFO | ROW_START | row_excel=65/208
+2026-03-29 18:04:43,087 | INFO | ROW_DONE | row_excel=65/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,087 | INFO | ROW_START | row_excel=66/208
+2026-03-29 18:04:43,088 | INFO | ROW_DONE | row_excel=66/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,088 | INFO | ROW_START | row_excel=67/208
+2026-03-29 18:04:43,090 | INFO | ROW_DONE | row_excel=67/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,090 | INFO | ROW_START | row_excel=68/208
+2026-03-29 18:04:43,093 | INFO | ROW_DONE | row_excel=68/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,093 | INFO | ROW_START | row_excel=69/208
+2026-03-29 18:04:43,095 | INFO | ROW_DONE | row_excel=69/208 | status=unresolved | resolved_ticker=None | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,095 | INFO | ROW_START | row_excel=70/208
+2026-03-29 18:04:43,097 | INFO | ROW_DONE | row_excel=70/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,098 | INFO | ROW_START | row_excel=71/208
+2026-03-29 18:04:43,102 | INFO | ROW_DONE | row_excel=71/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,102 | INFO | ROW_START | row_excel=72/208
+2026-03-29 18:04:43,104 | INFO | ROW_DONE | row_excel=72/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,105 | INFO | ROW_START | row_excel=73/208
+2026-03-29 18:04:43,105 | INFO | ROW_DONE | row_excel=73/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,105 | INFO | ROW_START | row_excel=74/208
+2026-03-29 18:04:43,107 | INFO | ROW_DONE | row_excel=74/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,108 | INFO | ROW_START | row_excel=75/208
+2026-03-29 18:04:43,116 | INFO | ROW_DONE | row_excel=75/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.01 | rate_limit_delta=0
+2026-03-29 18:04:43,116 | INFO | ROW_START | row_excel=76/208
+2026-03-29 18:04:43,117 | INFO | ROW_DONE | row_excel=76/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,117 | INFO | SOURCE_CHECKPOINT | rows_done=75
+2026-03-29 18:04:43,117 | INFO | ROW_START | row_excel=77/208
+2026-03-29 18:04:43,119 | INFO | ROW_DONE | row_excel=77/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,119 | INFO | ROW_START | row_excel=78/208
+2026-03-29 18:04:43,123 | INFO | ROW_DONE | row_excel=78/208 | status=ready | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,123 | INFO | ROW_START | row_excel=79/208
+2026-03-29 18:04:43,126 | INFO | ROW_DONE | row_excel=79/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,126 | INFO | ROW_START | row_excel=80/208
+2026-03-29 18:04:43,131 | INFO | ROW_DONE | row_excel=80/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,131 | INFO | ROW_START | row_excel=81/208
+2026-03-29 18:04:43,135 | INFO | ROW_DONE | row_excel=81/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,135 | INFO | ROW_START | row_excel=82/208
+2026-03-29 18:04:43,138 | INFO | ROW_DONE | row_excel=82/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,138 | INFO | ROW_START | row_excel=83/208
+2026-03-29 18:04:43,140 | INFO | ROW_DONE | row_excel=83/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,140 | INFO | ROW_START | row_excel=84/208
+2026-03-29 18:04:43,142 | INFO | ROW_DONE | row_excel=84/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,142 | INFO | ROW_START | row_excel=85/208
+2026-03-29 18:04:43,143 | INFO | ROW_DONE | row_excel=85/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,143 | INFO | ROW_START | row_excel=86/208
+2026-03-29 18:04:43,145 | INFO | ROW_DONE | row_excel=86/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,145 | INFO | ROW_START | row_excel=87/208
+2026-03-29 18:04:43,147 | INFO | ROW_DONE | row_excel=87/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,148 | INFO | ROW_START | row_excel=88/208
+2026-03-29 18:04:43,149 | INFO | ROW_DONE | row_excel=88/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,149 | INFO | ROW_START | row_excel=89/208
+2026-03-29 18:04:43,151 | INFO | ROW_DONE | row_excel=89/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,151 | INFO | ROW_START | row_excel=90/208
+2026-03-29 18:04:43,152 | INFO | ROW_DONE | row_excel=90/208 | status=ready_without_release_anchor | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,152 | INFO | ROW_START | row_excel=91/208
+2026-03-29 18:04:43,154 | INFO | ROW_DONE | row_excel=91/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,154 | INFO | ROW_START | row_excel=92/208
+2026-03-29 18:04:43,157 | INFO | ROW_DONE | row_excel=92/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,157 | INFO | ROW_START | row_excel=93/208
+2026-03-29 18:04:43,159 | INFO | ROW_DONE | row_excel=93/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,159 | INFO | ROW_START | row_excel=94/208
+2026-03-29 18:04:43,159 | INFO | ROW_DONE | row_excel=94/208 | status=ready_without_release_anchor | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,159 | INFO | ROW_START | row_excel=95/208
+2026-03-29 18:04:43,170 | INFO | ROW_DONE | row_excel=95/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.01 | rate_limit_delta=0
+2026-03-29 18:04:43,170 | INFO | ROW_START | row_excel=96/208
+2026-03-29 18:04:43,173 | INFO | ROW_DONE | row_excel=96/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,174 | INFO | ROW_START | row_excel=97/208
+2026-03-29 18:04:43,176 | INFO | ROW_DONE | row_excel=97/208 | status=ready | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,176 | INFO | ROW_START | row_excel=98/208
+2026-03-29 18:04:43,178 | INFO | ROW_DONE | row_excel=98/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,179 | INFO | ROW_START | row_excel=99/208
+2026-03-29 18:04:43,185 | INFO | ROW_DONE | row_excel=99/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.01 | rate_limit_delta=0
+2026-03-29 18:04:43,185 | INFO | ROW_START | row_excel=100/208
+2026-03-29 18:04:43,187 | INFO | ROW_DONE | row_excel=100/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,188 | INFO | ROW_START | row_excel=101/208
+2026-03-29 18:04:43,188 | INFO | ROW_DONE | row_excel=101/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,188 | INFO | SOURCE_CHECKPOINT | rows_done=100
+2026-03-29 18:04:43,189 | INFO | ROW_START | row_excel=102/208
+2026-03-29 18:04:43,189 | INFO | ROW_DONE | row_excel=102/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,189 | INFO | ROW_START | row_excel=103/208
+2026-03-29 18:04:43,190 | INFO | ROW_DONE | row_excel=103/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,190 | INFO | ROW_START | row_excel=104/208
+2026-03-29 18:04:43,191 | INFO | ROW_DONE | row_excel=104/208 | status=ready_without_release_anchor | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,191 | INFO | ROW_START | row_excel=105/208
+2026-03-29 18:04:43,192 | INFO | ROW_DONE | row_excel=105/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,192 | INFO | ROW_START | row_excel=106/208
+2026-03-29 18:04:43,193 | INFO | ROW_DONE | row_excel=106/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,193 | INFO | ROW_START | row_excel=107/208
+2026-03-29 18:04:43,194 | INFO | ROW_DONE | row_excel=107/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,195 | INFO | ROW_START | row_excel=108/208
+2026-03-29 18:04:43,197 | INFO | ROW_DONE | row_excel=108/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,198 | INFO | ROW_START | row_excel=109/208
+2026-03-29 18:04:43,203 | INFO | ROW_DONE | row_excel=109/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,203 | INFO | ROW_START | row_excel=110/208
+2026-03-29 18:04:43,204 | INFO | ROW_DONE | row_excel=110/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,204 | INFO | ROW_START | row_excel=111/208
+2026-03-29 18:04:43,207 | INFO | ROW_DONE | row_excel=111/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,207 | INFO | ROW_START | row_excel=112/208
+2026-03-29 18:04:43,211 | INFO | ROW_DONE | row_excel=112/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,211 | INFO | ROW_START | row_excel=113/208
+2026-03-29 18:04:43,214 | INFO | ROW_DONE | row_excel=113/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,214 | INFO | ROW_START | row_excel=114/208
+2026-03-29 18:04:43,216 | INFO | ROW_DONE | row_excel=114/208 | status=ready_without_release_anchor | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,216 | INFO | ROW_START | row_excel=115/208
+2026-03-29 18:04:43,220 | INFO | ROW_DONE | row_excel=115/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,221 | INFO | ROW_START | row_excel=116/208
+2026-03-29 18:04:43,223 | INFO | ROW_DONE | row_excel=116/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,223 | INFO | ROW_START | row_excel=117/208
+2026-03-29 18:04:43,225 | INFO | ROW_DONE | row_excel=117/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,225 | INFO | ROW_START | row_excel=118/208
+2026-03-29 18:04:43,229 | INFO | ROW_DONE | row_excel=118/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,229 | INFO | ROW_START | row_excel=119/208
+2026-03-29 18:04:43,236 | INFO | ROW_DONE | row_excel=119/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.01 | rate_limit_delta=0
+2026-03-29 18:04:43,236 | INFO | ROW_START | row_excel=120/208
+2026-03-29 18:04:43,238 | INFO | ROW_DONE | row_excel=120/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,238 | INFO | ROW_START | row_excel=121/208
+2026-03-29 18:04:43,240 | INFO | ROW_DONE | row_excel=121/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,240 | INFO | ROW_START | row_excel=122/208
+2026-03-29 18:04:43,241 | INFO | ROW_DONE | row_excel=122/208 | status=ready_without_release_anchor | resolved_ticker=MBNK | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,241 | INFO | ROW_START | row_excel=123/208
+2026-03-29 18:04:43,243 | INFO | ROW_DONE | row_excel=123/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,244 | INFO | ROW_START | row_excel=124/208
+2026-03-29 18:04:43,246 | INFO | ROW_DONE | row_excel=124/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,247 | INFO | ROW_START | row_excel=125/208
+2026-03-29 18:04:43,248 | INFO | ROW_DONE | row_excel=125/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,249 | INFO | ROW_START | row_excel=126/208
+2026-03-29 18:04:43,251 | INFO | ROW_DONE | row_excel=126/208 | status=ready_without_release_anchor | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,251 | INFO | SOURCE_CHECKPOINT | rows_done=125
+2026-03-29 18:04:43,251 | INFO | ROW_START | row_excel=127/208
+2026-03-29 18:04:43,252 | INFO | ROW_DONE | row_excel=127/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,252 | INFO | ROW_START | row_excel=128/208
+2026-03-29 18:04:43,253 | INFO | ROW_DONE | row_excel=128/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,253 | INFO | ROW_START | row_excel=129/208
+2026-03-29 18:04:43,254 | INFO | ROW_DONE | row_excel=129/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,254 | INFO | ROW_START | row_excel=130/208
+2026-03-29 18:04:43,256 | INFO | ROW_DONE | row_excel=130/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,256 | INFO | ROW_START | row_excel=131/208
+2026-03-29 18:04:43,256 | INFO | ROW_DONE | row_excel=131/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,257 | INFO | ROW_START | row_excel=132/208
+2026-03-29 18:04:43,257 | INFO | ROW_DONE | row_excel=132/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,257 | INFO | ROW_START | row_excel=133/208
+2026-03-29 18:04:43,258 | INFO | ROW_DONE | row_excel=133/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,258 | INFO | ROW_START | row_excel=134/208
+2026-03-29 18:04:43,259 | INFO | ROW_DONE | row_excel=134/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,259 | INFO | ROW_START | row_excel=135/208
+2026-03-29 18:04:43,261 | INFO | ROW_DONE | row_excel=135/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,261 | INFO | ROW_START | row_excel=136/208
+2026-03-29 18:04:43,264 | INFO | ROW_DONE | row_excel=136/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,264 | INFO | ROW_START | row_excel=137/208
+2026-03-29 18:04:43,266 | INFO | ROW_DONE | row_excel=137/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,267 | INFO | ROW_START | row_excel=138/208
+2026-03-29 18:04:43,272 | INFO | ROW_DONE | row_excel=138/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,272 | INFO | ROW_START | row_excel=139/208
+2026-03-29 18:04:43,273 | INFO | ROW_DONE | row_excel=139/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,273 | INFO | ROW_START | row_excel=140/208
+2026-03-29 18:04:43,274 | INFO | ROW_DONE | row_excel=140/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,274 | INFO | ROW_START | row_excel=141/208
+2026-03-29 18:04:43,275 | INFO | ROW_DONE | row_excel=141/208 | status=ready_without_release_anchor | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,275 | INFO | ROW_START | row_excel=142/208
+2026-03-29 18:04:43,279 | INFO | ROW_DONE | row_excel=142/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,279 | INFO | ROW_START | row_excel=143/208
+2026-03-29 18:04:43,282 | INFO | ROW_DONE | row_excel=143/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,282 | INFO | ROW_START | row_excel=144/208
+2026-03-29 18:04:43,283 | INFO | ROW_DONE | row_excel=144/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,284 | INFO | ROW_START | row_excel=145/208
+2026-03-29 18:04:43,287 | INFO | ROW_DONE | row_excel=145/208 | status=ready | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,287 | INFO | ROW_START | row_excel=146/208
+2026-03-29 18:04:43,290 | INFO | ROW_DONE | row_excel=146/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,290 | INFO | ROW_START | row_excel=147/208
+2026-03-29 18:04:43,291 | INFO | ROW_DONE | row_excel=147/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,292 | INFO | ROW_START | row_excel=148/208
+2026-03-29 18:04:43,292 | INFO | ROW_DONE | row_excel=148/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,293 | INFO | ROW_START | row_excel=149/208
+2026-03-29 18:04:43,296 | INFO | ROW_DONE | row_excel=149/208 | status=ready | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,296 | INFO | ROW_START | row_excel=150/208
+2026-03-29 18:04:43,301 | INFO | ROW_DONE | row_excel=150/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,302 | INFO | ROW_START | row_excel=151/208
+2026-03-29 18:04:43,305 | INFO | ROW_DONE | row_excel=151/208 | status=ready_without_release_anchor | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,305 | INFO | SOURCE_CHECKPOINT | rows_done=150
+2026-03-29 18:04:43,305 | INFO | ROW_START | row_excel=152/208
+2026-03-29 18:04:43,306 | INFO | ROW_DONE | row_excel=152/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,306 | INFO | ROW_START | row_excel=153/208
+2026-03-29 18:04:43,308 | INFO | ROW_DONE | row_excel=153/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,308 | INFO | ROW_START | row_excel=154/208
+2026-03-29 18:04:43,311 | INFO | ROW_DONE | row_excel=154/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,312 | INFO | ROW_START | row_excel=155/208
+2026-03-29 18:04:43,316 | INFO | ROW_DONE | row_excel=155/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,316 | INFO | ROW_START | row_excel=156/208
+2026-03-29 18:04:43,317 | INFO | ROW_DONE | row_excel=156/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,318 | INFO | ROW_START | row_excel=157/208
+2026-03-29 18:04:43,321 | INFO | ROW_DONE | row_excel=157/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,321 | INFO | ROW_START | row_excel=158/208
+2026-03-29 18:04:43,323 | INFO | ROW_DONE | row_excel=158/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,323 | INFO | ROW_START | row_excel=159/208
+2026-03-29 18:04:43,324 | INFO | ROW_DONE | row_excel=159/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,324 | INFO | ROW_START | row_excel=160/208
+2026-03-29 18:04:43,325 | WARNING | ANCHOR_DATE_MISMATCH | row=160 | release_date=2013-10-15 | anchor_trade_date=2014-06-04 | delta_days=232
+2026-03-29 18:04:43,325 | INFO | ROW_DONE | row_excel=160/208 | status=ready | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,325 | INFO | ROW_START | row_excel=161/208
+2026-03-29 18:04:43,329 | INFO | ROW_DONE | row_excel=161/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,329 | INFO | ROW_START | row_excel=162/208
+2026-03-29 18:04:43,335 | INFO | ROW_DONE | row_excel=162/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.01 | rate_limit_delta=0
+2026-03-29 18:04:43,335 | INFO | ROW_START | row_excel=163/208
+2026-03-29 18:04:43,337 | INFO | ROW_DONE | row_excel=163/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,337 | INFO | ROW_START | row_excel=164/208
+2026-03-29 18:04:43,339 | INFO | ROW_DONE | row_excel=164/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,339 | INFO | ROW_START | row_excel=165/208
+2026-03-29 18:04:43,340 | INFO | ROW_DONE | row_excel=165/208 | status=ready_without_release_anchor | resolved_ticker=T | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,340 | INFO | ROW_START | row_excel=166/208
+2026-03-29 18:04:43,341 | INFO | ROW_DONE | row_excel=166/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,341 | INFO | ROW_START | row_excel=167/208
+2026-03-29 18:04:43,345 | INFO | ROW_DONE | row_excel=167/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,345 | INFO | ROW_START | row_excel=168/208
+2026-03-29 18:04:43,348 | INFO | ROW_DONE | row_excel=168/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,348 | INFO | ROW_START | row_excel=169/208
+2026-03-29 18:04:43,352 | INFO | ROW_DONE | row_excel=169/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,352 | INFO | ROW_START | row_excel=170/208
+2026-03-29 18:04:43,358 | INFO | ROW_DONE | row_excel=170/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.01 | rate_limit_delta=0
+2026-03-29 18:04:43,358 | INFO | ROW_START | row_excel=171/208
+2026-03-29 18:04:43,362 | INFO | ROW_DONE | row_excel=171/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,362 | INFO | ROW_START | row_excel=172/208
+2026-03-29 18:04:43,367 | INFO | ROW_DONE | row_excel=172/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,367 | INFO | ROW_START | row_excel=173/208
+2026-03-29 18:04:43,369 | INFO | ROW_DONE | row_excel=173/208 | status=ready_without_release_anchor | resolved_ticker=YDEX | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,369 | INFO | ROW_START | row_excel=174/208
+2026-03-29 18:04:43,372 | INFO | ROW_DONE | row_excel=174/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,372 | INFO | ROW_START | row_excel=175/208
+2026-03-29 18:04:43,374 | INFO | ROW_DONE | row_excel=175/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,374 | INFO | ROW_START | row_excel=176/208
+2026-03-29 18:04:43,377 | INFO | ROW_DONE | row_excel=176/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,377 | INFO | SOURCE_CHECKPOINT | rows_done=175
+2026-03-29 18:04:43,377 | INFO | ROW_START | row_excel=177/208
+2026-03-29 18:04:43,382 | INFO | ROW_DONE | row_excel=177/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,382 | INFO | ROW_START | row_excel=178/208
+2026-03-29 18:04:43,386 | INFO | ROW_DONE | row_excel=178/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,386 | INFO | ROW_START | row_excel=179/208
+2026-03-29 18:04:43,387 | INFO | ROW_DONE | row_excel=179/208 | status=ready_without_release_anchor | resolved_ticker=ROSB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,387 | INFO | ROW_START | row_excel=180/208
+2026-03-29 18:04:43,388 | INFO | ROW_DONE | row_excel=180/208 | status=ready_without_release_anchor | resolved_ticker=ROSB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,388 | INFO | ROW_START | row_excel=181/208
+2026-03-29 18:04:43,390 | INFO | ROW_DONE | row_excel=181/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,391 | INFO | ROW_START | row_excel=182/208
+2026-03-29 18:04:43,393 | INFO | ROW_DONE | row_excel=182/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,393 | INFO | ROW_START | row_excel=183/208
+2026-03-29 18:04:43,397 | INFO | ROW_DONE | row_excel=183/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,397 | INFO | ROW_START | row_excel=184/208
+2026-03-29 18:04:43,402 | INFO | ROW_DONE | row_excel=184/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,402 | INFO | ROW_START | row_excel=185/208
+2026-03-29 18:04:43,405 | INFO | ROW_DONE | row_excel=185/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,406 | INFO | ROW_START | row_excel=186/208
+2026-03-29 18:04:43,408 | INFO | ROW_DONE | row_excel=186/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,408 | INFO | ROW_START | row_excel=187/208
+2026-03-29 18:04:43,409 | INFO | ROW_DONE | row_excel=187/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,410 | INFO | ROW_START | row_excel=188/208
+2026-03-29 18:04:43,415 | INFO | ROW_DONE | row_excel=188/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,415 | INFO | ROW_START | row_excel=189/208
+2026-03-29 18:04:43,419 | INFO | ROW_DONE | row_excel=189/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,420 | INFO | ROW_START | row_excel=190/208
+2026-03-29 18:04:43,421 | INFO | ROW_DONE | row_excel=190/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,421 | INFO | ROW_START | row_excel=191/208
+2026-03-29 18:04:43,423 | INFO | ROW_DONE | row_excel=191/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,423 | INFO | ROW_START | row_excel=192/208
+2026-03-29 18:04:43,425 | INFO | ROW_DONE | row_excel=192/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,425 | INFO | ROW_START | row_excel=193/208
+2026-03-29 18:04:43,428 | INFO | ROW_DONE | row_excel=193/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,428 | INFO | ROW_START | row_excel=194/208
+2026-03-29 18:04:43,433 | INFO | ROW_DONE | row_excel=194/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,433 | INFO | ROW_START | row_excel=195/208
+2026-03-29 18:04:43,434 | INFO | ROW_DONE | row_excel=195/208 | status=unresolved | resolved_ticker=ACBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,435 | INFO | ROW_START | row_excel=196/208
+2026-03-29 18:04:43,437 | INFO | ROW_DONE | row_excel=196/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,437 | INFO | ROW_START | row_excel=197/208
+2026-03-29 18:04:43,438 | INFO | ROW_DONE | row_excel=197/208 | status=unresolved | resolved_ticker=PSBR | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,438 | INFO | ROW_START | row_excel=198/208
+2026-03-29 18:04:43,440 | INFO | ROW_DONE | row_excel=198/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,440 | INFO | ROW_START | row_excel=199/208
+2026-03-29 18:04:43,442 | INFO | ROW_DONE | row_excel=199/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,442 | INFO | ROW_START | row_excel=200/208
+2026-03-29 18:04:43,445 | INFO | ROW_DONE | row_excel=200/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,446 | INFO | ROW_START | row_excel=201/208
+2026-03-29 18:04:43,448 | INFO | ROW_DONE | row_excel=201/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,449 | INFO | SOURCE_CHECKPOINT | rows_done=200
+2026-03-29 18:04:43,449 | INFO | ROW_START | row_excel=202/208
+2026-03-29 18:04:43,451 | INFO | ROW_DONE | row_excel=202/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,451 | INFO | ROW_START | row_excel=203/208
+2026-03-29 18:04:43,455 | INFO | ROW_DONE | row_excel=203/208 | status=ready_without_release_anchor | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,455 | INFO | ROW_START | row_excel=204/208
+2026-03-29 18:04:43,456 | INFO | ROW_DONE | row_excel=204/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,456 | INFO | ROW_START | row_excel=205/208
+2026-03-29 18:04:43,457 | INFO | ROW_DONE | row_excel=205/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,457 | INFO | ROW_START | row_excel=206/208
+2026-03-29 18:04:43,458 | INFO | ROW_DONE | row_excel=206/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:43,458 | INFO | ROW_START | row_excel=207/208
+2026-03-29 18:04:43,567 | INFO | ROW_DONE | row_excel=207/208 | status=ready | resolved_ticker=SBER | elapsed_s=0.11 | rate_limit_delta=0
+2026-03-29 18:04:43,567 | INFO | ROW_START | row_excel=208/208
+2026-03-29 18:04:43,570 | INFO | ROW_DONE | row_excel=208/208 | status=ready_without_release_anchor | resolved_ticker=SVCB | elapsed_s=0.00 | rate_limit_delta=0
+2026-03-29 18:04:46,563 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2024-02-19 | anchor_trade_idx=44 | trade_days_in_fetch=65 | required_pre=280
+2026-03-29 18:04:46,741 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2024-09-24 | anchor_trade_idx=196 | trade_days_in_fetch=219 | required_pre=280
+2026-03-29 18:04:46,846 | WARNING | ANCHOR_DATE_OVERRIDE | row=28 | raw_parsed=2023-09-07 | effective_anchor=2023-12-15 | source=n/a
+2026-03-29 18:04:46,848 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2023-12-15 | anchor_trade_idx=0 | trade_days_in_fetch=19 | required_pre=280
+2026-03-29 18:04:46,854 | WARNING | ANCHOR_DATE_OVERRIDE | row=30 | raw_parsed=2023-06-14 | effective_anchor=2023-12-15 | source=n/a
+2026-03-29 18:04:46,854 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2023-12-15 | anchor_trade_idx=0 | trade_days_in_fetch=19 | required_pre=280
+2026-03-29 18:04:46,881 | WARNING | INSUFFICIENT_HISTORY | ticker=RENI | anchor=2022-06-14 | anchor_trade_idx=139 | trade_days_in_fetch=162 | required_pre=280
+2026-03-29 18:04:47,186 | WARNING | INSUFFICIENT_HISTORY | ticker=OZON | anchor=2021-04-13 | anchor_trade_idx=96 | trade_days_in_fetch=118 | required_pre=280
+2026-03-29 18:04:48,291 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2014-12-09 | anchor_trade_idx=134 | trade_days_in_fetch=157 | required_pre=280
+2026-03-29 18:04:48,357 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2014-09-11 | anchor_trade_idx=71 | trade_days_in_fetch=93 | required_pre=280
+2026-03-29 18:04:48,393 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2014-06-16 | anchor_trade_idx=8 | trade_days_in_fetch=31 | required_pre=280
+2026-03-29 18:04:48,552 | WARNING | ANCHOR_DATE_OVERRIDE | row=160 | raw_parsed=2013-10-15 | effective_anchor=2014-06-04 | source=n/a
+2026-03-29 18:04:48,553 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2014-06-04 | anchor_trade_idx=0 | trade_days_in_fetch=23 | required_pre=280
+2026-03-29 18:04:59,646 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2024-11-15 | anchor_trade_idx=234 | trade_days_in_fetch=255 | required_pre=280
+2026-03-29 18:04:59,714 | WARNING | ANCHOR_DATE_OVERRIDE | row=20 | raw_parsed=2024-10-31 | effective_anchor=2024-10-24 | source=deal_close_date
+2026-03-29 18:04:59,740 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2024-09-25 | anchor_trade_idx=197 | trade_days_in_fetch=220 | required_pre=280
+2026-03-29 18:04:59,804 | WARNING | ANCHOR_DATE_OVERRIDE | row=26 | raw_parsed=2024-06-25 | effective_anchor=2024-06-11 | source=deal_close_date
+2026-03-29 18:04:59,849 | WARNING | ANCHOR_DATE_OVERRIDE | row=28 | raw_parsed=2024-01-11 | effective_anchor=2023-08-31 | source=deal_close_date
+2026-03-29 18:04:59,851 | WARNING | ANCHOR_DATE_OVERRIDE | row=31 | raw_parsed=2023-01-18 | effective_anchor=2019-05-22 | source=deal_close_date
+2026-03-29 18:04:59,873 | WARNING | ANCHOR_DATE_OVERRIDE | row=34 | raw_parsed=2025-11-12 | effective_anchor=2026-02-18 | source=deal_close_date
+2026-03-29 18:04:59,916 | WARNING | ANCHOR_DATE_OVERRIDE | row=37 | raw_parsed=2022-06-27 | effective_anchor=2022-06-17 | source=deal_close_date
+2026-03-29 18:04:59,917 | WARNING | ANCHOR_DATE_OVERRIDE | row=38 | raw_parsed=2022-02-03 | effective_anchor=2022-02-18 | source=deal_close_date
+2026-03-29 18:04:59,983 | WARNING | ANCHOR_DATE_OVERRIDE | row=44 | raw_parsed=2021-10-30 | effective_anchor=2021-11-29 | source=deal_close_date
+2026-03-29 18:05:00,006 | WARNING | ANCHOR_DATE_OVERRIDE | row=46 | raw_parsed=2021-09-30 | effective_anchor=2022-01-20 | source=deal_close_date
+2026-03-29 18:05:00,007 | WARNING | ANCHOR_DATE_OVERRIDE | row=47 | raw_parsed=2021-09-30 | effective_anchor=2022-01-20 | source=deal_close_date
+2026-03-29 18:05:00,053 | WARNING | ANCHOR_DATE_OVERRIDE | row=50 | raw_parsed=2021-07-01 | effective_anchor=2021-04-12 | source=deal_close_date
+2026-03-29 18:05:00,098 | WARNING | ANCHOR_DATE_OVERRIDE | row=52 | raw_parsed=2021-07-20 | effective_anchor=2021-05-14 | source=deal_close_date
+2026-03-29 18:05:00,145 | WARNING | ANCHOR_DATE_OVERRIDE | row=56 | raw_parsed=2021-05-31 | effective_anchor=2021-04-14 | source=deal_close_date
+2026-03-29 18:05:00,149 | WARNING | INSUFFICIENT_HISTORY | ticker=OZON | anchor=2021-05-26 | anchor_trade_idx=126 | trade_days_in_fetch=149 | required_pre=280
+2026-03-29 18:05:00,185 | WARNING | ANCHOR_DATE_OVERRIDE | row=59 | raw_parsed=2021-04-23 | effective_anchor=2021-04-02 | source=deal_close_date
+2026-03-29 18:05:00,206 | WARNING | ANCHOR_DATE_OVERRIDE | row=60 | raw_parsed=2021-04-09 | effective_anchor=2021-05-18 | source=deal_close_date
+2026-03-29 18:05:00,273 | WARNING | ANCHOR_DATE_OVERRIDE | row=65 | raw_parsed=2021-03-02 | effective_anchor=2021-02-20 | source=deal_close_date
+2026-03-29 18:05:00,343 | WARNING | ANCHOR_DATE_OVERRIDE | row=70 | raw_parsed=2021-01-04 | effective_anchor=2021-01-19 | source=deal_close_date
+2026-03-29 18:05:00,344 | WARNING | ANCHOR_DATE_OVERRIDE | row=71 | raw_parsed=2021-01-11 | effective_anchor=2021-05-05 | source=deal_close_date
+2026-03-29 18:05:00,390 | WARNING | ANCHOR_DATE_OVERRIDE | row=73 | raw_parsed=2020-12-04 | effective_anchor=2020-12-31 | source=deal_close_date
+2026-03-29 18:05:00,413 | WARNING | ANCHOR_DATE_OVERRIDE | row=75 | raw_parsed=2020-10-01 | effective_anchor=2020-10-29 | source=deal_close_date
+2026-03-29 18:05:00,624 | WARNING | ANCHOR_DATE_OVERRIDE | row=86 | raw_parsed=2019-12-11 | effective_anchor=2020-11-06 | source=deal_close_date
+2026-03-29 18:05:00,625 | WARNING | ANCHOR_DATE_OVERRIDE | row=87 | raw_parsed=2019-12-02 | effective_anchor=2020-03-25 | source=deal_close_date
+2026-03-29 18:05:00,625 | WARNING | ANCHOR_DATE_OVERRIDE | row=89 | raw_parsed=2020-03-05 | effective_anchor=2019-12-24 | source=deal_close_date
+2026-03-29 18:05:00,626 | WARNING | ANCHOR_DATE_OVERRIDE | row=90 | raw_parsed=2019-08-29 | effective_anchor=2019-05-22 | source=deal_close_date
+2026-03-29 18:05:00,691 | WARNING | ANCHOR_DATE_OVERRIDE | row=94 | raw_parsed=2019-08-01 | effective_anchor=2017-10-12 | source=deal_close_date
+2026-03-29 18:05:00,762 | WARNING | ANCHOR_DATE_OVERRIDE | row=98 | raw_parsed=2019-04-10 | effective_anchor=2019-04-01 | source=deal_close_date
+2026-03-29 18:05:00,810 | WARNING | ANCHOR_DATE_OVERRIDE | row=101 | raw_parsed=2018-08-03 | effective_anchor=2018-04-20 | source=deal_close_date
+2026-03-29 18:05:00,812 | WARNING | ANCHOR_DATE_OVERRIDE | row=103 | raw_parsed=2018-12-19 | effective_anchor=2018-08-07 | source=deal_close_date
+2026-03-29 18:05:00,814 | WARNING | ANCHOR_DATE_OVERRIDE | row=104 | raw_parsed=2018-07-24 | effective_anchor=2018-07-16 | source=deal_close_date
+2026-03-29 18:05:00,816 | WARNING | ANCHOR_DATE_OVERRIDE | row=107 | raw_parsed=2018-04-26 | effective_anchor=2018-04-20 | source=deal_close_date
+2026-03-29 18:05:00,841 | WARNING | ANCHOR_DATE_OVERRIDE | row=111 | raw_parsed=2018-01-28 | effective_anchor=2018-01-18 | source=deal_close_date
+2026-03-29 18:05:00,863 | WARNING | ANCHOR_DATE_OVERRIDE | row=112 | raw_parsed=2018-01-28 | effective_anchor=2018-01-19 | source=deal_close_date
+2026-03-29 18:05:00,891 | WARNING | ANCHOR_DATE_OVERRIDE | row=115 | raw_parsed=2017-09-29 | effective_anchor=2017-09-04 | source=deal_close_date
+2026-03-29 18:05:00,939 | WARNING | ANCHOR_DATE_OVERRIDE | row=117 | raw_parsed=2018-04-11 | effective_anchor=2017-05-03 | source=deal_close_date
+2026-03-29 18:05:01,082 | WARNING | ANCHOR_DATE_OVERRIDE | row=125 | raw_parsed=2017-01-21 | effective_anchor=2016-11-24 | source=deal_close_date
+2026-03-29 18:05:01,084 | WARNING | ANCHOR_DATE_OVERRIDE | row=127 | raw_parsed=2016-10-11 | effective_anchor=2016-10-19 | source=deal_close_date
+2026-03-29 18:05:01,088 | WARNING | ANCHOR_DATE_OVERRIDE | row=128 | raw_parsed=2017-12-20 | effective_anchor=2016-03-29 | source=deal_close_date
+2026-03-29 18:05:01,089 | WARNING | ANCHOR_DATE_OVERRIDE | row=129 | raw_parsed=2016-05-10 | effective_anchor=2016-04-29 | source=deal_close_date
+2026-03-29 18:05:01,182 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2014-12-09 | anchor_trade_idx=134 | trade_days_in_fetch=157 | required_pre=280
+2026-03-29 18:05:01,243 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2014-09-10 | anchor_trade_idx=70 | trade_days_in_fetch=93 | required_pre=280
+2026-03-29 18:05:01,275 | WARNING | ANCHOR_DATE_OVERRIDE | row=151 | raw_parsed=2014-10-15 | effective_anchor=2014-08-20 | source=deal_close_date
+2026-03-29 18:05:01,276 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2014-08-20 | anchor_trade_idx=55 | trade_days_in_fetch=78 | required_pre=280
+2026-03-29 18:05:01,308 | WARNING | ANCHOR_DATE_OVERRIDE | row=154 | raw_parsed=2014-05-13 | effective_anchor=2015-04-03 | source=deal_close_date
+2026-03-29 18:05:01,355 | WARNING | ANCHOR_DATE_OVERRIDE | row=156 | raw_parsed=2017-09-29 | effective_anchor=2014-03-14 | source=deal_close_date
+2026-03-29 18:05:01,377 | WARNING | ANCHOR_DATE_OVERRIDE | row=157 | raw_parsed=2014-08-14 | effective_anchor=2014-03-14 | source=deal_close_date
+2026-03-29 18:05:01,403 | WARNING | ANCHOR_DATE_OVERRIDE | row=158 | raw_parsed=2016-04-27 | effective_anchor=2014-02-28 | source=deal_close_date
+2026-03-29 18:05:01,425 | WARNING | ANCHOR_DATE_OVERRIDE | row=159 | raw_parsed=2014-02-10 | effective_anchor=2014-12-09 | source=deal_close_date
+2026-03-29 18:05:01,426 | WARNING | ANCHOR_DATE_OVERRIDE | row=160 | raw_parsed=2013-10-15 | effective_anchor=2013-12-11 | source=deal_close_date
+2026-03-29 18:05:01,427 | WARNING | ANCHOR_DATE_OVERRIDE | row=161 | raw_parsed=2013-10-08 | effective_anchor=2013-05-23 | source=deal_close_date
+2026-03-29 18:05:01,453 | WARNING | ANCHOR_DATE_OVERRIDE | row=162 | raw_parsed=2013-07-02 | effective_anchor=2013-04-11 | source=deal_close_date
+2026-03-29 18:05:01,476 | WARNING | ANCHOR_DATE_OVERRIDE | row=163 | raw_parsed=2013-10-04 | effective_anchor=2013-07-04 | source=deal_close_date
+2026-03-29 18:05:01,503 | WARNING | ANCHOR_DATE_OVERRIDE | row=165 | raw_parsed=2013-10-19 | effective_anchor=2013-08-06 | source=deal_close_date
+2026-03-29 18:05:01,526 | WARNING | ANCHOR_DATE_OVERRIDE | row=168 | raw_parsed=2013-09-17 | effective_anchor=2012-12-19 | source=deal_close_date
+2026-03-29 18:05:01,526 | WARNING | ANCHOR_DATE_OVERRIDE | row=169 | raw_parsed=2012-10-10 | effective_anchor=2012-10-01 | source=deal_close_date
+2026-03-29 18:05:01,553 | WARNING | ANCHOR_DATE_OVERRIDE | row=170 | raw_parsed=2012-10-23 | effective_anchor=2012-09-05 | source=deal_close_date
+2026-03-29 18:05:02,118 | WARNING | ANCHOR_DATE_OVERRIDE | row=172 | raw_parsed=2012-05-22 | effective_anchor=2012-05-16 | source=deal_close_date
+2026-03-29 18:05:02,309 | WARNING | ANCHOR_DATE_OVERRIDE | row=176 | raw_parsed=2012-02-27 | effective_anchor=2012-02-15 | source=deal_close_date
+2026-03-29 18:05:02,387 | WARNING | ANCHOR_DATE_OVERRIDE | row=178 | raw_parsed=2012-01-12 | effective_anchor=2012-01-30 | source=deal_close_date
+2026-03-29 18:05:02,450 | WARNING | ANCHOR_DATE_OVERRIDE | row=179 | raw_parsed=2011-12-01 | effective_anchor=2011-12-29 | source=deal_close_date
+2026-03-29 18:05:02,452 | WARNING | ANCHOR_DATE_OVERRIDE | row=180 | raw_parsed=2011-12-01 | effective_anchor=2011-12-09 | source=deal_close_date
+2026-03-29 18:05:02,453 | WARNING | ANCHOR_DATE_OVERRIDE | row=181 | raw_parsed=2011-12-01 | effective_anchor=2011-12-23 | source=deal_close_date
+2026-03-29 18:05:02,479 | WARNING | ANCHOR_DATE_OVERRIDE | row=182 | raw_parsed=2011-12-01 | effective_anchor=2011-12-07 | source=deal_close_date
+2026-03-29 18:05:02,579 | WARNING | ANCHOR_DATE_OVERRIDE | row=186 | raw_parsed=2011-11-15 | effective_anchor=2011-11-24 | source=deal_close_date
+2026-03-29 18:05:02,607 | WARNING | ANCHOR_DATE_OVERRIDE | row=187 | raw_parsed=2011-09-30 | effective_anchor=2011-06-30 | source=deal_close_date
+2026-03-29 18:05:02,690 | WARNING | ANCHOR_DATE_OVERRIDE | row=190 | raw_parsed=2011-03-07 | effective_anchor=2011-03-22 | source=deal_close_date
+2026-03-29 18:05:02,691 | WARNING | ANCHOR_DATE_OVERRIDE | row=191 | raw_parsed=2011-03-02 | effective_anchor=2011-02-01 | source=deal_close_date
+2026-03-29 18:05:02,718 | WARNING | ANCHOR_DATE_OVERRIDE | row=192 | raw_parsed=2010-12-23 | effective_anchor=2010-01-25 | source=deal_close_date
+2026-03-29 18:05:02,768 | WARNING | ANCHOR_DATE_OVERRIDE | row=194 | raw_parsed=2010-11-02 | effective_anchor=2010-11-08 | source=deal_close_date
+2026-03-29 18:05:02,789 | WARNING | ANCHOR_DATE_OVERRIDE | row=195 | raw_parsed=2010-06-30 | effective_anchor=2008-11-30 | source=deal_close_date
+2026-03-29 18:05:02,790 | WARNING | ANCHOR_DATE_OVERRIDE | row=196 | raw_parsed=2010-06-30 | effective_anchor=2010-06-15 | source=deal_close_date
+2026-03-29 18:05:02,790 | WARNING | ANCHOR_DATE_OVERRIDE | row=197 | raw_parsed=2010-06-30 | effective_anchor=2010-06-07 | source=deal_close_date
+2026-03-29 18:05:02,790 | WARNING | ANCHOR_DATE_OVERRIDE | row=198 | raw_parsed=2010-06-25 | effective_anchor=2010-07-06 | source=deal_close_date
+2026-03-29 18:05:02,838 | WARNING | ANCHOR_DATE_OVERRIDE | row=200 | raw_parsed=2010-06-30 | effective_anchor=2010-05-31 | source=deal_close_date
+2026-03-29 18:05:02,887 | WARNING | ANCHOR_DATE_OVERRIDE | row=202 | raw_parsed=2010-06-25 | effective_anchor=2010-07-08 | source=deal_close_date
+2026-03-29 18:05:02,909 | WARNING | ANCHOR_DATE_OVERRIDE | row=203 | raw_parsed=2010-06-30 | effective_anchor=2010-04-26 | source=deal_close_date
+2026-03-29 18:05:02,936 | WARNING | ANCHOR_DATE_OVERRIDE | row=204 | raw_parsed=2010-06-30 | effective_anchor=2010-06-03 | source=deal_close_date
+2026-03-29 18:05:02,958 | WARNING | ANCHOR_DATE_OVERRIDE | row=205 | raw_parsed=2010-06-25 | effective_anchor=2010-07-05 | source=deal_close_date
+2026-03-29 18:05:03,005 | WARNING | ANCHOR_DATE_OVERRIDE | row=207 | raw_parsed=2013-10-05 | effective_anchor=2010-12-01 | source=deal_close_date
+2026-03-29 18:05:12,586 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2024-02-19 | anchor_trade_idx=44 | trade_days_in_fetch=65 | required_pre=280
+2026-03-29 18:05:12,743 | WARNING | INSUFFICIENT_HISTORY | ticker=SVCB | anchor=2024-10-30 | anchor_trade_idx=222 | trade_days_in_fetch=245 | required_pre=280
+2026-03-29 18:05:12,884 | WARNING | INSUFFICIENT_HISTORY | ticker=RENI | anchor=2022-06-14 | anchor_trade_idx=139 | trade_days_in_fetch=162 | required_pre=280
+2026-03-29 18:05:13,139 | WARNING | INSUFFICIENT_HISTORY | ticker=OZON | anchor=2021-04-13 | anchor_trade_idx=96 | trade_days_in_fetch=118 | required_pre=280
+2026-03-29 18:05:14,165 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2014-12-09 | anchor_trade_idx=134 | trade_days_in_fetch=157 | required_pre=280
+2026-03-29 18:05:14,276 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2014-09-11 | anchor_trade_idx=71 | trade_days_in_fetch=93 | required_pre=280
+2026-03-29 18:05:14,356 | WARNING | INSUFFICIENT_HISTORY | ticker=YDEX | anchor=2014-06-16 | anchor_trade_idx=8 | trade_days_in_fetch=31 | required_pre=280
+2026-03-29 18:05:25,646 | INFO | FIELD_MISSING_SUMMARY (daily tables)
+2026-03-29 18:05:25,647 | INFO | Adjusted Close | missing=109505 | top_reasons={'adjusted_close_unavailable': 109505} | top_sources={'unavailable': 109505}
+2026-03-29 18:05:25,648 | INFO | RUONIA daily | missing=109505 | top_reasons={'benchmark_series_missing': 109505} | top_sources={'unavailable': 109505}
+2026-03-29 18:05:25,648 | INFO | ROA | missing=61833 | top_reasons={'financials_no_asof_value': 57024, 'financials_missing_metric': 4809} | top_sources={'unavailable': 61833}
+2026-03-29 18:05:25,648 | INFO | ROE | missing=58184 | top_reasons={'financials_no_asof_value': 57551, 'financials_missing_metric': 633} | top_sources={'unavailable': 58184}
+2026-03-29 18:05:25,648 | INFO | IMOEX daily close | missing=92000 | top_reasons={'benchmark_no_asof_value': 92000} | top_sources={'unavailable': 92000}
+2026-03-29 18:05:25,648 | INFO | Market Capitalization | missing=57657 | top_reasons={'financials_no_asof_value': 57024, 'financials_missing_metric': 633} | top_sources={'unavailable': 57657}
+2026-03-29 18:05:25,648 | INFO | P/B | missing=57657 | top_reasons={'financials_no_asof_value': 57024, 'financials_missing_metric': 633} | top_sources={'unavailable': 57657}
+2026-03-29 18:05:25,648 | INFO | P/E | missing=57657 | top_reasons={'financials_no_asof_value': 57024, 'financials_missing_metric': 633} | top_sources={'unavailable': 57657}
+2026-03-29 18:05:25,649 | INFO | Total Assets | missing=57657 | top_reasons={'financials_no_asof_value': 57024, 'financials_missing_metric': 633} | top_sources={'unavailable': 57657}
+2026-03-29 18:07:30,580 | INFO | BHAR: сохранено 128 строк в /home/keeichi/Work/diplom/out/bhar_by_deal_ann.csv

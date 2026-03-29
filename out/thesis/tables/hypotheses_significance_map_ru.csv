@@ -1,9 +1,9 @@
 Гипотеза,Описание,Метрика_теста,Есть статистически значимый эффект,Комментарий
-H1,Мгновенная внутридневная реакция,CAR_ANN_INTRADAY_15M,НЕТ,p=0.1326
+H1,Мгновенная внутридневная реакция,CAR_ANN_INTRADAY_15M,НЕТ,Окна intraday: CAR_ANN_INTRADAY_15M p=0.3942; CAR_ANN_INTRADAY_30M p=0.1771; CAR_ANN_INTRADAY_1H p=0.2379; CAR_ANN_INTRADAY_3H p=0.2467; CAR_ANN_INTRADAY_M60_P180 p=0.4154.
 H2,Ранние бары после якоря,CAR first bars,НЕ ПРОТЕСТИРОВАНО,Недостаточно данных или ручная метрика
-H3,Доля реакции за 1ч к дню,ratio_1h_vs_day,НЕТ,p=0.2535
+H3,Доля реакции за 1ч к дню,ratio_1h_vs_day,НЕТ,Сравнение окон: CAR_ANN_INTRADAY_1H mean=-0.0034 p=0.2379; CAR_ANN_INTRADAY_M60_P180 mean=-0.0032 p=0.4154; CAR_ANN_INTRADAY_FULL mean=0.0003 p=0.9658; CAR_ANN_INTRADAY_TO_CLOSE mean=-0.0026 p=0.5738.
 H4,Предсобытийное окно intraday [-4;0] до якоря,CAR_INTRADAY_PRE_4_0,НЕ ПРОТЕСТИРОВАНО,
-H5,Различие on/off market intraday,CAR_ANN_INTRADAY_15M × is_off_market,НЕТ,p=0.8498
+H5,Различие on/off market intraday,CAR_ANN_INTRADAY_15M × is_off_market,НЕТ,p=0.2464
 H6,Дневные CAR объявления,CAR_ANN_1_1 / CAR_ANN_3_3,НЕТ,p=0.9122
 H7,Знак среднего CAR_ANN_1_1,sign mean CAR,НЕТ,p=0.9122
 H8,"Предсобытийный run-up [-30,-5]",RUNUP_PRE_30_5,ДА,p=0.03874

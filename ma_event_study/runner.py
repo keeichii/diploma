@@ -5,6 +5,7 @@ import re
 import sys
 import time
 from dataclasses import dataclass
+import math
 import os
 import pickle
 from datetime import date, datetime, time as dt_time, timedelta, timezone
@@ -35,7 +36,11 @@ RATE_LIMIT_SLEEP_BASE = 3
 RATE_LIMIT_HITS_TOTAL = 0
 
 MIN_15M_FETCH_PADDING_DAYS = 20
-DAILY_FETCH_CALENDAR_PADDING = 900
+# Поиск дневных свечей вокруг release_date для определения anchor_trade_date (intraday блок).
+# Должен захватывать случаи, когда инструмент начал торговаться значительно позже первой новости.
+RELEASE_DAILY_SEARCH_PADDING_DAYS = 365
+# Минимальный дополнительный календарный запас сверх расчетного окна (дни после anchor и небольшой буфер до) для daily окон.
+DAILY_FETCH_CALENDAR_PADDING = 30
 
 SHARES_CACHE: dict[str, list[dict[str, Any]]] | None = None
 SHARES_BY_NAME: list[dict[str, Any]] | None = None
@@ -94,6 +99,14 @@ COL_FIRST_PRESS_RELEASE_TIME_ALIASES = [
     "время первого пресс-релиза",
     "время объявления сделки",
     "время объявления",
+]
+COL_DEAL_CLOSE_DATE_ALIASES = [
+    "deal_close_date",
+    "дата закрытия сделки",
+    "дата закрытия",
+    "close date",
+    "deal close",
+    "closing date",
 ]
 COL_CBONDS_ACTUALIZATION_DATE_ALIASES = [
     "cbonds_actualization_date",
@@ -576,6 +589,7 @@ def build_column_map(df: pd.DataFrame) -> dict[str, str | None]:
         "deal_object": _pick_col(df, COL_OBJECT_ALIASES, 2, "deal_object"),
         "first_press_release_date": _pick_col(df, COL_FIRST_PRESS_RELEASE_DATE_ALIASES, 3, "first_press_release_date"),
         "first_press_release_time": _pick_col(df, COL_FIRST_PRESS_RELEASE_TIME_ALIASES, 4, "first_press_release_time"),
+        "deal_close_date": _pick_col(df, COL_DEAL_CLOSE_DATE_ALIASES, 5, "deal_close_date"),
         "cbonds_actualization_date": _pick_col(df, COL_CBONDS_ACTUALIZATION_DATE_ALIASES, 17, "cbonds_actualization_date"),
         "cbonds_create_date": _pick_col(df, COL_CBONDS_CREATE_DATE_ALIASES, 18, "cbonds_create_date"),
     }
@@ -985,7 +999,7 @@ def resolve_release_anchor(client: Client, instrument_id: str, release_date_raw:
         client,
         instrument_id,
         release_date - timedelta(days=MIN_15M_FETCH_PADDING_DAYS),
-        release_date + timedelta(days=MIN_15M_FETCH_PADDING_DAYS),
+        release_date + timedelta(days=RELEASE_DAILY_SEARCH_PADDING_DAYS),
     )
     trade_days = _unique_trade_days(daily)
     if not trade_days:
@@ -1183,6 +1197,7 @@ def process_source_rows(client: Client, df: pd.DataFrame, col_map: dict[str, str
             deal_object = row.get(col_map["deal_object"]) if col_map["deal_object"] else None
             release_date_raw = row.get(col_map["first_press_release_date"]) if col_map["first_press_release_date"] else None
             release_time_raw = row.get(col_map["first_press_release_time"]) if col_map["first_press_release_time"] else None
+            deal_close_raw = row.get(col_map["deal_close_date"]) if col_map.get("deal_close_date") else None
             cbonds_act_raw = row.get(col_map["cbonds_actualization_date"]) if col_map["cbonds_actualization_date"] else None
             cbonds_create_raw = row.get(col_map["cbonds_create_date"]) if col_map["cbonds_create_date"] else None
 
@@ -1193,6 +1208,7 @@ def process_source_rows(client: Client, df: pd.DataFrame, col_map: dict[str, str
             df.at[i, "audit_first_press_release_date_parsed"] = parse_date_any(release_date_raw)
             rt = parse_time_any(release_time_raw)
             df.at[i, "audit_first_press_release_time_parsed"] = rt.strftime("%H:%M") if rt else None
+            df.at[i, "audit_deal_close_date_parsed"] = parse_date_any(deal_close_raw)
             df.at[i, "audit_cbonds_actualization_date_parsed"] = parse_date_any(cbonds_act_raw)
             df.at[i, "audit_cbonds_create_date_parsed"] = parse_date_any(cbonds_create_raw)
             df.at[i, "audit_resolved_flag"] = 1 if resolved.ok else 0
@@ -1402,25 +1418,40 @@ def build_table_2_generic(
         buyer_company = row.get(col_map["buyer_company"]) if col_map.get("buyer_company") else None
         deal_object = row.get(col_map["deal_object"]) if col_map.get("deal_object") else None
         buyer_ticker = _display_buyer_ticker(row, col_map, source_df, i)
+
+        # Primary close anchor: Дата закрытия сделки (deal_close_date), fallback: cbonds_actualization_date.
+        close_raw = row.get(col_map["deal_close_date"]) if col_map.get("deal_close_date") else None
+        close_parsed = parse_date_any(close_raw)
         anchor_raw = row.get(col_map[anchor_col_key]) if col_map.get(anchor_col_key) else None
         anchor_date_raw_str = None if anchor_raw is None else str(anchor_raw).strip()
         anchor_date_raw_parsed = parse_date_any(anchor_raw)
+        if event_name == "cbonds_actualization":
+            if close_parsed is not None:
+                anchor_date_effective = close_parsed
+                close_anchor_source = "deal_close_date"
+            else:
+                anchor_date_effective = anchor_date_raw_parsed
+                close_anchor_source = "cbonds_actualization_date"
+        else:
+            anchor_date_effective = anchor_date_raw_parsed
+            close_anchor_source = "n/a"
         if event_name == "first_press_release" and int(source_df.at[i, "audit_resolved_flag"] or 0) == 1:
             audit_anchor = source_df.at[i, "audit_release_anchor_trade_date"]
             if pd.notna(audit_anchor):
                 ad_from_audit = parse_date_any(audit_anchor)
-                anchor_date = ad_from_audit if ad_from_audit is not None else anchor_date_raw_parsed
+                anchor_date = ad_from_audit if ad_from_audit is not None else anchor_date_effective
             else:
-                anchor_date = anchor_date_raw_parsed
+                anchor_date = anchor_date_effective
         else:
-            anchor_date = anchor_date_raw_parsed
+            anchor_date = anchor_date_effective
 
         if anchor_date and anchor_date_raw_parsed and abs((anchor_date - anchor_date_raw_parsed).days) > 5:
             logger.warning(
-                "ANCHOR_DATE_OVERRIDE | row=%s | raw_parsed=%s | effective_anchor=%s",
+                "ANCHOR_DATE_OVERRIDE | row=%s | raw_parsed=%s | effective_anchor=%s | source=%s",
                 i + 2,
                 anchor_date_raw_parsed,
                 anchor_date,
+                close_anchor_source,
             )
 
         src_excel = i + 2
@@ -1491,11 +1522,18 @@ def build_table_2_generic(
 
         is_off_market_release = _iom_resolved() if event_name == "first_press_release" else 0
 
+        # Для daily-окон estimation (-daily_window_pre..+daily_window_post) нужен глубокий pre-history.
+        # Берем запас по календарю как ~1.5 * требуемого числа торговых дней + небольшой буфер DAILY_FETCH_CALENDAR_PADDING.
+        required_pre_trade_days = int(cfg.daily_window_pre)
+        required_pre_calendar_days = int(math.ceil(required_pre_trade_days * 1.5))
+        fetch_start = anchor_date - timedelta(days=required_pre_calendar_days + DAILY_FETCH_CALENDAR_PADDING)
+        fetch_end = anchor_date + timedelta(days=DAILY_FETCH_CALENDAR_PADDING)
+
         daily = _get_daily_window(
             client,
             instrument_id,
-            anchor_date - timedelta(days=DAILY_FETCH_CALENDAR_PADDING),
-            anchor_date + timedelta(days=DAILY_FETCH_CALENDAR_PADDING),
+            fetch_start,
+            fetch_end,
         )
         selected, anchor_trade_date = _select_daily_slice(
             daily,
@@ -1609,7 +1647,12 @@ def run_build(cfg: Config) -> None:
     col_map = build_column_map(source_df)
     source_df = _ensure_columns(source_df, AUDIT_COLS)
     # Диапазон для IMOEX historical preload (минимизируем количество API вызовов).
-    anchor_date_cols = [k for k in ["first_press_release_date", "cbonds_actualization_date", "cbonds_create_date"] if col_map.get(k)]
+    # В приоритете: дата закрытия сделки, затем cbonds-актуализация, затем дата создания.
+    anchor_date_cols = [
+        k
+        for k in ["deal_close_date", "cbonds_actualization_date", "cbonds_create_date", "first_press_release_date"]
+        if col_map.get(k)
+    ]
     anchor_dates: list[date] = []
     for k in anchor_date_cols:
         col = col_map[k]
@@ -1626,7 +1669,11 @@ def run_build(cfg: Config) -> None:
         # честный дефолт: без дат бенчмарк всё равно не заполнится
         min_anchor = date.today()
         max_anchor = date.today()
-    bench_from = min_anchor - timedelta(days=DAILY_FETCH_CALENDAR_PADDING)
+
+    # Окно бенчмарков: покрываем estimation window и добавляем небольшой календарный буфер.
+    required_pre_trade_days = int(cfg.daily_window_pre)
+    required_pre_calendar_days = int(math.ceil(required_pre_trade_days * 1.5))
+    bench_from = min_anchor - timedelta(days=required_pre_calendar_days + DAILY_FETCH_CALENDAR_PADDING)
     bench_to = max_anchor + timedelta(days=DAILY_FETCH_CALENDAR_PADDING)
 
     try:

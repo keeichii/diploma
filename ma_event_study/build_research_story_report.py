@@ -511,7 +511,13 @@ def build_docx(ctx: ReportContext, m: Dict[str, object], sections: Dict[str, obj
     ]
     for img_path, caption in chart_notes:
         doc.add_paragraph(caption)
-        doc.add_picture(str(img_path), width=Cm(15.5))
+        if img_path.is_file():
+            doc.add_picture(str(img_path), width=Cm(15.5))
+        else:
+            add_docx_paragraph(
+                doc,
+                f"[Пропущено: файл графика не найден: {img_path.name}]",
+            )
         doc.add_paragraph()
 
     doc.add_heading("7. Ограничения и корректность интерпретации", level=1)
@@ -692,9 +698,12 @@ def build_pdf(ctx: ReportContext, m: Dict[str, object], sections: Dict[str, obje
     ]
     for img_path, note in chart_notes:
         add_body(note)
-        img = RLImage(str(img_path))
-        img._restrictSize(15.3 * cm, 10.8 * cm)
-        story.append(img)
+        if img_path.is_file():
+            img = RLImage(str(img_path))
+            img._restrictSize(15.3 * cm, 10.8 * cm)
+            story.append(img)
+        else:
+            add_body(f"[Пропущено: файл графика не найден: {img_path.name}]")
         story.append(Spacer(1, 0.2 * cm))
 
     add_heading("7. Ограничения и корректность интерпретации")

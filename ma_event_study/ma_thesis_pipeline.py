@@ -625,6 +625,7 @@ def compute_intraday_metrics(base: pd.DataFrame, intraday: pd.DataFrame) -> pd.D
             "is_off_market_release": 0,
             "CAR_ANN_INTRADAY_15M": np.nan,
             "CAR_ANN_INTRADAY_30M": np.nan,
+            "CAR_ANN_INTRADAY_M60_P180": np.nan,
             "CAR_ANN_INTRADAY_1H": np.nan,
             "CAR_ANN_INTRADAY_3H": np.nan,
             "CAR_ANN_INTRADAY_FULL": np.nan,
@@ -636,6 +637,7 @@ def compute_intraday_metrics(base: pd.DataFrame, intraday: pd.DataFrame) -> pd.D
             "ratio_1h_vs_day": np.nan,
             "CAR_CLOSE_INTRADAY_15M": np.nan,
             "CAR_CLOSE_INTRADAY_30M": np.nan,
+            "CAR_CLOSE_INTRADAY_M60_P180": np.nan,
             "CAR_CLOSE_INTRADAY_1H": np.nan,
             "CAR_CLOSE_INTRADAY_3H": np.nan,
             "CAR_CLOSE_INTRADAY_FULL": np.nan,
@@ -684,6 +686,7 @@ def compute_intraday_metrics(base: pd.DataFrame, intraday: pd.DataFrame) -> pd.D
 
         record["CAR_ANN_INTRADAY_15M"] = intraday_car(-15, 15)
         record["CAR_ANN_INTRADAY_30M"] = intraday_car(-30, 30)
+        record["CAR_ANN_INTRADAY_M60_P180"] = intraday_car(-60, 180)
         record["CAR_ANN_INTRADAY_1H"] = intraday_car(0, 60)
         record["CAR_ANN_INTRADAY_3H"] = intraday_car(0, 180)
         record["CAR_ANN_INTRADAY_FULL"] = float(abnormal.dropna().sum()) if abnormal.notna().any() else np.nan
@@ -1172,6 +1175,7 @@ def main() -> None:
     metric_cols = [
         "CAR_ANN_INTRADAY_15M",
         "CAR_ANN_INTRADAY_30M",
+        "CAR_ANN_INTRADAY_M60_P180",
         "CAR_ANN_INTRADAY_1H",
         "CAR_ANN_INTRADAY_3H",
         "CAR_ANN_INTRADAY_FULL",

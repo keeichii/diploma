@@ -6,132 +6,96 @@ buyer_ticker + deal_object + event_name + anchor_date + anchor_trade_date + sour
 
 File: table_2_1_first_press_release-3.xlsx
 Source: /home/keeichi/Work/diplom/out/table_2_1_first_press_release.xlsx
-Rows: 42209, Unique events: 141
-Excluded pipeline stub rows (pipeline_row_note): 66
+Rows: 36594, Unique events: 128
+Excluded pipeline stub rows (pipeline_row_note): 79
 Price field: Close, RUB (Adjusted Close fully empty; using Close.)
 RUONIA note: RUONIA-adjusted close unavailable: ruonia_index is fully empty after merge/ffill.
-Benchmark column: IMOEX daily close, non-null share=17.29%
+Benchmark column: IMOEX daily close, non-null share=16.34%
 Duplicate event keys: 0
 Duplicate (event_id,t) rows: 0
 Missing t rows: 0, Missing price rows: 0
 Non-sequential t events: 0
 Events with missing t=0 row: 0
-Events with t=0 Date != anchor_date: 16
-Weekend rows: 485 (1.15%)
+Events with t=0 Date != anchor_date: 0
+Weekend rows: 408 (1.11%)
 Likely calendar-day series (median date diff=1 for majority events): True
 Anomalous |return| > 50% rows: 1
-Events with max(t)<=0 (no post-event tail): 2
-Max available t in file: 60
+Events with max(t)<=0 (no post-event tail): 0
+Max available t in file: 30
 --------------------------------------------------------------------------------
 File: table_2_2_cbonds_actualization.xlsx
 Source: /home/keeichi/Work/diplom/out/table_2_2_cbonds_actualization.xlsx
-Rows: 42683, Unique events: 140
-Excluded pipeline stub rows (pipeline_row_note): 67
+Rows: 36633, Unique events: 124
+Excluded pipeline stub rows (pipeline_row_note): 83
 Price field: Close, RUB (Adjusted Close fully empty; using Close.)
 RUONIA note: RUONIA-adjusted close unavailable: ruonia_index is fully empty after merge/ffill.
-Benchmark column: IMOEX daily close, non-null share=18.23%
+Benchmark column: IMOEX daily close, non-null share=16.77%
 Duplicate event keys: 0
 Duplicate (event_id,t) rows: 0
 Missing t rows: 0, Missing price rows: 0
 Non-sequential t events: 0
 Events with missing t=0 row: 0
-Events with t=0 Date != anchor_date: 20
-Weekend rows: 498 (1.17%)
+Events with t=0 Date != anchor_date: 4
+Weekend rows: 436 (1.19%)
 Likely calendar-day series (median date diff=1 for majority events): True
 Anomalous |return| > 50% rows: 0
 Events with max(t)<=0 (no post-event tail): 0
-Max available t in file: 60
+Max available t in file: 30
 --------------------------------------------------------------------------------
 File: table_2_3_cbonds_create.xlsx
 Source: /home/keeichi/Work/diplom/out/table_2_3_cbonds_create.xlsx
-Rows: 41894, Unique events: 140
-Excluded pipeline stub rows (pipeline_row_note): 67
+Rows: 36278, Unique events: 124
+Excluded pipeline stub rows (pipeline_row_note): 83
 Price field: Close, RUB (Adjusted Close fully empty; using Close.)
 RUONIA note: RUONIA-adjusted close unavailable: ruonia_index is fully empty after merge/ffill.
-Benchmark column: IMOEX daily close, non-null share=15.85%
+Benchmark column: IMOEX daily close, non-null share=14.83%
 Duplicate event keys: 0
 Duplicate (event_id,t) rows: 0
 Missing t rows: 0, Missing price rows: 0
 Non-sequential t events: 0
 Events with missing t=0 row: 0
-Events with t=0 Date != anchor_date: 22
-Weekend rows: 450 (1.07%)
+Events with t=0 Date != anchor_date: 6
+Weekend rows: 365 (1.01%)
 Likely calendar-day series (median date diff=1 for majority events): True
 Anomalous |return| > 50% rows: 0
-Events with max(t)<=0 (no post-event tail): 2
-Max available t in file: 60
+Events with max(t)<=0 (no post-event tail): 0
+Max available t in file: 30
 --------------------------------------------------------------------------------
 
 EVENT-LEVEL DETAILS
 
 --- Detail: table_2_1_first_press_release-3.xlsx ---
-EVENTS WITH t=0 Date != anchor_date:
-  event_id=SVCB | Best2pay | first_press_release | 2022-01-10 | 2023-12-15 | 44 | Date(t=0)=2023-12-15 | anchor_date=2022-01-10
-  event_id=SVCB | FinEx London | first_press_release | 2022-01-24 | 2023-12-15 | 47 | Date(t=0)=2023-12-15 | anchor_date=2022-01-24
-  event_id=SVCB | Finex Investment Management | first_press_release | 2022-01-24 | 2023-12-15 | 46 | Date(t=0)=2023-12-15 | anchor_date=2022-01-24
-  event_id=SVCB | В2СPL (B2C платежи и логистика) | first_press_release | 2023-06-14 | 2023-12-15 | 30 | Date(t=0)=2023-12-15 | anchor_date=2023-06-14
-  event_id=SVCB | Инлайф Страхование (Страховая компания Уралсиб) | first_press_release | 2023-09-07 | 2023-12-15 | 28 | Date(t=0)=2023-12-15 | anchor_date=2023-09-07
-  event_id=SVCB | Септем Капитал / Yango. Доходчивые вложения | first_press_release | 2021-06-29 | 2023-12-15 | 55 | Date(t=0)=2023-12-15 | anchor_date=2021-06-29
-  event_id=SVCB | Страховая компания Согласие | first_press_release | 2022-01-16 | 2023-12-15 | 41 | Date(t=0)=2023-12-15 | anchor_date=2022-01-16
-  event_id=SVCB | Узагроэкспортбанк | first_press_release | 2022-02-23 | 2023-12-15 | 37 | Date(t=0)=2023-12-15 | anchor_date=2022-02-23
-  event_id=SVCB | Управляющая компания (УК) Восточный Капитал | first_press_release | 2021-06-29 | 2023-12-15 | 56 | Date(t=0)=2023-12-15 | anchor_date=2021-06-29
-  event_id=T | CloudPayments | first_press_release | 2017-10-12 | 2019-10-28 | 31 | Date(t=0)=2019-10-28 | anchor_date=2017-10-12
-  event_id=T | CloudPayments | first_press_release | 2017-10-13 | 2019-10-28 | 114 | Date(t=0)=2019-10-28 | anchor_date=2017-10-13
-  event_id=T | CloudPayments | first_press_release | 2017-10-13 | 2019-10-28 | 90 | Date(t=0)=2019-10-28 | anchor_date=2017-10-13
-  event_id=T | CloudPayments | first_press_release | 2017-10-13 | 2019-10-28 | 94 | Date(t=0)=2019-10-28 | anchor_date=2017-10-13
-  event_id=T | Кассир.ру | first_press_release | 2018-07-13 | 2019-10-28 | 104 | Date(t=0)=2019-10-28 | anchor_date=2018-07-13
-  event_id=YDEX | Seedcamp | first_press_release | 2012-04-27 | 2014-06-04 | 173 | Date(t=0)=2014-06-04 | anchor_date=2012-04-27
-  event_id=YDEX | Кинопоиск | first_press_release | 2013-10-15 | 2014-06-04 | 160 | Date(t=0)=2014-06-04 | anchor_date=2013-10-15
-EVENTS WITH max(t) < 20 (n=2): insufficient for [-20;20] window
-  SVCB | Септем Капитал / Yango. Доходчивые вложения | first_press_release | 2021-06-29 | 2023-12-15 | 55
-  SVCB | Управляющая компания (УК) Восточный Капитал | first_press_release | 2021-06-29 | 2023-12-15 | 56
-EVENTS WITH min(t) > -30 (n=17): market model estimation window IMPOSSIBLE
-  SVCB | Best2pay | first_press_release | 2022-01-10 | 2023-12-15 | 44
-  SVCB | FinEx London | first_press_release | 2022-01-24 | 2023-12-15 | 47
-  SVCB | Finex Investment Management | first_press_release | 2022-01-24 | 2023-12-15 | 46
-  SVCB | В2СPL (B2C платежи и логистика) | first_press_release | 2023-06-14 | 2023-12-15 | 30
-  SVCB | Инлайф Страхование (Страховая компания Уралсиб) | first_press_release | 2023-09-07 | 2023-12-15 | 28
-  SVCB | Септем Капитал / Yango. Доходчивые вложения | first_press_release | 2021-06-29 | 2023-12-15 | 55
-  SVCB | Страховая компания Согласие | first_press_release | 2022-01-16 | 2023-12-15 | 41
-  SVCB | Узагроэкспортбанк | first_press_release | 2022-02-23 | 2023-12-15 | 37
-  SVCB | Управляющая компания (УК) Восточный Капитал | first_press_release | 2021-06-29 | 2023-12-15 | 56
-  T | CloudPayments | first_press_release | 2017-10-12 | 2019-10-28 | 31
+EVENTS WITH max(t) < 20 (n=13): insufficient for [-20;20] window
+  SBER | 2ГИС | first_press_release | 2020-06-11 | 2020-06-11 | 79
+  SBER | OZON.ru | first_press_release | 2020-06-04 | 2020-06-04 | 82
+  SBER | Rambler | first_press_release | 2020-10-30 | 2020-10-30 | 74
+  SBER | АО Электрозавод | first_press_release | 2020-12-28 | 2020-12-28 | 65
+  SBER | Алгоритмика | first_press_release | 2024-12-26 | 2024-12-26 | 18
+  SBER | Эвотор | first_press_release | 2020-12-23 | 2020-12-23 | 72
+  SBER | Яндекс. Деньги | first_press_release | 2020-06-02 | 2020-06-02 | 81
+  SVCB | В2СPL (B2C платежи и логистика) | first_press_release | 2023-12-15 | 2023-12-15 | 30
+  SVCB | Инлайф Страхование (Страховая компания Уралсиб) | first_press_release | 2023-12-15 | 2023-12-15 | 28
+  T | Бизнес-центр Центральный телеграф | first_press_release | 2024-05-24 | 2024-05-24 | 10
+EVENTS WITH min(t) > -30 (n=4): market model estimation window IMPOSSIBLE
+  SVCB | В2СPL (B2C платежи и логистика) | first_press_release | 2023-12-15 | 2023-12-15 | 30
+  SVCB | Инлайф Страхование (Страховая компания Уралсиб) | first_press_release | 2023-12-15 | 2023-12-15 | 28
+  YDEX | Auto.ru | first_press_release | 2014-06-16 | 2014-06-16 | 151
+  YDEX | Кинопоиск | first_press_release | 2014-06-04 | 2014-06-04 | 160
 
 --- Detail: table_2_2_cbonds_actualization.xlsx ---
 EVENTS WITH t=0 Date != anchor_date:
-  event_id=SBER | Агрохолдинг Юрма | cbonds_actualization | 2018-01-28 | 2018-01-29 | 111 | Date(t=0)=2018-01-29 | anchor_date=2018-01-28
-  event_id=SBER | Бизнес-центр РосЕвроПлаза в Новосибирске | cbonds_actualization | 2013-10-05 | 2013-10-07 | 207 | Date(t=0)=2013-10-07 | anchor_date=2013-10-05
-  event_id=SBER | Гатчинский комбикормовый завод (ГКЗ) | cbonds_actualization | 2018-01-28 | 2018-01-29 | 112 | Date(t=0)=2018-01-29 | anchor_date=2018-01-28
-  event_id=SBER | Мясокомбинат Усть-Лабинский | cbonds_actualization | 2013-10-13 | 2013-10-14 | 167 | Date(t=0)=2013-10-14 | anchor_date=2013-10-13
-  event_id=SBER | Спортлото | cbonds_actualization | 2011-05-14 | 2011-05-16 | 189 | Date(t=0)=2011-05-16 | anchor_date=2011-05-14
-  event_id=SVCB | Best2pay | cbonds_actualization | 2021-10-30 | 2023-12-15 | 44 | Date(t=0)=2023-12-15 | anchor_date=2021-10-30
-  event_id=SVCB | FinEx London | cbonds_actualization | 2021-09-30 | 2023-12-15 | 47 | Date(t=0)=2023-12-15 | anchor_date=2021-09-30
-  event_id=SVCB | Finex Investment Management | cbonds_actualization | 2021-09-30 | 2023-12-15 | 46 | Date(t=0)=2023-12-15 | anchor_date=2021-09-30
-  event_id=SVCB | В2СPL (B2C платежи и логистика) | cbonds_actualization | 2023-05-16 | 2023-12-15 | 30 | Date(t=0)=2023-12-15 | anchor_date=2023-05-16
-  event_id=SVCB | Витабанк | cbonds_actualization | 2022-02-22 | 2023-12-15 | 36 | Date(t=0)=2023-12-15 | anchor_date=2022-02-22
-  event_id=SVCB | ГК Национальная факторинговая компания (НФК) | cbonds_actualization | 2021-07-20 | 2023-12-15 | 52 | Date(t=0)=2023-12-15 | anchor_date=2021-07-20
-  event_id=SVCB | Страховая компания Согласие | cbonds_actualization | 2021-12-23 | 2023-12-15 | 41 | Date(t=0)=2023-12-15 | anchor_date=2021-12-23
-  event_id=SVCB | Узагроэкспортбанк | cbonds_actualization | 2022-06-27 | 2023-12-15 | 37 | Date(t=0)=2023-12-15 | anchor_date=2022-06-27
-  event_id=T | CloudPayments | cbonds_actualization | 2017-10-11 | 2019-10-28 | 114 | Date(t=0)=2019-10-28 | anchor_date=2017-10-11
-  event_id=T | CloudPayments | cbonds_actualization | 2019-08-01 | 2019-10-28 | 94 | Date(t=0)=2019-10-28 | anchor_date=2019-08-01
-  event_id=T | CloudPayments | cbonds_actualization | 2019-08-29 | 2019-10-28 | 90 | Date(t=0)=2019-10-28 | anchor_date=2019-08-29
-  event_id=T | Кассир.ру | cbonds_actualization | 2018-07-24 | 2019-10-28 | 104 | Date(t=0)=2019-10-28 | anchor_date=2018-07-24
-  event_id=T | Росбанк | cbonds_actualization | 2024-08-31 | 2024-09-02 | 24 | Date(t=0)=2024-09-02 | anchor_date=2024-08-31
-  event_id=YDEX | Seedcamp | cbonds_actualization | 2012-04-28 | 2014-06-04 | 173 | Date(t=0)=2014-06-04 | anchor_date=2012-04-28
-  event_id=YDEX | Кинопоиск | cbonds_actualization | 2013-10-15 | 2014-06-04 | 160 | Date(t=0)=2014-06-04 | anchor_date=2013-10-15
-EVENTS WITH max(t) < 20 (n=1): insufficient for [-20;20] window
-  SVCB | ГК Национальная факторинговая компания (НФК) | cbonds_actualization | 2021-07-20 | 2023-12-15 | 52
-EVENTS WITH min(t) > -30 (n=15): market model estimation window IMPOSSIBLE
-  SVCB | Best2pay | cbonds_actualization | 2021-10-30 | 2023-12-15 | 44
-  SVCB | FinEx London | cbonds_actualization | 2021-09-30 | 2023-12-15 | 47
-  SVCB | Finex Investment Management | cbonds_actualization | 2021-09-30 | 2023-12-15 | 46
-  SVCB | В2СPL (B2C платежи и логистика) | cbonds_actualization | 2023-05-16 | 2023-12-15 | 30
-  SVCB | Витабанк | cbonds_actualization | 2022-02-22 | 2023-12-15 | 36
-  SVCB | ГК Национальная факторинговая компания (НФК) | cbonds_actualization | 2021-07-20 | 2023-12-15 | 52
-  SVCB | Инлайф Страхование (Страховая компания Уралсиб) | cbonds_actualization | 2024-01-11 | 2024-01-11 | 28
-  SVCB | Страховая компания Согласие | cbonds_actualization | 2021-12-23 | 2023-12-15 | 41
-  SVCB | Узагроэкспортбанк | cbonds_actualization | 2022-06-27 | 2023-12-15 | 37
-  T | CloudPayments | cbonds_actualization | 2017-10-11 | 2019-10-28 | 114
+  event_id=SBER | Мясокомбинат Усть-Лабинский | cbonds_actualization | 2013-10-13 | 2013-10-14 | Date(t=0)=2013-10-14 | anchor_date=2013-10-13
+  event_id=SBER | Химкомбинат Сода-Хлорат | cbonds_actualization | 2011-12-03 | 2011-12-05 | Date(t=0)=2011-12-05 | anchor_date=2011-12-03
+  event_id=T | Гостиница Турист (г. Москва) | cbonds_actualization | 2025-08-03 | 2025-08-04 | Date(t=0)=2025-08-04 | anchor_date=2025-08-03
+  event_id=T | Росбанк | cbonds_actualization | 2024-08-31 | 2024-09-02 | Date(t=0)=2024-09-02 | anchor_date=2024-08-31
+EVENTS WITH max(t) < 20 (n=7): insufficient for [-20;20] window
+  SBER | ESforce Holdings | cbonds_actualization | 2020-02-20 | 2020-02-20
+  SBER | Rambler | cbonds_actualization | 2020-10-30 | 2020-10-30
+  SBER | АО Электрозавод | cbonds_actualization | 2021-02-20 | 2021-02-20
+  SBER | Эвотор | cbonds_actualization | 2020-12-23 | 2020-12-23
+  T | AnyQuery | cbonds_actualization | 2024-12-13 | 2024-12-13
+  YDEX | Т-банк (Тинькофф) | cbonds_actualization | 2020-10-16 | 2020-10-16
+  YDEX | еКредит | cbonds_actualization | 2024-06-04 | 2024-06-04
 
 --- Detail: table_2_3_cbonds_create.xlsx ---
 EVENTS WITH t=0 Date != anchor_date:
@@ -141,33 +105,13 @@ EVENTS WITH t=0 Date != anchor_date:
   event_id=SBER | Гатчинский комбикормовый завод (ГКЗ) | cbonds_create | 2018-01-28 | 2018-01-29 | 112 | Date(t=0)=2018-01-29 | anchor_date=2018-01-28
   event_id=SBER | Еаптека | cbonds_create | 2020-11-22 | 2020-11-23 | 67 | Date(t=0)=2020-11-23 | anchor_date=2020-11-22
   event_id=SBER | Спортлото | cbonds_create | 2011-05-14 | 2011-05-16 | 189 | Date(t=0)=2011-05-16 | anchor_date=2011-05-14
-  event_id=SVCB | Best2pay | cbonds_create | 2022-01-10 | 2023-12-15 | 44 | Date(t=0)=2023-12-15 | anchor_date=2022-01-10
-  event_id=SVCB | FinEx London | cbonds_create | 2022-01-24 | 2023-12-15 | 47 | Date(t=0)=2023-12-15 | anchor_date=2022-01-24
-  event_id=SVCB | Finex Investment Management | cbonds_create | 2022-01-24 | 2023-12-15 | 46 | Date(t=0)=2023-12-15 | anchor_date=2022-01-24
-  event_id=SVCB | В2СPL (B2C платежи и логистика) | cbonds_create | 2023-06-14 | 2023-12-15 | 30 | Date(t=0)=2023-12-15 | anchor_date=2023-06-14
-  event_id=SVCB | Витабанк | cbonds_create | 2022-05-18 | 2023-12-15 | 36 | Date(t=0)=2023-12-15 | anchor_date=2022-05-18
-  event_id=SVCB | Септем Капитал / Yango. Доходчивые вложения | cbonds_create | 2021-06-29 | 2023-12-15 | 55 | Date(t=0)=2023-12-15 | anchor_date=2021-06-29
-  event_id=SVCB | Страховая компания Согласие | cbonds_create | 2022-01-16 | 2023-12-15 | 41 | Date(t=0)=2023-12-15 | anchor_date=2022-01-16
-  event_id=SVCB | Узагроэкспортбанк | cbonds_create | 2021-11-29 | 2023-12-15 | 37 | Date(t=0)=2023-12-15 | anchor_date=2021-11-29
-  event_id=SVCB | Управляющая компания (УК) Восточный Капитал | cbonds_create | 2021-06-29 | 2023-12-15 | 56 | Date(t=0)=2023-12-15 | anchor_date=2021-06-29
-  event_id=T | CloudPayments | cbonds_create | 2017-10-13 | 2019-10-28 | 114 | Date(t=0)=2019-10-28 | anchor_date=2017-10-13
-  event_id=T | CloudPayments | cbonds_create | 2017-10-13 | 2019-10-28 | 31 | Date(t=0)=2019-10-28 | anchor_date=2017-10-13
-  event_id=T | CloudPayments | cbonds_create | 2017-10-13 | 2019-10-28 | 90 | Date(t=0)=2019-10-28 | anchor_date=2017-10-13
-  event_id=T | CloudPayments | cbonds_create | 2017-10-13 | 2019-10-28 | 94 | Date(t=0)=2019-10-28 | anchor_date=2017-10-13
-  event_id=T | Кассир.ру | cbonds_create | 2018-07-13 | 2019-10-28 | 104 | Date(t=0)=2019-10-28 | anchor_date=2018-07-13
-  event_id=YDEX | Seedcamp | cbonds_create | 2012-04-27 | 2014-06-04 | 173 | Date(t=0)=2014-06-04 | anchor_date=2012-04-27
-  event_id=YDEX | Кинопоиск | cbonds_create | 2013-10-15 | 2014-06-04 | 160 | Date(t=0)=2014-06-04 | anchor_date=2013-10-15
-EVENTS WITH max(t) < 20 (n=2): insufficient for [-20;20] window
-  SVCB | Септем Капитал / Yango. Доходчивые вложения | cbonds_create | 2021-06-29 | 2023-12-15 | 55
-  SVCB | Управляющая компания (УК) Восточный Капитал | cbonds_create | 2021-06-29 | 2023-12-15 | 56
-EVENTS WITH min(t) > -30 (n=17): market model estimation window IMPOSSIBLE
-  SVCB | Best2pay | cbonds_create | 2022-01-10 | 2023-12-15 | 44
-  SVCB | FinEx London | cbonds_create | 2022-01-24 | 2023-12-15 | 47
-  SVCB | Finex Investment Management | cbonds_create | 2022-01-24 | 2023-12-15 | 46
-  SVCB | В2СPL (B2C платежи и логистика) | cbonds_create | 2023-06-14 | 2023-12-15 | 30
-  SVCB | Витабанк | cbonds_create | 2022-05-18 | 2023-12-15 | 36
-  SVCB | Септем Капитал / Yango. Доходчивые вложения | cbonds_create | 2021-06-29 | 2023-12-15 | 55
-  SVCB | Страховая компания Согласие | cbonds_create | 2022-01-16 | 2023-12-15 | 41
-  SVCB | Узагроэкспортбанк | cbonds_create | 2021-11-29 | 2023-12-15 | 37
-  SVCB | Управляющая компания (УК) Восточный Капитал | cbonds_create | 2021-06-29 | 2023-12-15 | 56
-  T | CloudPayments | cbonds_create | 2017-10-13 | 2019-10-28 | 114
+EVENTS WITH max(t) < 20 (n=7): insufficient for [-20;20] window
+  SBER | ESforce Holdings | cbonds_create | 2020-02-20 | 2020-02-20 | 84
+  SBER | OZON.ru | cbonds_create | 2020-06-05 | 2020-06-05 | 82
+  SBER | Rambler | cbonds_create | 2020-06-14 | 2020-06-15 | 83
+  SBER | Rambler | cbonds_create | 2020-10-30 | 2020-10-30 | 74
+  SBER | Алгоритмика | cbonds_create | 2024-12-26 | 2024-12-26 | 18
+  SBER | Эвотор | cbonds_create | 2020-12-23 | 2020-12-23 | 72
+  YDEX | NewPay | cbonds_create | 2024-12-24 | 2024-12-24 | 16
+EVENTS WITH min(t) > -30 (n=1): market model estimation window IMPOSSIBLE
+  YDEX | Auto.ru | cbonds_create | 2014-06-16 | 2014-06-16 | 151
