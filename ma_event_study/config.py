@@ -22,6 +22,8 @@ class Config:
     sheet_name: str | None
     autosave_every: int
     daily_window: int
+    daily_window_pre: int
+    daily_window_post: int
     ignore_unresolved_rows: bool
     cache_dir: Path
     adjusted_close_allow_close_fallback: bool
@@ -107,6 +109,10 @@ def load_config(path: Path) -> Config:
     market_cap_shares_variant = str(raw.get("cache", {}).get("market_cap_shares_variant", "auto")).strip()
 
 
+    dw = int(run.get("daily_window", 250))
+    dwp = int(run.get("daily_window_pre", dw))
+    dwpost = int(run.get("daily_window_post", 60))
+
     return Config(
         input_xlsx=input_xlsx,
         output_dir=output_dir,
@@ -116,7 +122,9 @@ def load_config(path: Path) -> Config:
         token=token,
         sheet_name=raw.get("input", {}).get("sheet_name"),
         autosave_every=int(run.get("autosave_every", 25)),
-        daily_window=int(run.get("daily_window", 250)),
+        daily_window=dw,
+        daily_window_pre=dwp,
+        daily_window_post=dwpost,
         ignore_unresolved_rows=_parse_bool(run.get("ignore_unresolved_rows", False)),
         cache_dir=cache_dir,
         adjusted_close_allow_close_fallback=adjusted_close_allow_close_fallback,

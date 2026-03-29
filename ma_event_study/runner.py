@@ -160,6 +160,7 @@ TABLE2_COLS = [
     "deal_object",
     "event_name",
     "anchor_date",
+    "anchor_date_raw",
     "anchor_trade_date",
     "is_off_market_release",
     "t",
@@ -205,6 +206,7 @@ def _table2_stub_row(
     deal_object: Any,
     event_name: str,
     anchor_date: date | None,
+    anchor_date_raw: str | None = None,
     anchor_trade_date: date | None,
     is_off_market_release: int,
     t: int,
@@ -218,6 +220,7 @@ def _table2_stub_row(
         "deal_object": deal_object,
         "event_name": event_name,
         "anchor_date": anchor_date.isoformat() if anchor_date else None,
+        "anchor_date_raw": anchor_date_raw,
         "anchor_trade_date": anchor_trade_date.isoformat() if anchor_trade_date else None,
         "is_off_market_release": is_off_market_release,
         "t": t,
@@ -323,22 +326,50 @@ def _norm_ticker(x: Any) -> str:
     return "".join(ch for ch in s if (ch.isalnum() or ch == "."))
 
 
+def _validate_parsed_date(result: date, raw: Any) -> date | None:
+    if result.year < 1990 or result.year > 2035:
+        logger.warning("SUSPICIOUS_DATE | raw=%r | parsed=%s", raw, result)
+        return None
+    return result
+
+
 def parse_date_any(x: Any) -> date | None:
     if x is None or (isinstance(x, float) and pd.isna(x)):
         return None
+    if isinstance(x, bool):
+        return None
     if isinstance(x, pd.Timestamp):
-        return x.date()
+        return _validate_parsed_date(x.date(), x)
     if isinstance(x, datetime):
-        return x.date()
+        return _validate_parsed_date(x.date(), x)
     if isinstance(x, date):
-        return x
+        return _validate_parsed_date(x, x)
+    # numpy scalar / Excel serial
+    if hasattr(x, "item") and not isinstance(x, (bytes, str)):
+        try:
+            x = x.item()
+        except Exception:
+            pass
+    if isinstance(x, (int, float)) and not isinstance(x, bool):
+        xf = float(x)
+        # Excel serial: безопасный диапазон; не путать с календарным годом (1900–2100)
+        if 1000 < xf < 100_000:
+            is_int_like = abs(xf - round(xf)) < 1e-9
+            if is_int_like and 1900 <= int(round(xf)) <= 2100:
+                return None
+            try:
+                d = date(1899, 12, 30) + timedelta(days=int(round(xf)))
+                return _validate_parsed_date(d, x)
+            except Exception:
+                pass
+        return None
     s = str(x).strip()
     if not s or s.lower() == "nan":
         return None
     dt = pd.to_datetime(s, dayfirst=True, errors="coerce")
     if pd.isna(dt):
         return None
-    return dt.date()
+    return _validate_parsed_date(dt.date(), x)
 
 
 def parse_time_any(x: Any) -> dt_time | None:
@@ -1069,17 +1100,33 @@ def _price_at_timestamp_rub(candle: Any) -> float | None:
     return o if o is not None else _q_to_float(getattr(candle, "close", None))
 
 
-def _select_daily_slice(candles: list[Any], anchor_date_raw: date, daily_window: int) -> tuple[list[Any], date | None]:
+def _select_daily_slice(
+    candles: list[Any],
+    anchor_calendar_date: date,
+    pre_window: int,
+    post_window: int,
+    *,
+    resolved_ticker: str | None = None,
+) -> tuple[list[Any], date | None]:
     if not candles:
         return [], None
     trade_days = _unique_trade_days(candles)
-    anchor_trade_date = _find_next_or_same_trade_day(trade_days, anchor_date_raw)
+    anchor_trade_date = _find_next_or_same_trade_day(trade_days, anchor_calendar_date)
     if anchor_trade_date is None:
         return [], None
     idx_map = {d: i for i, d in enumerate(trade_days)}
     anchor_idx = idx_map[anchor_trade_date]
-    left = max(0, anchor_idx - daily_window)
-    right = min(len(trade_days) - 1, anchor_idx + daily_window)
+    if anchor_idx < pre_window:
+        logger.warning(
+            "INSUFFICIENT_HISTORY | ticker=%s | anchor=%s | anchor_trade_idx=%s | trade_days_in_fetch=%s | required_pre=%s",
+            resolved_ticker,
+            anchor_calendar_date,
+            anchor_idx,
+            len(trade_days),
+            pre_window,
+        )
+    left = max(0, anchor_idx - pre_window)
+    right = min(len(trade_days) - 1, anchor_idx + post_window)
     selected_days = set(trade_days[left : right + 1])
     selected = [c for c in candles if _candle_dt_msk(c).date() in selected_days]
     selected.sort(key=_candle_dt_msk)
@@ -1160,7 +1207,25 @@ def process_source_rows(client: Client, df: pd.DataFrame, col_map: dict[str, str
             df.at[i, "audit_release_anchor_reason"] = anchor.reason
             df.at[i, "audit_row_status"] = "ready" if anchor.ok else "ready_without_release_anchor"
             df.at[i, "audit_skip_reason"] = None
-            df.at[i, "audit_notes"] = f"resolved={resolved.resolve_method}; release_anchor={anchor.reason}"
+            base_notes = f"resolved={resolved.resolve_method}; release_anchor={anchor.reason}"
+            release_date_parsed = parse_date_any(release_date_raw)
+            if (
+                anchor.ok
+                and anchor.anchor_trade_date
+                and release_date_parsed
+                and abs((anchor.anchor_trade_date - release_date_parsed).days) > 30
+            ):
+                logger.warning(
+                    "ANCHOR_DATE_MISMATCH | row=%s | release_date=%s | anchor_trade_date=%s | delta_days=%s",
+                    row_excel,
+                    release_date_parsed,
+                    anchor.anchor_trade_date,
+                    (anchor.anchor_trade_date - release_date_parsed).days,
+                )
+                base_notes += (
+                    f"; WARNING: anchor_trade_date is {abs((anchor.anchor_trade_date - release_date_parsed).days)}d from release_date"
+                )
+            df.at[i, "audit_notes"] = base_notes
             df.at[i, "audit_rate_limit_hits"] = RATE_LIMIT_HITS_TOTAL - before_hits
         except Exception as e:
             df.at[i, "audit_row_status"] = "row_error"
@@ -1321,7 +1386,26 @@ def build_table_2_generic(
         deal_object = row.get(col_map["deal_object"]) if col_map.get("deal_object") else None
         buyer_ticker = _display_buyer_ticker(row, col_map, source_df, i)
         anchor_raw = row.get(col_map[anchor_col_key]) if col_map.get(anchor_col_key) else None
-        anchor_date = parse_date_any(anchor_raw)
+        anchor_date_raw_str = None if anchor_raw is None else str(anchor_raw).strip()
+        anchor_date_raw_parsed = parse_date_any(anchor_raw)
+        if event_name == "first_press_release" and int(source_df.at[i, "audit_resolved_flag"] or 0) == 1:
+            audit_anchor = source_df.at[i, "audit_release_anchor_trade_date"]
+            if pd.notna(audit_anchor):
+                ad_from_audit = parse_date_any(audit_anchor)
+                anchor_date = ad_from_audit if ad_from_audit is not None else anchor_date_raw_parsed
+            else:
+                anchor_date = anchor_date_raw_parsed
+        else:
+            anchor_date = anchor_date_raw_parsed
+
+        if anchor_date and anchor_date_raw_parsed and abs((anchor_date - anchor_date_raw_parsed).days) > 5:
+            logger.warning(
+                "ANCHOR_DATE_OVERRIDE | row=%s | raw_parsed=%s | effective_anchor=%s",
+                i + 2,
+                anchor_date_raw_parsed,
+                anchor_date,
+            )
+
         src_excel = i + 2
 
         def _iom_resolved() -> int:
@@ -1338,6 +1422,7 @@ def build_table_2_generic(
                     deal_object=deal_object,
                     event_name=event_name,
                     anchor_date=anchor_date,
+                    anchor_date_raw=anchor_date_raw_str,
                     anchor_trade_date=None,
                     is_off_market_release=0,
                     t=0,
@@ -1358,6 +1443,7 @@ def build_table_2_generic(
                     deal_object=deal_object,
                     event_name=event_name,
                     anchor_date=anchor_date,
+                    anchor_date_raw=anchor_date_raw_str,
                     anchor_trade_date=None,
                     is_off_market_release=_iom_resolved() if event_name == "first_press_release" else 0,
                     t=0,
@@ -1376,6 +1462,7 @@ def build_table_2_generic(
                     deal_object=deal_object,
                     event_name=event_name,
                     anchor_date=None,
+                    anchor_date_raw=anchor_date_raw_str,
                     anchor_trade_date=None,
                     is_off_market_release=_iom_resolved() if event_name == "first_press_release" else 0,
                     t=0,
@@ -1393,7 +1480,13 @@ def build_table_2_generic(
             anchor_date - timedelta(days=DAILY_FETCH_CALENDAR_PADDING),
             anchor_date + timedelta(days=DAILY_FETCH_CALENDAR_PADDING),
         )
-        selected, anchor_trade_date = _select_daily_slice(daily, anchor_date, cfg.daily_window)
+        selected, anchor_trade_date = _select_daily_slice(
+            daily,
+            anchor_date,
+            cfg.daily_window_pre,
+            cfg.daily_window_post,
+            resolved_ticker=str(resolved_ticker).strip(),
+        )
         if not selected or anchor_trade_date is None:
             rows.append(
                 _table2_stub_row(
@@ -1403,6 +1496,7 @@ def build_table_2_generic(
                     deal_object=deal_object,
                     event_name=event_name,
                     anchor_date=anchor_date,
+                    anchor_date_raw=anchor_date_raw_str,
                     anchor_trade_date=None,
                     is_off_market_release=is_off_market_release,
                     t=0,
@@ -1424,6 +1518,7 @@ def build_table_2_generic(
                     deal_object=deal_object,
                     event_name=event_name,
                     anchor_date=anchor_date,
+                    anchor_date_raw=anchor_date_raw_str,
                     anchor_trade_date=anchor_trade_date,
                     is_off_market_release=is_off_market_release,
                     t=0,
@@ -1452,6 +1547,7 @@ def build_table_2_generic(
                     "deal_object": deal_object,
                     "event_name": event_name,
                     "anchor_date": anchor_date.isoformat(),
+                    "anchor_date_raw": anchor_date_raw_str,
                     "anchor_trade_date": anchor_trade_date.isoformat(),
                     "is_off_market_release": is_off_market_release,
                     "t": t_rel,

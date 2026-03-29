@@ -10,6 +10,8 @@ from scipy import stats
 
 CORE_WINDOWS = [(0, 1), (-1, 1), (0, 2), (-2, 2), (0, 4)]
 ROBUST_WINDOWS = [(-4, 4)]
+# H4: только бары строго до якоря (bar_k < 0), окно [-4,-1]
+PRE_EVENT_WINDOWS = [(-4, -1)]
 
 
 def _drop_pipeline_stub_rows(df: pd.DataFrame) -> tuple[pd.DataFrame, int]:
@@ -100,19 +102,32 @@ def summarize_vals(vals: pd.Series) -> dict[str, float]:
     }
 
 
-def event_cars(df: pd.DataFrame, ret_col: str, sample: str, label: str, windows: list[tuple[int, int]]) -> pd.DataFrame:
+# H4: бары k∈[-4,-1] (строго до якоря k=0); в отчётах обозначается как окно до границы события «[-4;0]»
+PRE_EVENT_WINDOW_LABELS: dict[tuple[int, int], str] = {(-4, -1): "[-4;0]_pre"}
+
+
+def event_cars(
+    df: pd.DataFrame,
+    ret_col: str,
+    sample: str,
+    label: str,
+    windows: list[tuple[int, int]],
+    window_labels: dict[tuple[int, int], str] | None = None,
+) -> pd.DataFrame:
     rows: list[dict[str, object]] = []
+    labels = window_labels or {}
     for event_id, g in df.groupby("event_id", dropna=False):
         for l, r in windows:
             x = g[(g["bar_k"] >= l) & (g["bar_k"] <= r)].sort_values("bar_k")
             exp_len = r - l + 1
+            win_str = labels.get((l, r), f"[{l};{r}]")
             if len(x) == exp_len and x[ret_col].notna().sum() == exp_len:
                 car = float(x[ret_col].sum())
                 ok = 1
             else:
                 car = np.nan
                 ok = 0
-            rows.append({"event_id": event_id, "sample": sample, "model": label, "window": f"[{l};{r}]", "CAR": car, "event_qualifies": ok})
+            rows.append({"event_id": event_id, "sample": sample, "model": label, "window": win_str, "CAR": car, "event_qualifies": ok})
     return pd.DataFrame(rows)
 
 
@@ -197,6 +212,29 @@ def run() -> None:
 
     raw["simple_return"] = raw.groupby("event_id")["priceattimestamprub"].pct_change()
     raw["log_return"] = raw.groupby("event_id")["priceattimestamprub"].transform(lambda s: np.log(s / s.shift(1)))
+
+    # baseline_estimation_window + prev-day baseline (один проход; см. pandas 2.2+ include_groups)
+    def _add_abn_intraday_baselines(g: pd.DataFrame) -> pd.DataFrame:
+        g = g.sort_values("timestampmsk")
+        prior = g[g["tradedayoffset"].between(-20, -1)]
+        mean_k = prior.groupby("bar_k")["simple_return"].mean()
+        out = g.copy()
+        out["abn_est"] = out["simple_return"] - out["bar_k"].map(mean_k).fillna(0.0)
+        out["abn_est_log"] = out["log_return"]  # лог-вариант: без adjust (как baseline prev-day для лога)
+        mu = pd.to_numeric(g.loc[g["tradedayoffset"] == -1, "simple_return"], errors="coerce").mean()
+        mu = 0.0 if pd.isna(mu) else float(mu)
+        out["abn_prev_day"] = pd.to_numeric(out["simple_return"], errors="coerce") - mu
+        return out
+
+    # pandas>=2.2: по умолчанию apply не передаёт колонки группировки → в результате пропадал event_id
+    try:
+        raw = raw.groupby("event_id", group_keys=False).apply(_add_abn_intraday_baselines, include_groups=True)
+    except TypeError:
+        parts: list[pd.DataFrame] = []
+        for _, g in raw.groupby("event_id", sort=False):
+            parts.append(_add_abn_intraday_baselines(g))
+        raw = pd.concat(parts, ignore_index=True)
+
     raw["anomalous_abs_gt_10pct"] = raw["simple_return"].abs() > 0.10
     anomalous_rows = int(raw["anomalous_abs_gt_10pct"].sum())
 
@@ -231,16 +269,78 @@ def run() -> None:
             ov = np.nan
         overnight.append({"event_id": event_id, "sample": sample, "model": "raw_simple", "window": "[overnight_gap_D0_to_Dplus1_open]", "CAR": ov})
 
-    all_event = []
+    ratio_rows: list[dict[str, object]] = []
+    for event_id, g in raw.groupby("event_id"):
+        g = g.sort_values("timestampmsk")
+        pre = g.loc[g["tradedayoffset"] == -1, "simple_return"].dropna()
+        exp = float(pre.mean()) if len(pre) >= 1 else 0.0
+        d0 = g.loc[g["tradedayoffset"] == 0].sort_values("timestampmsk")
+        if d0.empty or g["anchortimestampmsk"].isna().all():
+            ratio_rows.append({"event_id": event_id, "ratio_1h_vs_day_pct": np.nan})
+            continue
+        anchor = g["anchortimestampmsk"].dropna().iloc[0]
+        ab = d0["simple_return"].astype(float) - exp
+        day_tot = float(ab.sum())
+        end1h = anchor + pd.Timedelta(hours=1)
+        m1 = (d0["timestampmsk"] > anchor) & (d0["timestampmsk"] <= end1h)
+        h1 = float(ab.loc[m1].sum()) if m1.any() else np.nan
+        ratio_rows.append(
+            {
+                "event_id": event_id,
+                "ratio_1h_vs_day_pct": (h1 / day_tot * 100.0) if day_tot and not np.isclose(day_tot, 0.0) else np.nan,
+            }
+        )
+    ratio_df = pd.DataFrame(ratio_rows)
+
+    all_event: list[pd.DataFrame] = []
     for sample_name in ["main_sample", "supplementary_sample"]:
         sub = raw[raw["sample"] == sample_name].copy()
-        all_event.append(event_cars(sub, "simple_return", sample_name, "raw_simple", CORE_WINDOWS + ROBUST_WINDOWS))
-        all_event.append(event_cars(sub, "log_return", sample_name, "raw_log", CORE_WINDOWS + ROBUST_WINDOWS))
+        all_event.append(
+            event_cars(
+                sub,
+                "simple_return",
+                sample_name,
+                "raw_simple",
+                CORE_WINDOWS + ROBUST_WINDOWS + PRE_EVENT_WINDOWS,
+                window_labels=PRE_EVENT_WINDOW_LABELS,
+            )
+        )
+        all_event.append(
+            event_cars(
+                sub,
+                "log_return",
+                sample_name,
+                "raw_log",
+                CORE_WINDOWS + ROBUST_WINDOWS + PRE_EVENT_WINDOWS,
+                window_labels=PRE_EVENT_WINDOW_LABELS,
+            )
+        )
+        all_event.append(
+            event_cars(
+                sub,
+                "abn_est",
+                sample_name,
+                "baseline_estimation_window",
+                PRE_EVENT_WINDOWS + CORE_WINDOWS + ROBUST_WINDOWS,
+                window_labels=PRE_EVENT_WINDOW_LABELS,
+            )
+        )
+        all_event.append(
+            event_cars(
+                sub,
+                "abn_prev_day",
+                sample_name,
+                "baseline_prev_day",
+                PRE_EVENT_WINDOWS + CORE_WINDOWS + ROBUST_WINDOWS,
+                window_labels=PRE_EVENT_WINDOW_LABELS,
+            )
+        )
     all_event.append(pd.DataFrame(close_d0))
     all_event.append(pd.DataFrame(next4))
     all_event.append(pd.DataFrame(overnight))
     event_level = pd.concat(all_event, ignore_index=True)
     event_level["event_qualifies"] = event_level["CAR"].notna().astype(int)
+    event_level = event_level.merge(ratio_df, on="event_id", how="left")
 
     summary_rows = []
     for (sample, model, window), g in event_level.groupby(["sample", "model", "window"]):
@@ -250,12 +350,45 @@ def run() -> None:
 
     # On-market vs off-market split
     off_map = raw.groupby("event_id")["isoffmarketrelease"].max()
+    first_off = raw.groupby("event_id")["isoffmarketrelease"].first()
     event_level["offmarket_group"] = event_level["event_id"].map(lambda e: "off_market" if off_map.get(e, 0) == 1 else "on_market")
     split_rows = []
     for (sample, model, window, grp), g in event_level.groupby(["sample", "model", "window", "offmarket_group"]):
         x = summarize_vals(g["CAR"])
         split_rows.append({"sample": sample, "model": model, "window": window, "offmarket_group": grp, **x})
     split_df = pd.DataFrame(split_rows)
+    if not split_df.empty:
+        split_df["is_off_market_release"] = (split_df["offmarket_group"] == "off_market").astype(int)
+
+    # H5: одновыборочный t-test CAR (mean=0) отдельно для on-market и off-market; окно [-1;1], raw_simple
+    off_tt_rows: list[dict] = []
+    h5 = event_level[(event_level["model"] == "raw_simple") & (event_level["window"] == "[-1;1]")].copy()
+    if not h5.empty:
+        h5["is_off_market_release"] = h5["event_id"].map(lambda e: int(first_off.get(e, 0)))
+        for ioff, sub in h5.groupby("is_off_market_release", sort=True):
+            vals = sub["CAR"].dropna().astype(float)
+            if len(vals) < 2:
+                continue
+            t_stat, p_val = stats.ttest_1samp(vals, 0.0, nan_policy="omit")
+            off_tt_rows.append(
+                {
+                    "is_off_market_release": int(ioff),
+                    "model": "raw_simple",
+                    "window": "[-1;1]",
+                    "n": len(vals),
+                    "t_stat": float(t_stat),
+                    "p_value": float(p_val),
+                }
+            )
+    baseline_cmp: list[dict] = []
+    for (sample, window), g in event_level[event_level["window"].isin(["[-1;1]", "[-4;0]_pre"])].groupby(["sample", "window"]):
+        for model in ("raw_simple", "baseline_prev_day", "baseline_estimation_window"):
+            gm = g[g["model"] == model]
+            if gm.empty:
+                continue
+            baseline_cmp.append({"sample": sample, "window": window, "model": model, **summarize_vals(gm["CAR"])})
+    pd.DataFrame(off_tt_rows).to_csv(out_dir / "intraday_offmarket_ttests.csv", index=False, encoding="utf-8")
+    pd.DataFrame(baseline_cmp).to_csv(out_dir / "intraday_baseline_method_compare.csv", index=False, encoding="utf-8")
 
     # Files
     unified = raw[
@@ -279,6 +412,8 @@ def run() -> None:
             "bar_k",
             "simple_return",
             "log_return",
+            "abn_est",
+            "abn_prev_day",
             "is_15m_step",
             "anomalous_abs_gt_10pct",
         ]
@@ -292,7 +427,15 @@ def run() -> None:
         summary.to_excel(xw, sheet_name="summary", index=False)
         split_df.to_excel(xw, sheet_name="on_off_market_split", index=False)
 
-    core_main = summary[(summary["sample"] == "main_sample") & (summary["model"] == "raw_simple") & (summary["window"].isin(["[-1;1]", "[0;2]", "[-2;2]", "[0;4]", "[0;close_D0]"]))]
+    core_main = summary[
+        (summary["sample"] == "main_sample")
+        & (summary["model"] == "raw_simple")
+        & (
+            summary["window"].isin(
+                ["[-4;0]_pre", "[-1;1]", "[0;2]", "[-2;2]", "[0;4]", "[0;close_D0]"]
+            )
+        )
+    ]
     core_main.to_excel(out_dir / "intraday_main_table.xlsx", index=False)
 
     aud = IntradayAudit(

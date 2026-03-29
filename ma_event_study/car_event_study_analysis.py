@@ -21,6 +21,9 @@ INPUT_ALIASES = {
 }
 
 WINDOWS = [(-1, 1), (-3, 3), (-5, 5), (0, 1), (0, 3), (0, 5), (-10, 10), (-20, 20)]
+# H8: pre-event run-up (асимметричные окна)
+RUNUP_WINDOWS = [(-30, -5), (-20, -5), (-10, -5), (-5, -1)]
+CAR_WINDOWS = list(WINDOWS) + list(RUNUP_WINDOWS)
 ESTIMATION_WINDOWS = [(-120, -21), (-100, -21), (-60, -21)]
 
 
@@ -239,6 +242,7 @@ def is_sequential_t(ts: pd.Series) -> bool:
 
 
 def estimate_market_model(group: pd.DataFrame, stock_col: str, mkt_col: str) -> tuple[pd.Series, str | None]:
+    """OLS market model на окне оценки; при n<30 или сбое — fallback market-adjusted (как B_mkt_adj)."""
     result = pd.Series(np.nan, index=group.index, dtype=float)
     for left, right in ESTIMATION_WINDOWS:
         est = group[(group["t"] >= left) & (group["t"] <= right)]
@@ -259,7 +263,10 @@ def estimate_market_model(group: pd.DataFrame, stock_col: str, mkt_col: str) -> 
         pred = alpha + beta * group[mkt_col].to_numpy(dtype=float)
         result.loc[group.index] = group[stock_col].to_numpy(dtype=float) - pred
         return result, f"[{left};{right}]"
-    return result, None
+    # Fallback: не применяем C с пустым AR — переключаемся на market-adjusted
+    m = group[mkt_col].replace(0, np.nan).fillna(0.0)
+    result.loc[group.index] = group[stock_col].to_numpy(dtype=float) - m.to_numpy(dtype=float)
+    return result, "fallback_B_mkt_adj"
 
 
 def summarize_cars(cars: pd.Series) -> dict[str, float]:
@@ -350,6 +357,7 @@ def run() -> None:
     audits: list[FileAudit] = []
     all_event_rows = []
     summary_rows = []
+    audit_detail_blocks: list[str] = []
 
     for file_name in INPUT_CANDIDATES:
         raw, source_path = load_file(input_dir, file_name)
@@ -400,6 +408,40 @@ def run() -> None:
 
         t0 = raw[raw["t"] == 0][["event_id", "Date", "anchor_date"]].drop_duplicates("event_id")
         t0_mismatch = int((t0["Date"].dt.normalize() != t0["anchor_date"].dt.normalize()).sum())
+
+        block_lines: list[str] = []
+        if not t0.empty:
+            bad_t0 = t0[t0["Date"].dt.normalize() != t0["anchor_date"].dt.normalize()]
+            if not bad_t0.empty:
+                block_lines.append("EVENTS WITH t=0 Date != anchor_date:")
+                for _, rr in bad_t0.iterrows():
+                    ad = rr["anchor_date"]
+                    ad_str = pd.Timestamp(ad).date() if pd.notna(ad) else "NaT"
+                    dt_str = pd.Timestamp(rr["Date"]).date() if pd.notna(rr["Date"]) else "NaT"
+                    block_lines.append(
+                        f"  event_id={rr['event_id']} | Date(t=0)={dt_str} | anchor_date={ad_str}"
+                    )
+
+        max_t_per_event = raw.groupby("event_id")["t"].max()
+        short_events = max_t_per_event[max_t_per_event < 20].index.tolist()
+        if short_events:
+            block_lines.append(
+                f"EVENTS WITH max(t) < 20 (n={len(short_events)}): insufficient for [-20;20] window"
+            )
+            for eid in short_events[:10]:
+                block_lines.append(f"  {eid}")
+
+        min_t_per_event = raw.groupby("event_id")["t"].min()
+        no_estimation = min_t_per_event[min_t_per_event > -30].index.tolist()
+        if no_estimation:
+            block_lines.append(
+                f"EVENTS WITH min(t) > -30 (n={len(no_estimation)}): market model estimation window IMPOSSIBLE"
+            )
+            for eid in no_estimation[:10]:
+                block_lines.append(f"  {eid}")
+
+        if block_lines:
+            audit_detail_blocks.append(f"\n--- Detail: {file_name} ---\n" + "\n".join(block_lines))
 
         raw["weekday"] = raw["Date"].dt.weekday
         weekend_rows = int(raw["weekday"].isin([5, 6]).sum())
@@ -495,7 +537,7 @@ def run() -> None:
                 work["ar"] = work[stock_col]
             else:
                 work["ar"] = work[stock_col] - work[mkt_col]
-            cars = car_by_window(work, "ar", WINDOWS)
+            cars = car_by_window(work, "ar", CAR_WINDOWS)
             meta = work[["event_id", "source_file", "event_name"]].drop_duplicates("event_id")
             cars = cars.merge(meta, on="event_id", how="left")
             cars["model"] = model_name
@@ -527,24 +569,22 @@ def run() -> None:
                 ]
             for ret_pair in market_pairs:
                 stock_col, mkt_col, label = ret_pair
-                work = raw.copy()
-                mm = work.groupby("event_id", group_keys=False).apply(lambda g: estimate_market_model(g, stock_col, mkt_col))
+                work = raw.copy().reset_index(drop=False).rename(columns={"index": "idx"})
                 ar_parts = []
-                mm_windows = {}
-                for event_id, (series, win) in mm.items():
+                mm_windows: dict[str, str | None] = {}
+                for event_id, grp in work.groupby("event_id", sort=False):
+                    series, win = estimate_market_model(grp, stock_col, mkt_col)
+                    mm_windows[str(event_id)] = win
                     ar_parts.append(pd.DataFrame({"event_id": event_id, "idx": series.index, "ar": series.values}))
-                    mm_windows[event_id] = win
                 if ar_parts:
                     ar_df = pd.concat(ar_parts, ignore_index=True)
-                    work = work.reset_index().rename(columns={"index": "idx"})
                     work = work.merge(ar_df, on=["event_id", "idx"], how="left")
-                    work["ar"] = work["ar"]
-                    work["mm_estimation_window"] = work["event_id"].map(mm_windows)
+                    work["mm_estimation_window"] = work["event_id"].astype(str).map(mm_windows)
                 else:
                     work["ar"] = np.nan
                     work["mm_estimation_window"] = None
 
-                cars = car_by_window(work, "ar", WINDOWS)
+                cars = car_by_window(work, "ar", CAR_WINDOWS)
                 meta = work[["event_id", "source_file", "event_name", "mm_estimation_window"]].drop_duplicates("event_id")
                 cars = cars.merge(meta, on="event_id", how="left")
                 cars["model"] = label
@@ -617,6 +657,10 @@ def run() -> None:
         audit_lines.append(f"Events with max(t)<=0 (no post-event tail): {a.events_without_positive_t}")
         audit_lines.append(f"Max available t in file: {a.max_available_t}")
         audit_lines.append("-" * 80)
+    if audit_detail_blocks:
+        audit_lines.append("")
+        audit_lines.append("EVENT-LEVEL DETAILS")
+        audit_lines.extend(audit_detail_blocks)
     (out_dir / "car_audit.txt").write_text("\n".join(audit_lines), encoding="utf-8")
 
     print("Done.")
@@ -626,9 +670,14 @@ def run() -> None:
     print(f"Saved: {out_dir / 'car_audit.txt'}")
     print(f"Saved: {out_dir / 'car_main_table.xlsx'}")
 
-    from final_outputs import copy_final_outputs
+    # Копия итоговых файлов в thesis-директорию (относительный импорт внутри пакета).
+    try:
+        from .final_outputs import copy_final_outputs  # type: ignore[import-not-found]
 
-    print("Final:", copy_final_outputs(out_dir))
+        print("Final:", copy_final_outputs(out_dir))
+    except Exception:
+        # Не критично для расчёта CAR; CLI/пользователь могут отдельно собрать thesis-outputs.
+        pass
 
 
 if __name__ == "__main__":

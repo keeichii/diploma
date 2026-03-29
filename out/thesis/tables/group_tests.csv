@@ -1,13 +1,2 @@
-group_variable,metric,test,statistic,p_value,groups_used
-deal_status_clean,CAR_ANN_1_1,anova,3.021638904653588,0.032404594260576715,4
-deal_status_clean,CAR_CLOSE_1_1,anova,2.2122550310724045,0.09171062847104809,4
-deal_status_clean,RUNUP_PRE_30_5,anova,0.3753281453930475,0.7709499602123513,4
-deal_status_clean,BHAR_ANN_120,anova,0.5101593968029368,0.6759525606995871,4
-deal_kind_clean,CAR_ANN_1_1,anova,1.1336621575864634,0.34673343685635755,6
-deal_kind_clean,CAR_CLOSE_1_1,anova,0.6418200949062391,0.6683926753614744,6
-deal_kind_clean,RUNUP_PRE_30_5,anova,1.1183468177838944,0.354772773629875,6
-deal_kind_clean,BHAR_ANN_120,anova,0.7077135529010028,0.6187129066959687,6
-integration_direction_clean,CAR_ANN_1_1,anova,1.5131382506746633,0.21456431682261848,4
-integration_direction_clean,CAR_CLOSE_1_1,anova,0.6700807647778995,0.5724742187603316,4
-integration_direction_clean,RUNUP_PRE_30_5,anova,0.3548748385436421,0.7856917824606827,4
-integration_direction_clean,BHAR_ANN_120,anova,1.1532510058714134,0.3301822335286443,4
+group_variable,metric,n_groups,test,stat,p_value,normality_test,normality_p
+deal_status_clean,CAR_ANN_1_1,4,kruskal,6.797410101268612,0.07864312739343408,pooled_dagostino_k2,0.0032649177198079975

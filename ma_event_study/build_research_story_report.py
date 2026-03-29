@@ -6,6 +6,8 @@ from typing import Dict, Iterable, List, Tuple
 from xml.sax.saxutils import escape
 
 import pandas as pd
+
+from .paths import resolve_clean_data_file
 from docx import Document
 from docx.enum.section import WD_SECTION
 from docx.enum.table import WD_TABLE_ALIGNMENT
@@ -62,24 +64,35 @@ class ReportContext:
 def _read_csv_optional(path: Path) -> pd.DataFrame:
     if not path.exists():
         return pd.DataFrame()
-    return pd.read_csv(path)
+    return pd.read_csv(path, encoding="utf-8")
+
+
+def _clean_csv(name: str) -> pd.DataFrame:
+    p = resolve_clean_data_file(name)
+    if not p.is_file():
+        alt = CLEAN / name
+        if alt.is_file():
+            p = alt
+        else:
+            return pd.DataFrame()
+    return pd.read_csv(p, encoding="utf-8")
 
 
 def load_context() -> ReportContext:
     return ReportContext(
-        base_deals=pd.read_csv(CLEAN / "base_deals_standardized.csv"),
-        enriched=pd.read_csv(CLEAN / "ma_deals_enriched.csv"),
-        mapping_audit=pd.read_csv(TABLES / "mapping_audit.csv"),
-        summary_stats=pd.read_csv(TABLES / "summary_statistics.csv"),
-        one_sample_tests=pd.read_csv(TABLES / "one_sample_tests.csv"),
-        group_tests=pd.read_csv(TABLES / "group_tests.csv"),
-        regression_coeffs=pd.read_csv(MODELS / "regression_coefficients.csv"),
-        regression_diagnostics=pd.read_csv(MODELS / "regression_diagnostics.csv"),
+        base_deals=_clean_csv("base_deals_standardized.csv"),
+        enriched=_clean_csv("ma_deals_enriched.csv"),
+        mapping_audit=_read_csv_optional(TABLES / "mapping_audit.csv"),
+        summary_stats=_read_csv_optional(TABLES / "summary_statistics.csv"),
+        one_sample_tests=_read_csv_optional(TABLES / "one_sample_tests.csv"),
+        group_tests=_read_csv_optional(TABLES / "group_tests.csv"),
+        regression_coeffs=_read_csv_optional(MODELS / "regression_coefficients.csv"),
+        regression_diagnostics=_read_csv_optional(MODELS / "regression_diagnostics.csv"),
         hypotheses=_read_csv_optional(TABLES / "hypotheses_significance_map_ru.csv"),
-        warnings=pd.read_csv(TABLES / "warnings.csv"),
+        warnings=_read_csv_optional(TABLES / "warnings.csv"),
         case_summary=_read_csv_optional(TABLES / "significant_deals_case_analysis_summary_ru.csv"),
-        announcement_panel=pd.read_csv(CLEAN / "announcement_daily_panel_clean.csv"),
-        create_panel=pd.read_csv(CLEAN / "create_daily_panel_clean.csv"),
+        announcement_panel=_clean_csv("announcement_daily_panel_clean.csv"),
+        create_panel=_clean_csv("create_daily_panel_clean.csv"),
     )
 
 

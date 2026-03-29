@@ -313,6 +313,7 @@ def load_intraday_panel(path: Path) -> pd.DataFrame:
         "timestamp_msk": detect_column(raw.columns, ["timestamp_msk"]),
         "price": detect_column(raw.columns, ["price_at_timestamp_rub"]),
         "volume": detect_column(raw.columns, ["volume_during_timestamp_plus_15m_mn_rub"], required=False),
+        "is_off_market_release": detect_column(raw.columns, ["is_off_market_release"], required=False),
     }
     df = pd.DataFrame(
         {
@@ -329,6 +330,11 @@ def load_intraday_panel(path: Path) -> pd.DataFrame:
             "timestamp_msk": pd.to_datetime(raw[mapping["timestamp_msk"]], errors="coerce"),
             "price": parse_numeric_series(raw[mapping["price"]]),
             "volume_mn_rub": parse_numeric_series(raw[mapping["volume"]]) if mapping["volume"] else np.nan,
+            "is_off_market_release": (
+                pd.to_numeric(raw[mapping["is_off_market_release"]], errors="coerce").fillna(0).astype(int)
+                if mapping["is_off_market_release"]
+                else 0
+            ),
         }
     )
     df = standardize_panel_keys(df)
@@ -503,6 +509,7 @@ def extract_controls(sub: pd.DataFrame, event_t: pd.Series, prefix: str) -> Dict
     if event_rows.empty:
         event_rows = sub.loc[event_t >= 0].head(1)
     pre60 = sub.loc[event_t.between(-60, -1)]
+    pre20 = sub.loc[event_t.between(-20, -1)]
     out = {
         f"{prefix}_ROE": np.nan,
         f"{prefix}_ROA": np.nan,
@@ -512,6 +519,7 @@ def extract_controls(sub: pd.DataFrame, event_t: pd.Series, prefix: str) -> Dict
         f"{prefix}_MARKET_CAP": np.nan,
         f"{prefix}_LIQUIDITY_60D": np.nan,
         f"{prefix}_VOLATILITY_60D": np.nan,
+        "Volume_bln_avg_pre": np.nan,
     }
     if not event_rows.empty:
         row = event_rows.iloc[0]
@@ -527,6 +535,8 @@ def extract_controls(sub: pd.DataFrame, event_t: pd.Series, prefix: str) -> Dict
         )
     out[f"{prefix}_LIQUIDITY_60D"] = pre60["volume_bnrub"].mean() if "volume_bnrub" in pre60 else np.nan
     out[f"{prefix}_VOLATILITY_60D"] = pre60["security_return"].std() * np.sqrt(252) if not pre60.empty else np.nan
+    if "volume_bnrub" in pre20.columns and not pre20.empty and prefix == "ANN":
+        out["Volume_bln_avg_pre"] = float(pre20["volume_bnrub"].mean())
     return out
 
 
@@ -564,6 +574,7 @@ def compute_intraday_metrics(base: pd.DataFrame, intraday: pd.DataFrame) -> pd.D
     for deal in base.itertuples(index=False):
         record = {
             "source_row_excel": int(deal.source_row_excel),
+            "is_off_market_release": 0,
             "CAR_ANN_INTRADAY_15M": np.nan,
             "CAR_ANN_INTRADAY_30M": np.nan,
             "CAR_ANN_INTRADAY_1H": np.nan,
@@ -572,6 +583,9 @@ def compute_intraday_metrics(base: pd.DataFrame, intraday: pd.DataFrame) -> pd.D
             "CAR_ANN_INTRADAY_TO_CLOSE": np.nan,
             "CAR_ANN_NEXT_OPEN_1H": np.nan,
             "CAR_ANN_NEXT_DAY": np.nan,
+            "CAR_INTRADAY_PRE_4_0": np.nan,
+            "CAR_INTRADAY_PRE_4_0_prevday": np.nan,
+            "ratio_1h_vs_day": np.nan,
             "CAR_CLOSE_INTRADAY_15M": np.nan,
             "CAR_CLOSE_INTRADAY_30M": np.nan,
             "CAR_CLOSE_INTRADAY_1H": np.nan,
@@ -588,7 +602,9 @@ def compute_intraday_metrics(base: pd.DataFrame, intraday: pd.DataFrame) -> pd.D
         if sub.empty:
             rows.append(record)
             continue
-        sub = sub.sort_values("timestamp_msk")
+        sub = sub.sort_values("timestamp_msk").reset_index(drop=True)
+        if "is_off_market_release" in sub.columns and sub["is_off_market_release"].notna().any():
+            record["is_off_market_release"] = int(sub["is_off_market_release"].fillna(0).astype(int).max())
         anchor_ts = sub["anchor_timestamp_msk"].dropna().iloc[0] if sub["anchor_timestamp_msk"].notna().any() else pd.NaT
         if pd.isna(anchor_ts):
             log_warning(
@@ -600,7 +616,13 @@ def compute_intraday_metrics(base: pd.DataFrame, intraday: pd.DataFrame) -> pd.D
             rows.append(record)
             continue
         pre_day_returns = sub.loc[sub["trade_day_offset"] == -1, "interval_return"].dropna()
-        expected_mean = pre_day_returns.mean() if len(pre_day_returns) >= 4 else 0.0
+        expected_mean = float(pre_day_returns.mean()) if len(pre_day_returns) >= 4 else 0.0
+        anchor_pos_arr = np.where(sub["anchor_timestamp_msk"].eq(anchor_ts).to_numpy())[0]
+        k0 = int(anchor_pos_arr[0]) if len(anchor_pos_arr) else 0
+        sub["bar_k"] = np.arange(len(sub), dtype=int) - k0
+        prior_est = sub.loc[sub["trade_day_offset"].between(-20, -1), ["bar_k", "interval_return"]].dropna()
+        mean_by_k = prior_est.groupby("bar_k")["interval_return"].mean()
+        abnormal_est = sub["interval_return"] - sub["bar_k"].map(mean_by_k).fillna(0.0)
         abnormal = sub["interval_return"] - expected_mean
         event_trade_date = sub["anchor_trade_date"].dropna().iloc[0] if sub["anchor_trade_date"].notna().any() else anchor_ts.normalize()
         event_day = sub.loc[sub["timestamp_msk"].dt.tz_localize(None).dt.normalize() == pd.Timestamp(event_trade_date).normalize()]
@@ -621,6 +643,20 @@ def compute_intraday_metrics(base: pd.DataFrame, intraday: pd.DataFrame) -> pd.D
             close_ts = event_day["timestamp_msk"].max()
             same_day_window = abnormal.loc[(sub["timestamp_msk"] > anchor_ts) & (sub["timestamp_msk"] <= close_ts)].dropna()
             record["CAR_ANN_INTRADAY_TO_CLOSE"] = float(same_day_window.sum()) if not same_day_window.empty else np.nan
+            d0_only = event_day.sort_values("timestamp_msk")
+            day_tot = float(abnormal.loc[d0_only.index].sum())
+            end1h = anchor_ts + pd.Timedelta(hours=1)
+            m1 = (d0_only["timestamp_msk"] > anchor_ts) & (d0_only["timestamp_msk"] <= end1h)
+            if m1.any() and day_tot and not math.isclose(day_tot, 0.0):
+                h1 = float(abnormal.loc[d0_only.loc[m1].index].sum())
+                record["ratio_1h_vs_day"] = h1 / day_tot * 100.0
+        pre_mask = sub["bar_k"].between(-4, -1)
+        pre_est = abnormal_est.loc[pre_mask].dropna()
+        pre_prev = abnormal.loc[pre_mask].dropna()
+        if pre_mask.sum() == 4 and len(pre_est) == 4:
+            record["CAR_INTRADAY_PRE_4_0"] = float(pre_est.sum())
+        if pre_mask.sum() == 4 and len(pre_prev) == 4:
+            record["CAR_INTRADAY_PRE_4_0_prevday"] = float(pre_prev.sum())
         if not next_day.empty:
             next_open_ts = next_day["timestamp_msk"].min()
             next_close_ts = next_day["timestamp_msk"].max()
@@ -960,7 +996,7 @@ def plot_event_profile(panel: pd.DataFrame, ar_col: str, t_col: str, title: str,
 
 
 def export_dataframe(df: pd.DataFrame, csv_path: Path, xlsx_path: Optional[Path] = None) -> None:
-    df.to_csv(csv_path, index=False)
+    df.to_csv(csv_path, index=False, encoding="utf-8")
     if xlsx_path:
         with pd.ExcelWriter(xlsx_path, engine="xlsxwriter") as writer:
             df.to_excel(writer, index=False, sheet_name="data")
@@ -1041,6 +1077,11 @@ def main() -> None:
         .merge(act_metrics, on="source_row_excel", how="left")
         .merge(create_metrics, on="source_row_excel", how="left")
     )
+    if "deal_type_clean" in enriched.columns:
+        enriched["deal_type"] = enriched["deal_type_clean"].fillna("unknown").astype(str).str.strip()
+        enriched.loc[enriched["deal_type"].eq("") | enriched["deal_type"].eq("nan"), "deal_type"] = "unknown"
+    else:
+        enriched["deal_type"] = "unknown"
     if "RUNUP_PRE_30_5_x" in enriched.columns:
         enriched["RUNUP_PRE_30_5"] = enriched["RUNUP_PRE_30_5_y"].combine_first(enriched["RUNUP_PRE_30_5_x"])
         enriched["CAR_PRE_ANNOUNCEMENT"] = enriched["CAR_PRE_ANNOUNCEMENT_y"].combine_first(enriched["CAR_PRE_ANNOUNCEMENT_x"])
@@ -1062,6 +1103,9 @@ def main() -> None:
         "CAR_ANN_INTRADAY_TO_CLOSE",
         "CAR_ANN_NEXT_OPEN_1H",
         "CAR_ANN_NEXT_DAY",
+        "CAR_INTRADAY_PRE_4_0",
+        "CAR_INTRADAY_PRE_4_0_prevday",
+        "ratio_1h_vs_day",
         "CAR_ANN_1_1",
         "CAR_ANN_3_3",
         "CAR_ANN_5_5",
