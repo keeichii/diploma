@@ -226,14 +226,11 @@ def run() -> None:
         out["abn_prev_day"] = pd.to_numeric(out["simple_return"], errors="coerce") - mu
         return out
 
-    # pandas>=2.2: по умолчанию apply не передаёт колонки группировки → в результате пропадал event_id
-    try:
-        raw = raw.groupby("event_id", group_keys=False).apply(_add_abn_intraday_baselines, include_groups=True)
-    except TypeError:
-        parts: list[pd.DataFrame] = []
-        for _, g in raw.groupby("event_id", sort=False):
-            parts.append(_add_abn_intraday_baselines(g))
-        raw = pd.concat(parts, ignore_index=True)
+    # pandas 2.3+: include_groups=True запрещён; явный concat сохраняет event_id
+    parts: list[pd.DataFrame] = []
+    for _, g in raw.groupby("event_id", sort=False):
+        parts.append(_add_abn_intraday_baselines(g))
+    raw = pd.concat(parts, ignore_index=True)
 
     raw["anomalous_abs_gt_10pct"] = raw["simple_return"].abs() > 0.10
     anomalous_rows = int(raw["anomalous_abs_gt_10pct"].sum())
@@ -491,7 +488,12 @@ def run() -> None:
     print(out_dir / "intraday_audit.txt")
     print(out_dir / "intraday_main_table.xlsx")
 
-    from final_outputs import copy_final_outputs
+    try:
+        # When invoked as part of the package (`python -m ma_event_study.cli`), relative import works.
+        # When invoked as a script, fallback to absolute import.
+        from .final_outputs import copy_final_outputs
+    except ImportError:  # pragma: no cover
+        from final_outputs import copy_final_outputs
 
     print("Final:", copy_final_outputs(out_dir))
 

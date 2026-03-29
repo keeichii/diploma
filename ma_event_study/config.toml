@@ -7,13 +7,18 @@ autosave_every = 25
 
 # Симметричное окно (legacy): если не заданы pre/post, в коде может использоваться как fallback
 daily_window = 250
-# Асимметрия для market model: нужно >=260 торговых дней ДО якоря (оценка [-250,-30]) и запас после
-daily_window_pre = 260
+# Асимметрия для market model: запас ~30 торговых дней сверх окна оценки [-250,-30]
+daily_window_pre = 280
 daily_window_post = 60
 
 # Если true — строки с неразрешённым тикером не обрабатываются дальше (только audit). Если false — все строки
 # попадают в table_1 / table_2 с пометкой в pipeline_row_note, расчёты потом отфильтруют сами.
 ignore_unresolved_rows = false
+
+[model]
+# Единое оценочное окно для market model (ma_thesis_pipeline + car_event_study)
+estimation_window_start = -250
+estimation_window_end = -30
 
 [input]
 # Excel со сделками M&A (ma_deals.xlsx по ТЗ)

@@ -7,7 +7,12 @@ from xml.sax.saxutils import escape
 
 import pandas as pd
 
-from .paths import resolve_clean_data_file
+try:
+    # Работает при запуске как часть пакета (`python -m ma_event_study...`).
+    from .paths import resolve_clean_data_file
+except ImportError:  # pragma: no cover
+    # Работает при запуске файла напрямую (`python ma_event_study/build_research_story_report.py`).
+    from paths import resolve_clean_data_file
 from docx import Document
 from docx.enum.section import WD_SECTION
 from docx.enum.table import WD_TABLE_ALIGNMENT

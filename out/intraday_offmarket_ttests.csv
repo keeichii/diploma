@@ -1,0 +1,3 @@
+is_off_market_release,model,window,n,t_stat,p_value
+0,raw_simple,[-1;1],57,2.170432478297653,0.034230313944520994
+1,raw_simple,[-1;1],4,0.41925717416833214,0.7032392250701943

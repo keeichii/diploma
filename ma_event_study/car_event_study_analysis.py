@@ -8,6 +8,11 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
+try:
+    from .event_study_config import get_estimation_windows_list
+except ImportError:
+    from event_study_config import get_estimation_windows_list
+
 
 INPUT_CANDIDATES = [
     "table_2_1_first_press_release-3.xlsx",
@@ -24,7 +29,7 @@ WINDOWS = [(-1, 1), (-3, 3), (-5, 5), (0, 1), (0, 3), (0, 5), (-10, 10), (-20, 2
 # H8: pre-event run-up (асимметричные окна)
 RUNUP_WINDOWS = [(-30, -5), (-20, -5), (-10, -5), (-5, -1)]
 CAR_WINDOWS = list(WINDOWS) + list(RUNUP_WINDOWS)
-ESTIMATION_WINDOWS = [(-120, -21), (-100, -21), (-60, -21)]
+ESTIMATION_WINDOWS = get_estimation_windows_list()
 
 
 @dataclass
@@ -179,20 +184,35 @@ def get_adjusted_close_tinvest_ruonia(
 
     ru = ru[["date", "ruonia_index"]].drop_duplicates("date").sort_values("date")
     merged = out.merge(ru, on="date", how="left")
-    merged = merged.sort_values("date")
+    sort_cols = ["event_id", "date"] if "event_id" in merged.columns else ["date"]
+    merged = merged.sort_values(sort_cols)
     merged["ruonia_index"] = pd.to_numeric(merged["ruonia_index"], errors="coerce").ffill()
 
     if merged["ruonia_index"].isna().all():
         raise ValueError("ruonia_index is fully empty after merge/ffill.")
 
-    base_candidates = merged["ruonia_index"].replace(0, np.nan).dropna()
-    if base_candidates.empty:
-        raise ValueError("No non-zero ruonia_index values for base_index.")
-    base_index = float(base_candidates.iloc[0])
+    def _deflate_per_event(g: pd.DataFrame) -> pd.DataFrame:
+        g = g.copy()
+        base_cand = g["ruonia_index"].replace(0, np.nan).dropna()
+        if base_cand.empty:
+            bi = np.nan
+        else:
+            bi = float(base_cand.iloc[0])
+        safe_idx = g["ruonia_index"].replace(0, np.nan)
+        g["adjusted_close_deflated"] = g["close"] * bi / safe_idx
+        g["adjusted_close_carry"] = g["close"] * safe_idx / bi
+        return g
 
-    safe_idx = merged["ruonia_index"].replace(0, np.nan)
-    merged["adjusted_close_deflated"] = merged["close"] * base_index / safe_idx
-    merged["adjusted_close_carry"] = merged["close"] * safe_idx / base_index
+    if "event_id" in merged.columns:
+        merged = merged.groupby("event_id", group_keys=False).apply(_deflate_per_event)
+    else:
+        base_candidates = merged["ruonia_index"].replace(0, np.nan).dropna()
+        if base_candidates.empty:
+            raise ValueError("No non-zero ruonia_index values for base_index.")
+        base_index = float(base_candidates.iloc[0])
+        safe_idx = merged["ruonia_index"].replace(0, np.nan)
+        merged["adjusted_close_deflated"] = merged["close"] * base_index / safe_idx
+        merged["adjusted_close_carry"] = merged["close"] * safe_idx / base_index
 
     if merged["adjusted_close_deflated"].isna().all() or merged["adjusted_close_carry"].isna().all():
         raise ValueError("Adjusted close columns are empty (check close/ruonia_index and date alignment).")
@@ -372,6 +392,8 @@ def run() -> None:
         raw["t"] = pd.to_numeric(raw.get("t"), errors="coerce")
         raw["source_file"] = Path(source_path).name
 
+        raw, event_id_cols = build_event_id(raw)
+
         price_col, price_note = choose_price_field(raw)
         close_col = choose_close_col(raw)
         try:
@@ -394,8 +416,6 @@ def run() -> None:
             raw["benchmark_price"] = pd.to_numeric(raw[bench_col], errors="coerce")
         else:
             raw["benchmark_price"] = np.nan
-
-        raw, event_id_cols = build_event_id(raw)
         raw = raw.sort_values(["event_id", "t", "Date"], kind="mergesort").reset_index(drop=True)
 
         event_table = raw[event_id_cols].drop_duplicates()

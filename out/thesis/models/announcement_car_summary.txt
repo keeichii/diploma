@@ -1,30 +1,30 @@
                             OLS Regression Results                            
 ==============================================================================
 Dep. Variable:            CAR_ANN_1_1   R-squared:                       0.108
-Model:                            OLS   Adj. R-squared:                  0.000
-Method:                 Least Squares   F-statistic:                     12.35
-Date:                Sun, 29 Mar 2026   Prob (F-statistic):           1.49e-09
-Time:                        15:58:27   Log-Likelihood:                 122.42
-No. Observations:                  66   AIC:                            -228.8
-Df Residuals:                      58   BIC:                            -211.3
+Model:                            OLS   Adj. R-squared:                  0.001
+Method:                 Least Squares   F-statistic:                     12.38
+Date:                Sun, 29 Mar 2026   Prob (F-statistic):           1.42e-09
+Time:                        17:21:12   Log-Likelihood:                 122.72
+No. Observations:                  66   AIC:                            -229.4
+Df Residuals:                      58   BIC:                            -211.9
 Df Model:                           7                                         
 Covariance Type:                  HC1                                         
 ======================================================================================================
                                          coef    std err          z      P>|z|      [0.025      0.975]
 ------------------------------------------------------------------------------------------------------
-Intercept                              0.0129      0.017      0.751      0.453      -0.021       0.046
-C(deal_status_clean)[T.Отменена]       0.0157      0.023      0.669      0.504      -0.030       0.062
-C(deal_status_clean)[T.Оформление]    -0.0182      0.008     -2.336      0.019      -0.033      -0.003
-C(deal_status_clean)[T.Переговоры]     0.0061      0.017      0.359      0.720      -0.027       0.040
-ANN_LIQUIDITY_60D                     -0.0005      0.001     -0.591      0.554      -0.002       0.001
-ANN_VOLATILITY_60D                    -0.0089      0.060     -0.148      0.883      -0.127       0.109
-stake_pct_std                      -9.645e-05      0.000     -0.638      0.523      -0.000       0.000
-deal_value_usd_mn_std               1.376e-05   5.59e-06      2.461      0.014     2.8e-06    2.47e-05
+Intercept                              0.0130      0.017      0.760      0.447      -0.021       0.047
+C(deal_status_clean)[T.Отменена]       0.0160      0.024      0.679      0.497      -0.030       0.062
+C(deal_status_clean)[T.Оформление]    -0.0184      0.008     -2.374      0.018      -0.034      -0.003
+C(deal_status_clean)[T.Переговоры]     0.0063      0.017      0.375      0.708      -0.027       0.039
+ANN_LIQUIDITY_60D                     -0.0005      0.001     -0.560      0.575      -0.002       0.001
+ANN_VOLATILITY_60D                    -0.0107      0.060     -0.179      0.858      -0.128       0.107
+stake_pct_std                      -9.783e-05      0.000     -0.648      0.517      -0.000       0.000
+deal_value_usd_mn_std               1.371e-05   5.57e-06      2.461      0.014    2.79e-06    2.46e-05
 ==============================================================================
-Omnibus:                        5.068   Durbin-Watson:                   1.673
-Prob(Omnibus):                  0.079   Jarque-Bera (JB):                4.452
-Skew:                          -0.432   Prob(JB):                        0.108
-Kurtosis:                       3.934   Cond. No.                     9.16e+03
+Omnibus:                        5.271   Durbin-Watson:                   1.669
+Prob(Omnibus):                  0.072   Jarque-Bera (JB):                4.660
+Skew:                          -0.450   Prob(JB):                       0.0973
+Kurtosis:                       3.941   Cond. No.                     9.16e+03
 ==============================================================================
 
 Notes:

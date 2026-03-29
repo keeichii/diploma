@@ -86,6 +86,11 @@ import statsmodels.api as sm
 import statsmodels.formula.api as smf
 from scipy import stats
 
+try:
+    from ma_event_study.event_study_config import get_estimation_window
+except ImportError:
+    from event_study_config import get_estimation_window
+
 
 OUT_INPUT_DIR = PROJECT_ROOT / "out"
 OUTPUT_ROOT = PROJECT_ROOT / "out" / "thesis"
@@ -176,6 +181,10 @@ def detect_column(columns: Iterable[str], aliases: Iterable[str], required: bool
         if not tokens:
             continue
         matches = [col for col in columns if tokens.issubset(set(normalize_label(col).split()))]
+        if len(matches) > 1:
+            raise KeyError(
+                f"Ambiguous column for aliases={list(aliases)}: multiple matches {matches}. Specify column name explicitly."
+            )
         if len(matches) == 1:
             return matches[0]
     if required:
@@ -339,7 +348,9 @@ def load_intraday_panel(path: Path) -> pd.DataFrame:
     )
     df = standardize_panel_keys(df)
     df = df.sort_values(["source_row_excel", "timestamp_msk"]).reset_index(drop=True)
-    df["interval_return"] = df.groupby("source_row_excel")["price"].pct_change()
+    df["interval_return"] = df.groupby(["source_row_excel", "trade_day_offset"], sort=False)["price"].pct_change(
+        fill_method=None
+    )
     return df
 
 
@@ -382,7 +393,6 @@ def load_daily_panel(path: Path, role: str) -> pd.DataFrame:
             "date": parse_date_series(raw[mapping["date"]]),
             "adjusted_close": adjusted,
             "close": close,
-            "price": adjusted.fillna(close),
             "volume_bnrub": parse_numeric_series(raw[mapping["volume"]]) if mapping["volume"] else np.nan,
             "market_cap_bnrub": parse_numeric_series(raw[mapping["market_cap"]]) if mapping["market_cap"] else np.nan,
             "benchmark_close": parse_numeric_series(raw[mapping["benchmark_close"]]) if mapping["benchmark_close"] else np.nan,
@@ -397,6 +407,28 @@ def load_daily_panel(path: Path, role: str) -> pd.DataFrame:
     )
     df = standardize_panel_keys(df)
     df = df.sort_values(["source_row_excel", "date"]).reset_index(drop=True)
+    deal_stats = (
+        df.groupby("source_row_excel", as_index=False)
+        .agg(
+            n_rows=("close", "size"),
+            adj_n=("adjusted_close", lambda s: int(s.notna().sum())),
+        )
+    )
+    deal_stats["adj_share"] = deal_stats["adj_n"] / deal_stats["n_rows"].replace(0, np.nan)
+    df = df.merge(deal_stats[["source_row_excel", "adj_share"]], on="source_row_excel", how="left")
+    use_adj = df["adj_share"] >= 0.8
+    df["price"] = np.where(use_adj, df["adjusted_close"], df["close"])
+    both_parts = (df["adj_share"] > 0) & (df["adj_share"] < 0.8) & df["adjusted_close"].notna() & df["close"].notna()
+    df["price_source"] = np.where(use_adj, "adjusted", np.where(both_parts, "mixed_WARNING", "close"))
+    for sr, sub in df.loc[both_parts].groupby("source_row_excel"):
+        as_share = float(sub["adj_share"].iloc[0])
+        log_warning(
+            category="mixed_price_series",
+            message=f"adjusted_close covers {as_share:.1%} of rows; using close-only (no hybrid with adjusted)",
+            table_role=role,
+            source_row_excel=int(sr),
+        )
+    df = df.drop(columns=["adj_share"])
     df["security_return"] = df.groupby("source_row_excel")["price"].pct_change(fill_method=None)
     df["benchmark_return"] = df.groupby("source_row_excel")["benchmark_close"].pct_change(fill_method=None)
     df["trading_seq"] = df.groupby("source_row_excel").cumcount()
@@ -456,8 +488,11 @@ def filter_certain_rows(panel: pd.DataFrame, mapping_status: pd.DataFrame) -> pd
     return panel[panel["source_row_excel"].isin(certain_ids)].copy()
 
 
-def build_daily_model(sub: pd.DataFrame, event_t: pd.Series) -> Tuple[pd.Series, str, int]:
-    est_mask = event_t.between(-250, -30) & sub["security_return"].notna()
+def build_daily_model(
+    sub: pd.DataFrame, event_t: pd.Series, source_row_excel: Optional[int] = None
+) -> Tuple[pd.Series, str, int]:
+    ew_lo, ew_hi = get_estimation_window()
+    est_mask = event_t.between(ew_lo, ew_hi) & sub["security_return"].notna()
     est = sub.loc[est_mask, ["security_return", "benchmark_return"]].dropna()
     if len(est) >= 60 and est["benchmark_return"].std() > 0:
         model = sm.OLS(est["security_return"], sm.add_constant(est["benchmark_return"])).fit()
@@ -468,10 +503,22 @@ def build_daily_model(sub: pd.DataFrame, event_t: pd.Series) -> Tuple[pd.Series,
         )
         return sub["security_return"] - expected, "market_model", len(est)
     if sub["benchmark_return"].notna().sum() >= 20:
+        if source_row_excel is not None:
+            log_warning(
+                category="model_fallback",
+                message="Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance)",
+                source_row_excel=source_row_excel,
+            )
         expected = sub["benchmark_return"].fillna(0.0)
         return sub["security_return"] - expected, "market_adjusted", int(sub["benchmark_return"].notna().sum())
     est_mean = est["security_return"].mean() if len(est) >= 20 else 0.0
     expected = pd.Series(est_mean, index=sub.index)
+    if source_row_excel is not None:
+        log_warning(
+            category="model_fallback",
+            message="Using mean_adjusted (benchmark sparse or estimation window short)",
+            source_row_excel=source_row_excel,
+        )
     return sub["security_return"] - expected, "mean_adjusted", len(est)
 
 
@@ -493,15 +540,13 @@ def compounded_return(values: pd.Series) -> float:
 
 def bhar_window(sub: pd.DataFrame, event_t: pd.Series, horizon: int, min_fraction: float = 0.8) -> float:
     mask = event_t.between(1, horizon)
-    window = sub.loc[mask, ["security_return", "benchmark_return"]].dropna(subset=["security_return"])
+    window = sub.loc[mask, ["security_return", "benchmark_return"]].dropna(how="any")
     min_obs = max(5, int(math.ceil(horizon * min_fraction)))
     if len(window) < min_obs:
         return np.nan
-    stock = compounded_return(window["security_return"].dropna())
-    if window["benchmark_return"].notna().sum() >= min_obs:
-        bench = compounded_return(window["benchmark_return"].dropna())
-        return stock - bench
-    return stock
+    stock = compounded_return(window["security_return"])
+    bench = compounded_return(window["benchmark_return"])
+    return stock - bench
 
 
 def extract_controls(sub: pd.DataFrame, event_t: pd.Series, prefix: str) -> Dict[str, float]:
@@ -519,7 +564,6 @@ def extract_controls(sub: pd.DataFrame, event_t: pd.Series, prefix: str) -> Dict
         f"{prefix}_MARKET_CAP": np.nan,
         f"{prefix}_LIQUIDITY_60D": np.nan,
         f"{prefix}_VOLATILITY_60D": np.nan,
-        "Volume_bln_avg_pre": np.nan,
     }
     if not event_rows.empty:
         row = event_rows.iloc[0]
@@ -535,8 +579,12 @@ def extract_controls(sub: pd.DataFrame, event_t: pd.Series, prefix: str) -> Dict
         )
     out[f"{prefix}_LIQUIDITY_60D"] = pre60["volume_bnrub"].mean() if "volume_bnrub" in pre60 else np.nan
     out[f"{prefix}_VOLATILITY_60D"] = pre60["security_return"].std() * np.sqrt(252) if not pre60.empty else np.nan
-    if "volume_bnrub" in pre20.columns and not pre20.empty and prefix == "ANN":
-        out["Volume_bln_avg_pre"] = float(pre20["volume_bnrub"].mean())
+    if prefix == "ANN":
+        out["Volume_bln_avg_pre"] = (
+            float(pre20["volume_bnrub"].mean())
+            if "volume_bnrub" in pre20.columns and not pre20.empty
+            else np.nan
+        )
     return out
 
 
@@ -546,7 +594,7 @@ def compute_anchored_daily_metrics(panel: pd.DataFrame, prefix: str) -> Tuple[pd
     for source_row, sub in panel.groupby("source_row_excel", sort=True):
         sub = sub.sort_values("t").copy()
         event_t = sub["t"]
-        abnormal, model_type, n_est = build_daily_model(sub, event_t)
+        abnormal, model_type, n_est = build_daily_model(sub, event_t, source_row_excel=int(source_row))
         sub[f"ar_{prefix.lower()}"] = abnormal
         sub[f"expected_model_{prefix.lower()}"] = model_type
         sub[f"n_est_{prefix.lower()}"] = n_est
@@ -726,29 +774,30 @@ def compute_completion_metrics(base: pd.DataFrame, panels: Dict[str, pd.DataFram
             )
             rows.append(metrics)
             continue
-        event_pos = sub.index[sub["date"] == event_trade_date]
-        if len(event_pos) == 0:
+        pos = sub.reset_index(drop=True)
+        event_idx = pos.index[pos["date"] == event_trade_date]
+        if len(event_idx) == 0:
             rows.append(metrics)
             continue
-        event_pos = sub.index.get_loc(event_pos[0])
-        event_t = pd.Series(np.arange(len(sub)) - event_pos, index=sub.index)
-        abnormal, model_type, n_est = build_daily_model(sub, event_t)
+        event_pos = int(event_idx[0])
+        event_t = pd.Series(np.arange(len(pos)) - event_pos, index=pos.index)
+        abnormal, model_type, n_est = build_daily_model(pos, event_t, source_row_excel=int(deal.source_row_excel))
         metrics.update(
             {
                 "CAR_CLOSE_1_1": sum_window(abnormal, event_t, -1, 1),
                 "CAR_CLOSE_3_3": sum_window(abnormal, event_t, -3, 3),
                 "CAR_CLOSE_5_5": sum_window(abnormal, event_t, -5, 5),
                 "CAR_CLOSE_10_10": sum_window(abnormal, event_t, -10, 10),
-                "BHAR_CLOSE_60": bhar_window(sub, event_t, 60),
-                "BHAR_CLOSE_120": bhar_window(sub, event_t, 120),
-                "BHAR_CLOSE_250": bhar_window(sub, event_t, 250),
+                "BHAR_CLOSE_60": bhar_window(pos, event_t, 60),
+                "BHAR_CLOSE_120": bhar_window(pos, event_t, 120),
+                "BHAR_CLOSE_250": bhar_window(pos, event_t, 250),
                 "CLOSE_MODEL_TYPE": model_type,
                 "CLOSE_ESTIMATION_OBS": n_est,
                 "CLOSE_PANEL_ROLE": role,
                 "CLOSE_EVENT_TRADE_DATE": event_trade_date,
             }
         )
-        metrics.update(extract_controls(sub, event_t, "CLOSE"))
+        metrics.update(extract_controls(pos, event_t, "CLOSE"))
         rows.append(metrics)
     return pd.DataFrame(rows)
 
@@ -854,22 +903,41 @@ def run_group_tests(enriched: pd.DataFrame, metrics: List[str]) -> pd.DataFrame:
             grouped = [g[metric].values for _, g in sub.groupby(group_col)]
             if len(grouped) == 2:
                 stat, p_value = stats.ttest_ind(grouped[0], grouped[1], equal_var=False, nan_policy="omit")
-                test_name = "welch_t"
+                rows.append(
+                    {
+                        "group_variable": group_col,
+                        "metric": metric,
+                        "test": "welch_t",
+                        "statistic": stat,
+                        "p_value": p_value,
+                        "groups_used": len(grouped),
+                    }
+                )
             elif len(grouped) > 2:
-                stat, p_value = stats.f_oneway(*grouped)
-                test_name = "anova"
+                kw_stat, kw_p = stats.kruskal(*grouped)
+                rows.append(
+                    {
+                        "group_variable": group_col,
+                        "metric": metric,
+                        "test": "kruskal_wallis",
+                        "statistic": kw_stat,
+                        "p_value": kw_p,
+                        "groups_used": len(grouped),
+                    }
+                )
+                f_stat, f_p = stats.f_oneway(*grouped)
+                rows.append(
+                    {
+                        "group_variable": group_col,
+                        "metric": metric,
+                        "test": "anova_f",
+                        "statistic": f_stat,
+                        "p_value": f_p,
+                        "groups_used": len(grouped),
+                    }
+                )
             else:
                 continue
-            rows.append(
-                {
-                    "group_variable": group_col,
-                    "metric": metric,
-                    "test": test_name,
-                    "statistic": stat,
-                    "p_value": p_value,
-                    "groups_used": len(grouped),
-                }
-            )
     return pd.DataFrame(rows)
 
 
@@ -980,11 +1048,17 @@ def plot_event_profile(panel: pd.DataFrame, ar_col: str, t_col: str, title: str,
     sub = panel.loc[panel[t_col].between(low, high) & panel[ar_col].notna()].copy()
     if sub.empty:
         return
-    avg = sub.groupby(t_col)[ar_col].mean().sort_index()
+    g = sub.groupby(t_col)[ar_col]
+    avg = g.mean().sort_index()
+    n_per_t = g.size().reindex(avg.index, fill_value=0)
     car = avg.cumsum()
     fig, ax = plt.subplots(2, 1, figsize=(8, 7), sharex=True)
-    ax[0].bar(avg.index, avg.values)
-    ax[0].set_title(f"{title}: Average Abnormal Return")
+    ax[0].bar(avg.index, avg.values, color="steelblue")
+    ax0r = ax[0].twinx()
+    ax0r.step(n_per_t.index, n_per_t.values, where="mid", color="tab:red", alpha=0.85, linewidth=1.2)
+    ax0r.set_ylabel("N(t)", color="tab:red")
+    ax0r.tick_params(axis="y", labelcolor="tab:red")
+    ax[0].set_title(f"{title}: Average AR and event count N(t)")
     ax[0].set_ylabel("AR")
     ax[1].plot(car.index, car.values, marker="o")
     ax[1].set_title(f"{title}: Cumulative Abnormal Return")
@@ -1003,6 +1077,7 @@ def export_dataframe(df: pd.DataFrame, csv_path: Path, xlsx_path: Optional[Path]
 
 
 def main() -> None:
+    WARNING_LOG.clear()
     ensure_output_dirs()
 
     print_header("FOUND FILES AND ASSIGNED ROLES")
@@ -1154,6 +1229,22 @@ def main() -> None:
     export_dataframe(summary_stats, OUTPUT_DIRS["tables"] / "summary_statistics.csv", OUTPUT_DIRS["tables"] / "summary_statistics.xlsx")
     export_dataframe(one_sample_tests, OUTPUT_DIRS["tables"] / "one_sample_tests.csv", OUTPUT_DIRS["tables"] / "one_sample_tests.xlsx")
     export_dataframe(group_tests, OUTPUT_DIRS["tables"] / "group_tests.csv", OUTPUT_DIRS["tables"] / "group_tests.xlsx")
+    model_count_rows: List[Dict[str, object]] = []
+    for label, mframe in [
+        ("announcement_daily", ann_metrics),
+        ("actualization_daily", act_metrics),
+        ("create_daily", create_metrics),
+    ]:
+        col = next((c for c in mframe.columns if c.endswith("_MODEL_TYPE")), None)
+        if col is None:
+            continue
+        for mt, cnt in mframe[col].value_counts(dropna=False).items():
+            model_count_rows.append({"panel": label, "model_type": str(mt), "n_deals": int(cnt)})
+    export_dataframe(
+        pd.DataFrame(model_count_rows),
+        OUTPUT_DIRS["tables"] / "model_type_counts.csv",
+        OUTPUT_DIRS["tables"] / "model_type_counts.xlsx",
+    )
     export_dataframe(reg_coefs, OUTPUT_DIRS["models"] / "regression_coefficients.csv", OUTPUT_DIRS["models"] / "regression_coefficients.xlsx")
     export_dataframe(reg_diag, OUTPUT_DIRS["models"] / "regression_diagnostics.csv", OUTPUT_DIRS["models"] / "regression_diagnostics.xlsx")
     warning_df = warning_frame()

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+import re
 import sys
 import time
 from dataclasses import dataclass
@@ -366,6 +367,22 @@ def parse_date_any(x: Any) -> date | None:
     s = str(x).strip()
     if not s or s.lower() == "nan":
         return None
+    # DD.MM.YYYY — явно (первое число = день); не полагаться на dayfirst в pandas
+    m = re.fullmatch(r"(\d{1,2})\.(\d{1,2})\.(\d{4})", s)
+    if m:
+        day, month, year = int(m.group(1)), int(m.group(2)), int(m.group(3))
+        try:
+            return _validate_parsed_date(date(year, month, day), x)
+        except ValueError:
+            return None
+    # ISO YYYY-MM-DD
+    m_iso = re.fullmatch(r"(\d{4})-(\d{2})-(\d{2})", s)
+    if m_iso:
+        y, mo, d = int(m_iso.group(1)), int(m_iso.group(2)), int(m_iso.group(3))
+        try:
+            return _validate_parsed_date(date(y, mo, d), x)
+        except ValueError:
+            return None
     dt = pd.to_datetime(s, dayfirst=True, errors="coerce")
     if pd.isna(dt):
         return None

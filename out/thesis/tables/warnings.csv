@@ -1,67 +1,515 @@
 category,message,table_role,source_row_excel
-completion_intraday_unavailable,Completion intraday metrics left missing because no dedicated completion intraday panel was uploaded,intraday,2
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,3
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,22
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,28
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,29
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,30
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,31
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,32
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,36
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,37
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,38
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,40
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,44
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,46
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,47
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,52
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,55
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,56
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,62
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,63
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,66
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,69
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,70
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,73
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,85
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,86
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,87
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,88
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,89
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,90
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,94
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,98
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,101
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,103
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,104
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,105
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,106
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,107
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,108
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,110
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,113
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,114
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,122
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,124
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,125
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,126
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,127
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,128
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,129
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,133
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,137
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,141
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,156
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,158
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,159
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,160
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,165
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,166
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,168
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,173
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,179
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,180
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,190
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,195
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,196
-missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,197
+completion_intraday_unavailable,Completion intraday metrics left missing because no dedicated completion intraday panel was uploaded,intraday,2.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,9.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,28.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,30.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,31.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,34.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,35.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,37.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,39.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,41.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,42.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,43.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,44.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,45.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,46.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,47.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,48.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,49.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,50.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,51.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,53.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,54.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,55.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,56.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,57.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,58.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,59.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,60.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,61.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,64.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,65.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,67.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,68.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,71.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,72.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,74.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,75.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,77.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,78.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,79.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,80.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,81.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,82.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,83.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,84.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,90.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,91.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,92.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,93.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,94.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,95.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,96.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,97.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,99.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,100.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,104.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,109.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,111.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,112.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,114.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,115.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,116.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,117.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,118.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,119.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,120.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,121.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,123.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,130.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,138.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,142.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,143.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,145.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,146.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,147.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,149.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,150.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,151.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,153.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,154.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,155.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,156.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,157.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,158.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,160.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,161.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,162.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,163.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,167.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,169.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,170.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,171.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,172.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,173.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,174.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,175.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,176.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,177.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,178.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,181.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,182.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,183.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,184.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,185.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,186.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,187.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,188.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,189.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,191.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,192.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,193.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,194.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,198.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,199.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,200.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,201.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,202.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,203.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,204.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,205.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,206.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,207.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,28.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,30.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,33.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,35.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,36.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,37.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,39.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,41.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,42.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,43.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,44.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,45.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,46.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,47.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,48.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,49.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,50.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,51.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,52.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,53.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,54.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,57.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,58.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,59.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,60.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,61.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,64.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,65.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,67.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,68.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,71.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,72.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,74.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,75.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,77.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,78.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,79.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,80.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,81.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,82.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,83.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,84.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,90.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,91.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,92.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,93.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,94.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,95.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,96.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,97.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,99.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,100.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,104.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,109.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,111.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,112.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,114.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,115.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,116.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,117.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,118.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,119.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,120.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,121.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,123.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,130.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,138.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,142.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,143.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,145.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,146.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,147.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,149.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,150.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,151.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,153.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,154.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,155.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,156.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,157.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,158.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,160.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,161.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,162.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,163.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,167.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,169.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,170.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,171.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,172.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,173.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,174.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,175.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,176.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,177.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,178.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,181.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,182.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,183.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,184.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,185.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,186.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,187.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,188.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,189.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,191.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,192.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,193.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,194.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,198.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,199.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,200.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,201.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,202.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,203.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,204.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,205.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,206.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,207.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,9.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,25.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,30.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,31.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,34.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,35.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,36.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,37.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,39.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,41.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,42.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,43.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,44.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,45.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,46.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,47.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,48.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,49.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,50.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,51.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,53.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,54.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,55.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,56.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,57.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,58.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,59.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,60.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,61.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,64.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,65.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,67.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,68.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,71.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,72.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,74.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,75.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,77.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,78.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,79.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,80.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,81.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,82.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,83.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,84.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,90.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,91.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,92.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,93.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,94.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,95.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,96.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,97.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,99.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,100.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,104.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,109.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,111.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,112.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,114.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,115.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,116.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,117.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,118.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,119.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,120.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,121.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,123.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,130.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,138.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,142.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,143.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,145.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,146.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,147.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,149.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,150.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,151.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,153.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,154.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,155.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,156.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,157.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,158.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,160.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,161.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,162.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,163.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,167.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,169.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,170.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,171.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,172.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,173.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,174.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,175.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,176.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,177.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,178.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,181.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,182.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,183.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,184.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,185.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,186.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,187.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,188.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,189.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,191.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,192.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,193.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,194.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,198.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,199.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,200.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,201.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,202.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,203.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,204.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,205.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,206.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,207.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,3.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,22.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,28.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,29.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,30.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,31.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,32.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,33.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,34.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,35.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,36.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,37.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,38.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,39.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,40.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,42.0
+model_fallback,Using market_adjusted (OLS market model not estimated: insufficient obs or zero benchmark variance),,43.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,44.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,45.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,46.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,47.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,48.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,49.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,50.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,51.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,52.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,53.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,54.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,55.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,56.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,57.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,58.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,59.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,60.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,61.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,62.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,63.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,64.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,65.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,66.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,67.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,68.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,69.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,70.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,71.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,72.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,73.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,74.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,75.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,77.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,78.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,79.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,80.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,81.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,82.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,85.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,86.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,87.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,88.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,89.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,90.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,91.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,93.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,94.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,95.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,96.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,97.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,98.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,99.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,100.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,101.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,103.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,104.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,105.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,106.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,107.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,108.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,109.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,110.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,111.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,112.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,113.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,114.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,115.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,116.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,117.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,121.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,122.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,123.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,124.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,125.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,126.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,127.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,128.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,129.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,133.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,137.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,141.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,142.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,143.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,145.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,146.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,147.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,149.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,151.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,154.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,155.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,156.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,157.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,158.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,159.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,160.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,161.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,162.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,163.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,165.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,166.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,168.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,169.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,170.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,171.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,172.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,173.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,176.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,177.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,178.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,179.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,180.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,181.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,182.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,185.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,186.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,187.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,189.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,190.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,191.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,192.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,194.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,195.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,196.0
+missing_completion_coverage,No daily panel contains the completion date for re-anchored completion analysis,completion_daily,197.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,198.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,200.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,202.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,203.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,204.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,205.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,206.0
+model_fallback,Using mean_adjusted (benchmark sparse or estimation window short),,207.0
+regression_skipped,announcement_bhar: no usable predictors,,
+regression_skipped,completion_bhar: no usable predictors,,

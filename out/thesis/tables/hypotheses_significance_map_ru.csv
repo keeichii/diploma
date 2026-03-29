@@ -1,23 +1,23 @@
 Гипотеза,Описание,Метрика_теста,Есть статистически значимый эффект,Комментарий
-H1,Мгновенная внутридневная реакция,CAR_ANN_INTRADAY_15M,НЕТ,p=0.1313
+H1,Мгновенная внутридневная реакция,CAR_ANN_INTRADAY_15M,НЕТ,p=0.1326
 H2,Ранние бары после якоря,CAR first bars,НЕ ПРОТЕСТИРОВАНО,Недостаточно данных или ручная метрика
-H3,Доля реакции за 1ч к дню,ratio_1h_vs_day,НЕ ПРОТЕСТИРОВАНО,
+H3,Доля реакции за 1ч к дню,ratio_1h_vs_day,НЕТ,p=0.2535
 H4,Предсобытийное окно intraday [-4;0] до якоря,CAR_INTRADAY_PRE_4_0,НЕ ПРОТЕСТИРОВАНО,
-H5,Различие on/off market intraday,CAR_ANN_INTRADAY_15M × is_off_market,НЕ ПРОТЕСТИРОВАНО,
-H6,Дневные CAR объявления,CAR_ANN_1_1 / CAR_ANN_3_3,НЕТ,p=0.901
-H7,Знак среднего CAR_ANN_1_1,sign mean CAR,НЕТ,p=0.901
-H8,"Предсобытийный run-up [-30,-5]",RUNUP_PRE_30_5,ДА,p=0.03818
-H9,Размер сделки (лог),coef log_DealSize M1,НЕТ,p=0.3109
+H5,Различие on/off market intraday,CAR_ANN_INTRADAY_15M × is_off_market,НЕТ,p=0.8498
+H6,Дневные CAR объявления,CAR_ANN_1_1 / CAR_ANN_3_3,НЕТ,p=0.9122
+H7,Знак среднего CAR_ANN_1_1,sign mean CAR,НЕТ,p=0.9122
+H8,"Предсобытийный run-up [-30,-5]",RUNUP_PRE_30_5,ДА,p=0.03874
+H9,Размер сделки (лог),coef log_DealSize M1,НЕТ,p=0.326
 H10,Тип сделки (группы),deal_type × CAR_ANN_1_1,НЕ ПРОТЕСТИРОВАНО,
 H11,Тип сделки — ecosystem,subset deal_type,НЕ ПРОТЕСТИРОВАНО,
 H12,Тип сделки — core_banking,subset deal_type,НЕ ПРОТЕСТИРОВАНО,
 H13,Тип сделки — non_financial / distressed,subset deal_type,НЕ ПРОТЕСТИРОВАНО,
-H14,ROE fundamentals,coef ROE M2,НЕТ,p=0.1424
-H15,log Market Cap,coef log_MarketCap M1,НЕТ,p=0.8128
-H16,"ROA, P/B, P/E, активы",M2 coefficients,НЕТ,p=0.1424
-H17,Ликвидность (объём до события),coef log_Volume M4,НЕ ПРОТЕСТИРОВАНО,
-H18,Связь CAR короткого окна и BHAR,Spearman CAR×BHAR,НЕТ,p=0.3291
-H19,Пост-сделочный дрейф BHAR,BHAR_ANN_120 share<0 + t-test,ДА,p=0.0001381
+H14,ROE fundamentals,coef ROE M2,НЕТ,p=0.1421
+H15,log Market Cap,coef log_MarketCap M1,НЕТ,p=0.7499
+H16,"ROA, P/B, P/E, активы",M2 coefficients,НЕТ,p=0.1421
+H17,Ликвидность (объём до события),coef log_Volume M4,НЕТ,p=0.8588
+H18,Связь CAR короткого окна и BHAR,Spearman CAR×BHAR,НЕ ПРОТЕСТИРОВАНО,
+H19,Пост-сделочный дрейф BHAR,BHAR_ANN_120 share<0 + t-test,НЕ ПРОТЕСТИРОВАНО,
 H20,Ecosystem vs non-ecosystem BHAR,Mann-Whitney BHAR,НЕ ПРОТЕСТИРОВАНО,
 H21,Пост-сделочные финансы (ROE),требуются данные,НЕ ПРОТЕСТИРОВАНО,Недостаточно данных или ручная метрика
 H22,Пост-сделочные финансы (прочее),требуются данные,НЕ ПРОТЕСТИРОВАНО,Недостаточно данных или ручная метрика
